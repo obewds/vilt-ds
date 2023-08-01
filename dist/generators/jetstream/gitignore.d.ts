@@ -1,1 +1,1 @@
-export default function (): string;
+export default function (jetstreamGitignoreText: string): string;
