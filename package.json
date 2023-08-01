@@ -2,23 +2,34 @@
   "name": "@obewds/vilt-ds",
   "version": "0.1.0",
   "description": "The official repository for the VILT Design System for the Vue.js, Inertia.js, Laravel, and Tailwind CSS web app stack that is turbocharged with Typescript and VueVentus.",
+  "license": "MIT",
+  "author": "Matt McT",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc"
   },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "vilt-ds": "./cli/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/obewds/vilt-ds.git"
   },
-  "author": "Matt McT",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/obewds/vilt-ds/issues"
   },
   "homepage": "https://github.com/obewds/vilt-ds#readme",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.4.5",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "gradient-string": "^2.0.2"
   }
 }
