@@ -1,12 +1,14 @@
 // ./src/updaters/jetstream/updateJetstreamGitignore.ts
 import fs from 'fs-extra';
 import generateJetstreamGitignore from '../../generators/jetstream/generateJetstreamGitignore.js';
+import cliSuccessMessage from '../../helpers/cliSuccessMessage.js';
+import cliWarningMessage from '../../helpers/cliWarningMessage.js';
 import cwd from '../../helpers/cwd.js';
-import ifProjectFileExists from '../../helpers/ifProjectFileExists.js';
+import projectFileDoesExist from '../../helpers/projectFileDoesExist.js';
 export default function () {
     const filepath = '/.gitignore';
     // check if user's current repo root directory has a Laravel/Jetstream .gitignore file
-    if (ifProjectFileExists(filepath)) {
+    if (projectFileDoesExist(filepath)) {
         // extract the contents of the Laravel/Jetstream .gitignore file
         fs.readFile(cwd + filepath, 'utf8', function (err, data) {
             // error check
@@ -15,7 +17,11 @@ export default function () {
             }
             // If no error, then overwrite the current gitignore file content wrapped in VILT DS gitignore code
             fs.outputFileSync(cwd + filepath, generateJetstreamGitignore(String(data)), { flag: 'w+' });
+            cliSuccessMessage(filepath + ' file updated successfully!', true, true);
         });
+    }
+    else {
+        cliWarningMessage(filepath + ' not found, so no updates were made!', true, true);
     }
 }
 //# sourceMappingURL=updateJetstreamGitignore.js.map
