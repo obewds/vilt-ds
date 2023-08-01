@@ -15,7 +15,6 @@ ${developer}
 ${mac}
 
 ${windows}
-
 `;
 
 }
