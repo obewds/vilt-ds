@@ -9,7 +9,10 @@
   "scripts": {
     "build": "tsc",
     "pkg:org": "npm config set scope obewds",
-    "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+    "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
+    "bump:patch": "npm version patch && npm run build",
+    "bump:minor": "npm version minor && npm run build",
+    "bump:major": "npm version major && npm run build"
   },
   "files": [
     "dist"
