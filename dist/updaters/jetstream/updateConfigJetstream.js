@@ -13,14 +13,14 @@ export default function () {
             if (err) {
                 throw err;
             }
-            let modifiedData = String(data).replace(/\/\/ Features::termsAndPrivacyPolicy(),/g, 'Features::termsAndPrivacyPolicy(),').replace(/\/\/ Features::api(),/g, 'Features::api(),');
+            let modifiedData = String(data).replace('// Features::termsAndPrivacyPolicy()', 'Features::termsAndPrivacyPolicy()').replace('// Features::api()', 'Features::api()');
             // If no error, then overwrite the current config/jetstream.php file content with the modifications
             fs.outputFileSync(cwd + filepath, modifiedData, { flag: 'w+' });
-            cliSuccessMessage(filepath + ' file updated successfully!', true, true);
+            cliSuccessMessage(filepath + ' file updated successfully!', false, false);
         });
     }
     else {
-        cliWarningMessage(filepath + ' not found, so no updates were made!', true, true);
+        cliWarningMessage(filepath + ' not found, so no updates were made!', false, false);
     }
 }
 //# sourceMappingURL=updateConfigJetstream.js.map
