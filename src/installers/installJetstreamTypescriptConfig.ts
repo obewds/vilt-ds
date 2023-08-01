@@ -1,4 +1,4 @@
-// ./src/installers/installJetstreamTailwindConfig.ts
+// ./src/installers/installJetstreamTypescriptConfig.ts
 
 import fs from 'fs-extra'
 
