@@ -1,1 +1,1 @@
-{"version":3,"file":"gradientText.js","sourceRoot":"","sources":["../../src/helpers/gradientText.ts"],"names":[],"mappings":"AAAA,gCAAgC;AAEhC,OAAO,QAAQ,MAAM,iBAAiB,CAAA;AAEtC,MAAM,CAAC,OAAO,WAAW,MAAa;IAElC,OAAO,QAAQ,CAAC,YAAY,EAAE,MAAM,CAAC,CAAC,MAAM,CAAC,CAAA;AAEjD,CAAC"}
+{"version":3,"file":"gradientText.js","sourceRoot":"","sources":["../../src/helpers/gradientText.ts"],"names":[],"mappings":"AAAA,gCAAgC;AAEhC,OAAO,QAAQ,MAAM,iBAAiB,CAAA;AAEtC,MAAM,CAAC,OAAO,WAAW,MAAa;IAElC,OAAO,QAAQ,CAAC,MAAM,CAAC,MAAM,CAAC,CAAA;AAElC,CAAC"}
