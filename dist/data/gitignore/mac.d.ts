@@ -1,0 +1,2 @@
+declare const _default: "# MacOS General\n.DS_Store\n.AppleDouble\n.LSOverride\n\n# MacOS Thumbnails\n._*\n\n# MacOS Files that might appear in the root of a volume\n.DocumentRevisions-V100\n.fseventsd\n.Spotlight-V100\n.TemporaryItems\n.Trashes\n.VolumeIcon.icns\n.com.apple.timemachine.donotpresent\n\n# MacOS Directories potentially created on remote AFP share\n.AppleDB\n.AppleDesktop\nNetwork Trash Folder\nTemporary Items\n.apdisk";
+export default _default;
