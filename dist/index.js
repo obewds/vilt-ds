@@ -6,7 +6,7 @@ console.log(`
 
 
     ${gradientText('Welcome to the VILT DS CLI!')}
-    ${gradientText('-----------------------------')}
+    ${gradientText('---------------------------')}
     Install VILT stack starter files with VILT DS powered by VueVentus.
 
 
