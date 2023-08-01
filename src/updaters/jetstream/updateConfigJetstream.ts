@@ -20,9 +20,9 @@ export default function (): void {
             if (err) { throw err }
 
             let modifiedData = String(data).replace(
-                /\/\/Features::termsAndPrivacyPolicy(),/g, 'Features::termsAndPrivacyPolicy(),'
+                /\/\/ Features::termsAndPrivacyPolicy(),/g, 'Features::termsAndPrivacyPolicy(),'
             ).replace(
-                /\/\/Features::api(),/g, 'Features::api(),'
+                /\/\/ Features::api(),/g, 'Features::api(),'
             )
             
             // If no error, then overwrite the current config/jetstream.php file content with the modifications
