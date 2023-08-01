@@ -1,6 +1,8 @@
 // ./src/installers/installViltDsJetstream.ts
-import installJetstreamGitignore from '../installers/jetstream/installJetstreamGitignore.js';
+import updateConfigJetstream from '../updaters/jetstream/updateConfigJetstream.js';
+import updateJetstreamGitignore from '../updaters/jetstream/updateJetstreamGitignore.js';
 export default function () {
-    installJetstreamGitignore();
+    updateJetstreamGitignore();
+    updateConfigJetstream();
 }
 //# sourceMappingURL=installViltDsJetstream.js.map
