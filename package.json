@@ -1,18 +1,18 @@
 {
   "name": "@obewds/vilt-ds",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "The official repository for the VILT Design System for the Vue.js, Inertia.js, Laravel, and Tailwind CSS web app stack that is turbocharged with Typescript and VueVentus.",
   "license": "MIT",
   "author": "Matt McT",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "npx rimraf dist && tsc",
     "pkg:org": "npm config set scope obewds",
     "tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
-    "bump:patch": "npm version patch && npx rimraf dist && npm run build",
-    "bump:minor": "npm version minor && npx rimraf dist && npm run build",
-    "bump:major": "npm version major && npx rimraf dist && npm run build"
+    "bump:patch": "npm version patch && npm run build",
+    "bump:minor": "npm version minor && npm run build",
+    "bump:major": "npm version major && npm run build"
   },
   "files": [
     "dist"

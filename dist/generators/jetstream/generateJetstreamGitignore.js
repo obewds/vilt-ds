@@ -12,7 +12,6 @@ ${developer}
 ${mac}
 
 ${windows}
-
 `;
 }
 //# sourceMappingURL=generateJetstreamGitignore.js.map
