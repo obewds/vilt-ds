@@ -1,15 +1,10 @@
 #!/usr/bin/env node
 // ./src/index.ts
 
-import gradientText from './helpers/gradientText.js'
+import cliStartMessage from './helpers/cliStartMessage.js'
 
-// show cli start message
-console.log(`
+import installViltDsJetstream from './installers/installViltDsJetstream.js'
 
+cliStartMessage()
 
-    ${gradientText('Welcome to the VILT DS CLI!')}
-    ${gradientText('---------------------------')}
-    Install VILT stack starter files with VILT DS powered by VueVentus.
-
-
-`)
+installViltDsJetstream()
