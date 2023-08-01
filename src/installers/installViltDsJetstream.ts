@@ -17,26 +17,22 @@ export default function (): void {
     if (ifProjectFileExists('/.gitignore')) {
 
         // extract the contents of the Laravel/Jetstream .gitignore file
-        const currentGitignore = fs.readFile(gitignoreFilepath, 'utf8', function(err, data): string {
+        const currentGitignore = fs.readFile(gitignoreFilepath, 'utf8', function(err, data) {
             
             // error check
             if (err) { throw err }
-
-            return data
+            
+            // If no error then add the contents of the extracted file to the cli gitignore generator method
+            // and overwrite the current gitignore file content wrapped in VILT DS gitignore code
+            fs.outputFileSync(gitignoreFilepath, gitignore(String(data)), { flag: 'w+' })
 
         })
 
-        // add the contents of the extracted file to the cli gitignore generator method
-        // and overwrite the current gitignore file content wrapped in VILT DS gitignore code
-        fs.outputFileSync(gitignoreFilepath, gitignore(String(currentGitignore)), { flag: 'w+' })
+    } else {
 
-        return
+        // otherwise just output a fresh gitignore file
+        fs.outputFileSync(gitignoreFilepath, gitignore(''), { flag: 'w+' })
 
     }
-
-    // otherwise just output a fresh gitignore file
-    fs.outputFileSync(gitignoreFilepath, gitignore(''), { flag: 'w+' })
-
-    return
 
 }
