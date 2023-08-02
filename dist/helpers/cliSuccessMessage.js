@@ -1,5 +1,5 @@
 // ./cli/helpers/cliSuccessMessage.ts
-import gradientText from './gradientText.js';
+import gradientText from './gradient-text.js';
 export default function (string, prefixLineBreak = false, suffixLineBreak = false) {
     if (prefixLineBreak) {
         console.log(' ');

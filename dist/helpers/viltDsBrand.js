@@ -1,4 +1,4 @@
 // ./src/helpers/viltDsBrand.ts
-import gradientText from './gradientText.js';
+import gradientText from './gradient-text.js';
 export default gradientText('VILT DS');
 //# sourceMappingURL=viltDsBrand.js.map

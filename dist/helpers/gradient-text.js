@@ -1,6 +1,6 @@
-// ./cli/helpers/gradientText.ts
+// ./cli/helpers/gradient-text.ts
 import gradient from 'gradient-string';
 export default function (string) {
     return gradient.pastel(string);
 }
-//# sourceMappingURL=gradientText.js.map
+//# sourceMappingURL=gradient-text.js.map
