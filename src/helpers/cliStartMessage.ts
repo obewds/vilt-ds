@@ -1,6 +1,6 @@
 // ./cli/helpers/cliStartMessage.ts
 
-import gradientText from './gradientText.js'
+import gradientText from './gradient-text.js'
 
 export default function (): void {
 

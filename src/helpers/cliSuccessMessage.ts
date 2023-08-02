@@ -1,6 +1,6 @@
 // ./cli/helpers/cliSuccessMessage.ts
 
-import gradientText from './gradientText.js'
+import gradientText from './gradient-text.js'
 
 export default function (string:string, prefixLineBreak:boolean = false, suffixLineBreak:boolean = false): void {
 
