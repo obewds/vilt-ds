@@ -1,13 +1,13 @@
-// ./src/installers/installJetstreamTailwindConfig.ts
+// ./src/installers/installTsconfigJson.ts
 
 import fs from 'fs-extra'
 
-import generateJetstreamTypescriptConfig from '../generators/jetstream/generateJetstreamTypescriptConfig.js'
+import generateJetstreamTypescriptConfig from '../../generators/jetstream/generateJetstreamTypescriptConfig.js'
 
-import cliSuccessMessage from '../helpers/cliSuccessMessage.js'
-import cliWarningMessage from '../helpers/cliWarningMessage.js'
-import cwd from '../helpers/cwd.js'
-import projectFileDoesExist from '../helpers/projectFileDoesExist.js'
+import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
+import cliWarningMessage from '../../helpers/cliWarningMessage.js'
+import cwd from '../../helpers/cwd.js'
+import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
 
 export default function (): void {
 

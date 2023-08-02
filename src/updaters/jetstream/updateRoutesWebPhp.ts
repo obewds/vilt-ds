@@ -1,4 +1,4 @@
-// ./src/updaters/jetstream/updateConfigJetstream.ts
+// ./src/updaters/jetstream/updateRoutesWebPhp.ts
 
 import fs from 'fs-extra'
 
@@ -7,10 +7,28 @@ import cliWarningMessage from '../../helpers/cliWarningMessage.js'
 import cwd from '../../helpers/cwd.js'
 import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
 
+const newRoutesWebPhpCode = `});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+
+    Route::get('/vueventus', function () {
+        return Inertia::render('VueVentus');
+    })->name('vueventus');
+
+});`
+
 export default function (): void {
 
-    const filename = 'jetstream.php'
-    const filepath = '/config/' + filename
+    const filename = 'web.php'
+    const filepath = '/routes/' + filename
 
     if ( projectFileDoesExist(filepath) ) {
 
@@ -20,23 +38,20 @@ export default function (): void {
             if (err) { throw err }
 
             let modifiedData = String(data).replace(
-                '// Features::termsAndPrivacyPolicy()',
-                'Features::termsAndPrivacyPolicy()'
-            ).replace(
-                '// Features::api()',
-                'Features::api()'
+                '});',
+                newRoutesWebPhpCode
             )
             
             // If no error, then overwrite the current config/jetstream.php file content with the modifications
             fs.outputFileSync(cwd + filepath, modifiedData, { flag: 'w+' })
 
-            cliSuccessMessage(filepath + ' file updated successfully!', false, false)
+            cliSuccessMessage(cwd + filepath + ' file updated successfully!', false, false)
 
         })
 
     } else {
 
-        cliWarningMessage(filepath + ' not found, so no updates were made!', false, false)
+        cliWarningMessage(cwd + filepath + ' not found, so no updates were made!', false, false)
 
     }
 

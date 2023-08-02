@@ -1,13 +1,13 @@
-// ./src/installers/installJetstreamTailwindConfig.ts
+// ./src/installers/installTailwindConfigTs.ts
 
 import fs from 'fs-extra'
 
-import generateJetstreamTailwindConfig from '../generators/jetstream/generateJetstreamTailwindConfig.js'
+import generateJetstreamTailwindConfig from '../../generators/jetstream/generateJetstreamTailwindConfig.js'
 
-import cliSuccessMessage from '../helpers/cliSuccessMessage.js'
-import cliWarningMessage from '../helpers/cliWarningMessage.js'
-import cwd from '../helpers/cwd.js'
-import projectFileDoesExist from '../helpers/projectFileDoesExist.js'
+import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
+import cliWarningMessage from '../../helpers/cliWarningMessage.js'
+import cwd from '../../helpers/cwd.js'
+import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
 
 export default function (): void {
 
@@ -25,6 +25,5 @@ export default function (): void {
         cliWarningMessage(filepath + ' was found, so no changes were made!', false, false)
 
     }
-
 
 }

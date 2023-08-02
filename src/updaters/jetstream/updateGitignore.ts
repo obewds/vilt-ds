@@ -1,4 +1,4 @@
-// ./src/updaters/jetstream/updateJetstreamGitignore.ts
+// ./src/updaters/jetstream/updateGitignoreFile.ts
 
 import fs from 'fs-extra'
 
@@ -25,13 +25,13 @@ export default function (): void {
             // If no error, then overwrite the current gitignore file content wrapped in VILT DS gitignore code
             fs.outputFileSync(cwd + filepath, generateJetstreamGitignore(String(data)), { flag: 'w+' })
 
-            cliSuccessMessage(filepath + ' file updated successfully!', false, false)
+            cliSuccessMessage(cwd + filepath + ' file updated successfully!', false, false)
 
         })
 
     } else {
 
-        cliWarningMessage(filepath + ' not found, so no updates were made!', false, false)
+        cliWarningMessage(cwd + filepath + ' not found, so no updates were made!', false, false)
 
     }
 

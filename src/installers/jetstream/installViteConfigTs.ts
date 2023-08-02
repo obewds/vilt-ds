@@ -1,13 +1,13 @@
-// ./src/installers/installJetstreamViteConfig.ts
+// ./src/installers/installViteConfigTs.ts
 
 import fs from 'fs-extra'
 
-import generateJetstreamViteConfig from '../generators/jetstream/generateJetstreamViteConfig.js'
+import generateJetstreamViteConfig from '../../generators/jetstream/generateJetstreamViteConfig.js'
 
-import cliSuccessMessage from '../helpers/cliSuccessMessage.js'
-import cliWarningMessage from '../helpers/cliWarningMessage.js'
-import cwd from '../helpers/cwd.js'
-import projectFileDoesExist from '../helpers/projectFileDoesExist.js'
+import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
+import cliWarningMessage from '../../helpers/cliWarningMessage.js'
+import cwd from '../../helpers/cwd.js'
+import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
 
 export default function (): void {
 
