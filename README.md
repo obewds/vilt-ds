@@ -16,7 +16,7 @@ Move ALL the installed files into repo root directory and out of the installed d
 composer require laravel/jetstream
 ```
 
-> It's highly advised to use Laravel Sail and Docker Desktop to make installation easier for both beginners and experts alike. This guid assumes your local dev machine has Docker Desktop installed as well as a Laravel Sail shortcut to remove the need to precede sail CLI commands from needing a `php` prefix!
+> It's highly advised to use Laravel Sail and Docker Desktop to make installation easier for both beginners and experts alike. This guide assumes your local dev machine has Docker Desktop installed as well as a Laravel Sail shortcut to remove the need to precede sail CLI commands from needing a `php` prefix!
 
 > It's also highly advised to use Inertia's SSR feature as it makes for more resilient Vue component code and functionality as a project evolves into a bigger project!
 
