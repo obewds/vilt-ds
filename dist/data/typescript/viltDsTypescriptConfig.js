@@ -1,20 +1,19 @@
-// ./src/generators/jetstream/generateJetstreamTypescriptConfig.ts
-export default function () {
-    return `{
+// ./src/data/typescript/viltDsTypescriptConfig.ts
+export default {
     "compilerOptions": {
         // A few notes:
         // - Vue 3 supports ES2016+
         // - For Vite, the actual compilation target is determined by the
-        //   ` + "`build.target`" + ` option in the Vite config.
-        //   So don't change the ` + "`target`" + ` field here. It has to be
-        //   at least ` + "`ES2020`" + ` for dynamic ` + "`import()`" + `s and ` + "`import.meta`" + ` to work correctly.
-        // - If you are not using Vite, feel free to override the ` + "`target`" + ` field.
+        //   `build.target` option in the Vite config.
+        //   So don't change the `target` field here. It has to be
+        //   at least `ES2020` for dynamic `import()`s and `import.meta` to work correctly.
+        // - If you are not using Vite, feel free to override the `target` field.
         "target": "ESNext",
         "module": "ESNext",
         "strict": true,
-        // ` + '"noImplicitThis": true' + ` is part of ` + "`strict`" + `
-        // Added again here in case some users decide to disable ` + "`strict`" + `.
-        // This enables stricter inference for data properties on ` + "`this`" + `.
+        // "noImplicitThis": true is part of `strict`
+        // Added again here in case some users decide to disable `strict`.
+        // This enables stricter inference for data properties on `this`.
         "noImplicitThis": true,
         "noEmit": true,
         // "noUnusedLocals": true,
@@ -32,12 +31,12 @@ export default function () {
         "resolveJsonModule": true,
         "useDefineForClassFields": true,
         "forceConsistentCasingInFileNames": true,
-        "importHelpers": true, // ?
-        "experimentalDecorators": true, // ?
+        "importHelpers": true,
+        "experimentalDecorators": true,
         "allowImportingTsExtensions": true,
-        "allowJs": true, // ?
-        "allowSyntheticDefaultImports": true, // ?
-        "sourceMap": true, // ?
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
         "baseUrl": ".",
         "types": [
             "vite/client",
@@ -71,7 +70,5 @@ export default function () {
         "node_modules",
         "vendor"
     ],
-}
-`;
-}
-//# sourceMappingURL=generateJetstreamTypescriptConfig.js.map
+};
+//# sourceMappingURL=viltDsTypescriptConfig.js.map

@@ -10,7 +10,6 @@ export default [
     '@tailwindcss/aspect-ratio',
     '@headlessui/tailwindcss',
     'tailwind-scrollbar',
-    '@types/gsap',
     'gsap',
 ];
 //# sourceMappingURL=viltDsJetstreamDeps.js.map
