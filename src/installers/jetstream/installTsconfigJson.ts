@@ -2,7 +2,7 @@
 
 import installWhenNoFile from '../../helpers/installWhenNoFile.js'
 
-import viltDsTypescriptConfig from '../../data/typescript/viltDsTypescriptConfig.js'
+import viltDsTypescriptConfig from '../../data/typescript/vilt-ds-typescript-config.js'
 
 export default function (): void {
 

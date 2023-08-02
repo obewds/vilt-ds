@@ -2,10 +2,11 @@
 
 import installWhenNoFile from '../../helpers/installWhenNoFile.js'
 
-import viltDsAppColorsJson from '../../data/colors/viltDsAppColorsJson.js'
+import viltDsDefaultColorPalette from '../../data/colors/vilt-ds-default-tailwind-color-palette.js'
+
 
 export default function (): void {
 
-    installWhenNoFile( '/resources/js/', 'app.colors.json', JSON.stringify(viltDsAppColorsJson, null, 4) )
+    installWhenNoFile( '/resources/js/', 'app.colors.json', JSON.stringify(viltDsDefaultColorPalette, null, 4) )
 
 }

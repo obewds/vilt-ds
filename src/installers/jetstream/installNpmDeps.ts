@@ -3,7 +3,7 @@
 import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
 import run from '../../helpers/run.js'
 
-import viltDsJetstreamDeps from '../../data/npm/viltDsJetstreamDeps.js'
+import viltDsJetstreamDeps from '../../data/npm/vilt-ds-jetstream-deps.js'
 
 export default function (): void {
 
