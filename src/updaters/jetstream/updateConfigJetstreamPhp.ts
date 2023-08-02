@@ -30,13 +30,13 @@ export default function (): void {
             // If no error, then overwrite the current config/jetstream.php file content with the modifications
             fs.outputFileSync(cwd + filepath, modifiedData, { flag: 'w+' })
 
-            cliSuccessMessage(cwd + filepath + ' file updated successfully!', false, false)
+            cliSuccessMessage('.' + filepath + ' file was updated successfully!', false, false)
 
         })
 
     } else {
 
-        cliWarningMessage(cwd + filepath + ' not found, so no updates were made!', false, false)
+        cliWarningMessage('.' + filepath + ' was not found, so no updates were made!', false, false)
 
     }
 

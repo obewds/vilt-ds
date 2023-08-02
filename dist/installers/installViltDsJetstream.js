@@ -1,4 +1,5 @@
 // ./src/installers/installViltDsJetstream.ts
+import installAppColorsJson from '../installers/jetstream/installAppColorsJson.js';
 import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js';
 import installNpmDeps from '../installers/jetstream/installNpmDeps.js';
 import installTailwindConfigTs from '../installers/jetstream/installTailwindConfigTs.js';
@@ -13,6 +14,7 @@ export default function () {
     installNpmDeps();
     installVscodeExtensionsJson();
     installTsconfigJson();
+    installAppColorsJson();
     installTailwindConfigTs();
     installViteConfigTs();
     updateConfigJetstreamPhp();

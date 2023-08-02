@@ -10,10 +10,10 @@ export default function () {
     const filepath = '/' + filename;
     if (!projectFileDoesExist(filepath)) {
         fs.outputFileSync(cwd + filepath, generateViteConfigTs(), { flag: 'w+' });
-        cliSuccessMessage(filepath + ' file was created successfully!', false, false);
+        cliSuccessMessage('.' + filepath + ' file was created successfully!', false, false);
     }
     else {
-        cliWarningMessage(filepath + ' was found, so no changes were made!', false, false);
+        cliWarningMessage('A .' + filepath + ' file was found, so no changes were made!', false, false);
     }
 }
 //# sourceMappingURL=installViteConfigTs.js.map

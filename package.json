@@ -1,6 +1,6 @@
 {
   "name": "@obewds/vilt-ds",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "The official repository for the VILT Design System for the Vue.js, Inertia.js, Laravel, and Tailwind CSS web app stack that is turbocharged with Typescript and VueVentus.",
   "license": "MIT",
   "author": "Matt McT",
