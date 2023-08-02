@@ -1,4 +1,4 @@
-// ./src/data/gitignore/mac.ts
+// ./src/data/gitignore/vilt-ds-mac-gitignore.ts
 export default `# MacOS General
 .DS_Store
 .AppleDouble
@@ -22,4 +22,4 @@ export default `# MacOS General
 Network Trash Folder
 Temporary Items
 .apdisk`;
-//# sourceMappingURL=mac.js.map
+//# sourceMappingURL=vilt-ds-mac-gitignore.js.map

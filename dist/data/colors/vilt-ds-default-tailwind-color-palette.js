@@ -1,4 +1,4 @@
-// ./src/data/colors/viltDsAppColorsJson.ts
+// ./src/data/colors/vilt-ds-default-tailwind-color-palette.ts
 export default {
     "black": "#1a1a1a",
     "white": "#f8f8f8",
@@ -255,4 +255,4 @@ export default {
         "900": "#463726"
     }
 };
-//# sourceMappingURL=viltDsAppColorsJson.js.map
+//# sourceMappingURL=vilt-ds-default-tailwind-color-palette.js.map

@@ -1,4 +1,4 @@
-// ./src/data/gitignore/windows.ts
+// ./src/data/gitignore/vilt-ds-windows-gitignore.ts
 export default `# Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -23,4 +23,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk`;
-//# sourceMappingURL=windows.js.map
+//# sourceMappingURL=vilt-ds-windows-gitignore.js.map

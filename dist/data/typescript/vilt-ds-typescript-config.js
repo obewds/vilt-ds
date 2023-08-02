@@ -1,4 +1,4 @@
-// ./src/data/typescript/viltDsTypescriptConfig.ts
+// ./src/data/typescript/vilt-ds-typescript-config.ts
 export default {
     "compilerOptions": {
         // A few notes:
@@ -71,4 +71,4 @@ export default {
         "vendor"
     ],
 };
-//# sourceMappingURL=viltDsTypescriptConfig.js.map
+//# sourceMappingURL=vilt-ds-typescript-config.js.map

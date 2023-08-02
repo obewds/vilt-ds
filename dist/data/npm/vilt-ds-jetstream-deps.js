@@ -1,4 +1,4 @@
-// ./src/data/npm/viltDsJetstreamDeps.ts
+// ./src/data/npm/vilt-ds-jetstream-deps.ts
 export default [
     'typescript',
     '@types/node',
@@ -12,4 +12,4 @@ export default [
     'tailwind-scrollbar',
     'gsap',
 ];
-//# sourceMappingURL=viltDsJetstreamDeps.js.map
+//# sourceMappingURL=vilt-ds-jetstream-deps.js.map

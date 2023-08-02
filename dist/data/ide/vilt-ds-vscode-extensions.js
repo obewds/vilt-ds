@@ -1,4 +1,4 @@
-// ./src/data/ide/viltDsVsCodeExtensions.ts
+// ./src/data/ide/vilt-ds-vscode-extensions.ts
 let extensions = [
     'vue.volar',
     'vue.vscode-typescript-vue-plugin',
@@ -26,4 +26,4 @@ let viltDsVsCodeExtensions = {
 };
 extensions.forEach((extension) => viltDsVsCodeExtensions.recommendations.push(extension));
 export default viltDsVsCodeExtensions;
-//# sourceMappingURL=viltDsVsCodeExtensions.js.map
+//# sourceMappingURL=vilt-ds-vscode-extensions.js.map
