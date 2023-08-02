@@ -2,7 +2,7 @@
 
 import fs from 'fs-extra'
 
-import generateJetstreamViteConfig from '../../generators/jetstream/generateJetstreamViteConfig.js'
+import generateViteConfigTs from '../../generators/jetstream/generateViteConfigTs.js'
 
 import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
 import cliWarningMessage from '../../helpers/cliWarningMessage.js'
@@ -16,7 +16,7 @@ export default function (): void {
 
     if ( ! projectFileDoesExist(filepath) ) {
 
-        fs.outputFileSync(cwd + filepath, generateJetstreamViteConfig(), { flag: 'w+' })
+        fs.outputFileSync(cwd + filepath, generateViteConfigTs(), { flag: 'w+' })
 
         cliSuccessMessage(filepath + ' file was created successfully!', false, false)
 
