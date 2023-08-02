@@ -18,11 +18,11 @@ export default function (): void {
 
         fs.outputFileSync(cwd + filepath, JSON.stringify(viltDsTypescriptConfig, null, 4), { flag: 'w+' })
 
-        cliSuccessMessage(cwd + filepath + ' file was created successfully!', false, false)
+        cliSuccessMessage('.' + filepath + ' file was created successfully!', false, false)
 
     } else {
 
-        cliWarningMessage(cwd + filepath + ' was found, so no changes were made!', false, false)
+        cliWarningMessage('A .' + filepath + ' file was found, so no changes were made!', false, false)
 
     }
 
