@@ -17,11 +17,11 @@ export default function () {
             }
             // If no error, then overwrite the current gitignore file content wrapped in VILT DS gitignore code
             fs.outputFileSync(cwd + filepath, generateGitignore(String(data)), { flag: 'w+' });
-            cliSuccessMessage(cwd + filepath + ' file updated successfully!', false, false);
+            cliSuccessMessage('.' + filepath + ' file was updated successfully!', false, false);
         });
     }
     else {
-        cliWarningMessage(cwd + filepath + ' not found, so no updates were made!', false, false);
+        cliWarningMessage('.' + filepath + ' was not found, so no updates were made!', false, false);
     }
 }
 //# sourceMappingURL=updateGitignore.js.map
