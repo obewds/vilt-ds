@@ -7,23 +7,10 @@ import cliWarningMessage from '../../helpers/cliWarningMessage.js'
 import cwd from '../../helpers/cwd.js'
 import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
 
-const newRoutesWebPhpCode = `});
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-
+const newRoutesWebPhpCode = `})->name('dashboard');
     Route::get('/vueventus', function () {
         return Inertia::render('VueVentus');
-    })->name('vueventus');
-
-});`
+    })->name('vueventus');`
 
 export default function (): void {
 
@@ -38,7 +25,7 @@ export default function (): void {
             if (err) { throw err }
 
             let modifiedData = String(data).replace(
-                '});',
+                `    })->name('dashboard');`,
                 newRoutesWebPhpCode
             )
             
