@@ -1,6 +1,6 @@
-// ./src/updaters/jetstream/updateGitignoreFile.ts
+// ./src/updaters/jetstream/updateGitignore.ts
 import fs from 'fs-extra';
-import generateJetstreamGitignore from '../../generators/jetstream/generateJetstreamGitignore.js';
+import generateGitignore from '../../generators/jetstream/generateGitignore.js';
 import cliSuccessMessage from '../../helpers/cliSuccessMessage.js';
 import cliWarningMessage from '../../helpers/cliWarningMessage.js';
 import cwd from '../../helpers/cwd.js';
@@ -16,7 +16,7 @@ export default function () {
                 throw err;
             }
             // If no error, then overwrite the current gitignore file content wrapped in VILT DS gitignore code
-            fs.outputFileSync(cwd + filepath, generateJetstreamGitignore(String(data)), { flag: 'w+' });
+            fs.outputFileSync(cwd + filepath, generateGitignore(String(data)), { flag: 'w+' });
             cliSuccessMessage(cwd + filepath + ' file updated successfully!', false, false);
         });
     }

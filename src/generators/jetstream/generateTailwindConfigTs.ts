@@ -1,6 +1,8 @@
-// ./src/generators/jetstream/generateJetstreamTailwindConfig.ts
-export default function () {
-    return `// ./tailwind.config.ts
+// ./src/generators/jetstream/generateTailwindConfigTs.ts
+
+export default function (): string {
+
+return `// ./tailwind.config.ts
 
 import type { Config } from 'tailwindcss'
 
@@ -98,5 +100,5 @@ export default <Partial<Config>>{
     plugins: [aspectRatio, forms, typography, headlessUiTailwindCss, tailwindScrollbar],
 }
 `;
+
 }
-//# sourceMappingURL=generateJetstreamTailwindConfig.js.map

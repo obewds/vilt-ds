@@ -2,7 +2,7 @@
 
 import fs from 'fs-extra'
 
-import generateJetstreamTailwindConfig from '../../generators/jetstream/generateJetstreamTailwindConfig.js'
+import generateTailwindConfigTs from '../../generators/jetstream/generateTailwindConfigTs.js'
 
 import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
 import cliWarningMessage from '../../helpers/cliWarningMessage.js'
@@ -16,7 +16,7 @@ export default function (): void {
 
     if ( ! projectFileDoesExist(filepath) ) {
 
-        fs.outputFileSync(cwd + filepath, generateJetstreamTailwindConfig(), { flag: 'w+' })
+        fs.outputFileSync(cwd + filepath, generateTailwindConfigTs(), { flag: 'w+' })
 
         cliSuccessMessage(filepath + ' file was created successfully!', false, false)
 

@@ -4,23 +4,10 @@ import cliSuccessMessage from '../../helpers/cliSuccessMessage.js';
 import cliWarningMessage from '../../helpers/cliWarningMessage.js';
 import cwd from '../../helpers/cwd.js';
 import projectFileDoesExist from '../../helpers/projectFileDoesExist.js';
-const newRoutesWebPhpCode = `});
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-
+const newRoutesWebPhpCode = `})->name('dashboard');
     Route::get('/vueventus', function () {
         return Inertia::render('VueVentus');
-    })->name('vueventus');
-
-});`;
+    })->name('vueventus');`;
 export default function () {
     const filename = 'web.php';
     const filepath = '/routes/' + filename;
@@ -30,7 +17,7 @@ export default function () {
             if (err) {
                 throw err;
             }
-            let modifiedData = String(data).replace('});', newRoutesWebPhpCode);
+            let modifiedData = String(data).replace(`    })->name('dashboard');`, newRoutesWebPhpCode);
             // If no error, then overwrite the current config/jetstream.php file content with the modifications
             fs.outputFileSync(cwd + filepath, modifiedData, { flag: 'w+' });
             cliSuccessMessage(cwd + filepath + ' file updated successfully!', false, false);

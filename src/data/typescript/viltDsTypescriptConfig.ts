@@ -1,22 +1,20 @@
-// ./src/generators/jetstream/generateJetstreamTypescriptConfig.ts
+// ./src/data/typescript/viltDsTypescriptConfig.ts
 
-export default function (): string {
-
-return `{
+export default {
     "compilerOptions": {
         // A few notes:
         // - Vue 3 supports ES2016+
         // - For Vite, the actual compilation target is determined by the
-        //   ` + "`build.target`" + ` option in the Vite config.
-        //   So don't change the ` + "`target`" + ` field here. It has to be
-        //   at least ` + "`ES2020`" + ` for dynamic ` + "`import()`" + `s and ` + "`import.meta`" + ` to work correctly.
-        // - If you are not using Vite, feel free to override the ` + "`target`" + ` field.
+        //   `build.target` option in the Vite config.
+        //   So don't change the `target` field here. It has to be
+        //   at least `ES2020` for dynamic `import()`s and `import.meta` to work correctly.
+        // - If you are not using Vite, feel free to override the `target` field.
         "target": "ESNext",
         "module": "ESNext",
         "strict": true,
-        // ` + '"noImplicitThis": true' + ` is part of ` + "`strict`" + `
-        // Added again here in case some users decide to disable ` + "`strict`" + `.
-        // This enables stricter inference for data properties on ` + "`this`" + `.
+        // "noImplicitThis": true is part of `strict`
+        // Added again here in case some users decide to disable `strict`.
+        // This enables stricter inference for data properties on `this`.
         "noImplicitThis": true,
         "noEmit": true,
         // "noUnusedLocals": true,
@@ -73,7 +71,4 @@ return `{
         "node_modules",
         "vendor"
     ],
-}
-`;
-
 }

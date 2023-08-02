@@ -10,7 +10,6 @@ export type ViltDsJetstreamDependency = 'typescript'
 | '@tailwindcss/aspect-ratio'
 | '@headlessui/tailwindcss'
 | 'tailwind-scrollbar'
-| '@types/gsap'
 | 'gsap'
 
 export default [
@@ -24,6 +23,5 @@ export default [
     '@tailwindcss/aspect-ratio',
     '@headlessui/tailwindcss',
     'tailwind-scrollbar',
-    '@types/gsap',
     'gsap',
 ] as Array<ViltDsJetstreamDependency>

@@ -1,8 +1,6 @@
-// ./src/generators/jetstream/generateJetstreamViteConfig.ts
-
-export default function (): string {
-
-return `// ./vite.config.ts
+// ./src/generators/jetstream/generateViteConfigTs.ts
+export default function () {
+    return `// ./vite.config.ts
 
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
@@ -33,5 +31,5 @@ export default defineConfig({
     },
 })
 `;
-
 }
+//# sourceMappingURL=generateViteConfigTs.js.map

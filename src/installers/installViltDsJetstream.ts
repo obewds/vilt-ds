@@ -3,6 +3,7 @@
 import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js'
 import installNpmDeps from '../installers/jetstream/installNpmDeps.js'
 import installTailwindConfigTs from '../installers/jetstream/installTailwindConfigTs.js'
+import installTsconfigJson from '../installers/jetstream/installTsconfigJson.js'
 import installViteConfigTs from '../installers/jetstream/installViteConfigTs.js'
 
 import updateConfigJetstreamPhp from '../updaters/jetstream/updateConfigJetstreamPhp.js'
@@ -17,6 +18,8 @@ export default function (): void {
     installNpmDeps()
 
     installVscodeExtensionsJson()
+
+    installTsconfigJson()
 
     installTailwindConfigTs()
 
