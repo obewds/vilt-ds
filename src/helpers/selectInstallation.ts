@@ -2,7 +2,7 @@
 
 import inquirer from 'inquirer'
 
-import viltDsBrand from '../helpers/viltDsBrand.js'
+import viltDsBrand from '../helpers/vilt-ds-brand.js'
 
 export type ViltDsInstallationChoice = 'Install VILT DS Into A Laravel Jetstream Starter App' | null
 
