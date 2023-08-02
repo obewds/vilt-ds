@@ -1,13 +1,10 @@
 // ./src/updaters/jetstream/updateAppBladePhp.ts
 
-import fs from 'fs-extra'
+import updateWhenFileExists from '../../helpers/updateWhenFileExists.js'
 
-import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
-import cliWarningMessage from '../../helpers/cliWarningMessage.js'
-import cwd from '../../helpers/cwd.js'
-import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
+export default function (): void {
 
-const newCode = `<!DOCTYPE html>
+updateWhenFileExists( '/resources/views/', 'app.blade.php', `<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
@@ -49,24 +46,6 @@ const newCode = `<!DOCTYPE html>
     </body>
 
 </html>
-`
-
-export default function (): void {
-
-    const filename = 'app.blade.php'
-    const filepath = '/resources/views/' + filename
-
-    if ( projectFileDoesExist(filepath) ) {
-
-        // If no error, then overwrite the current config/jetstream.php file content with the modifications
-        fs.outputFileSync(cwd + filepath, newCode, { flag: 'w+' })
-
-        cliSuccessMessage('.' + filepath + ' file was updated successfully!', false, false)
-
-    } else {
-
-        cliWarningMessage('.' + filepath + ' was not found, so no updates were made!', false, false)
-
-    }
+` )
 
 }
