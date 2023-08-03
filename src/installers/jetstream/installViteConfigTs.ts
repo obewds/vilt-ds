@@ -1,6 +1,6 @@
 // ./src/installers/jetstream/installViteConfigTs.ts
 
-import installWhenNoFile from '../../helpers/installWhenNoFile.js'
+import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
 import generateViteConfigTs from '../../generators/jetstream/generateViteConfigTs.js'
 

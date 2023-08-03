@@ -1,6 +1,6 @@
 // ./src/installers/jetstream/installAppColorsJson.ts
 
-import installWhenNoFile from '../../helpers/installWhenNoFile.js'
+import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
 import viltDsDefaultColorPalette from '../../data/colors/vilt-ds-default-tailwind-color-palette.js'
 
