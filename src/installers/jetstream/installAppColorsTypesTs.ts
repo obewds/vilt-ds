@@ -2,7 +2,7 @@
 
 import installWhenNoFile from '../../helpers/installWhenNoFile.js'
 
-import generateAppColorsTypesTs from '../../generators/jetstream/generateAppColorsTypesTs.js'
+import generateAppColorsTypesTs from '../../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
 
 export default function (): void {
 

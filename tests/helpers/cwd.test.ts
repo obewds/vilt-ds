@@ -5,7 +5,7 @@ import cwd from '../../src/helpers/cwd'
 
 describe('./src/helpers/cwd module', () => {
 
-    test('module can be imported successfully', () => {
+    test('module can be imported and a value can be accessed successfully', () => {
 
         let value = cwd
 

@@ -7,7 +7,7 @@ import generateGitignore from '../../generators/jetstream/generateGitignore.js'
 import cliSuccessMessage from '../../helpers/cli-success-message.js'
 import cliWarningMessage from '../../helpers/cli-warning-message.js'
 import cwd from '../../helpers/cwd.js'
-import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
+import projectFileDoesExist from '../../helpers/project-file-does-exist.js'
 
 export default function (): void {
 

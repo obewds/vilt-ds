@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 // ./src/index.ts
 
-import type { ViltDsInstallationChoice } from './helpers/selectInstallation.js'
+import type { ViltDsInstallationChoice } from './helpers/select-installation.js'
 
 import cliStartMessage from './helpers/cli-start-message.js'
-import selectInstallation from './helpers/selectInstallation.js'
+import selectInstallation from './helpers/select-installation.js'
 
 import installViltDsJetstream from './installers/installViltDsJetstream.js'
 

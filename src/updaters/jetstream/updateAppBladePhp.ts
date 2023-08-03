@@ -1,6 +1,6 @@
 // ./src/updaters/jetstream/updateAppBladePhp.ts
 
-import updateWhenFileExists from '../../helpers/updateWhenFileExists.js'
+import updateWhenFileExists from '../../helpers/update-when-file-exists.js'
 
 export default function (): void {
 
