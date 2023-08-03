@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateTailwindConfigTs.ts
+// ./src/generators/jetstream/generate-tailwind-config-ts.ts
 export default function () {
     return `// ./tailwind.config.ts
 
@@ -99,4 +99,4 @@ export default <Partial<Config>>{
 }
 `;
 }
-//# sourceMappingURL=generateTailwindConfigTs.js.map
+//# sourceMappingURL=generate-tailwind-config-ts.js.map

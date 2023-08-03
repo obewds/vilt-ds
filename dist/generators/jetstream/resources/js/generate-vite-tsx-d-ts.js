@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateViteTsxDts.ts
+// ./src/generators/jetstream/resources/js/generate-vite-tsx-d-ts.ts
 export default function () {
     return `// ./resources/js/vite-tsx.d.ts
 
@@ -18,4 +18,4 @@ declare global {
 }
 `;
 }
-//# sourceMappingURL=generateViteTsxDts.js.map
+//# sourceMappingURL=generate-vite-tsx-d-ts.js.map
