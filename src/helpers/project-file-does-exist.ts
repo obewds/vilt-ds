@@ -9,12 +9,13 @@ export default function (filepath:string): boolean {
     const currentFilepath = cwd + filepath
 
     try {
-        if (fs.existsSync(currentFilepath)) {
+        if (fs.existsSync(currentFilepath) && filepath !== '') {
             return true
+        } else {
+            return false
         }
     } catch(err) {
         console.error(err)
-        return false
     }
 
 }
