@@ -1,6 +1,6 @@
 // ./src/installers/jetstream/installNpmDeps.ts
 
-import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
+import cliSuccessMessage from '../../helpers/cli-success-message.js'
 import run from '../../helpers/run.js'
 
 import viltDsJetstreamDeps from '../../data/npm/vilt-ds-jetstream-deps.js'

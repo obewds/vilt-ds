@@ -4,8 +4,8 @@ import fs from 'fs-extra'
 
 import generateGitignore from '../../generators/jetstream/generateGitignore.js'
 
-import cliSuccessMessage from '../../helpers/cliSuccessMessage.js'
-import cliWarningMessage from '../../helpers/cliWarningMessage.js'
+import cliSuccessMessage from '../../helpers/cli-success-message.js'
+import cliWarningMessage from '../../helpers/cli-warning-message.js'
 import cwd from '../../helpers/cwd.js'
 import projectFileDoesExist from '../../helpers/projectFileDoesExist.js'
 
