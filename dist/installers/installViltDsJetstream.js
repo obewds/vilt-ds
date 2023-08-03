@@ -1,4 +1,6 @@
 // ./src/installers/installViltDsJetstream.ts
+import installAppBladePhp from './jetstream/resources/views/install-app-blade-php.js';
+import installJetstreamGsapTs from './jetstream/resources/js/install-jetstream-gsap-ts.js';
 import installAppColorsJson from '../installers/jetstream/installAppColorsJson.js';
 import installAppColorsTypesTs from '../installers/jetstream/installAppColorsTypesTs.js';
 import installAppJetstreamTypesTs from '../installers/jetstream/installAppJetstreamTypesTs.js';
@@ -15,12 +17,10 @@ import installViteConfigTs from '../installers/jetstream/installViteConfigTs.js'
 import installViteTsxDts from '../installers/jetstream/installViteTsxDts.js';
 import installViteWindowDts from '../installers/jetstream/installViteWindowDts.js';
 import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js';
-import updateAppBladePhp from '../updaters/jetstream/updateAppBladePhp.js';
 import updateConfigJetstreamPhp from '../updaters/jetstream/updateConfigJetstreamPhp.js';
 import updateGitignore from '../updaters/jetstream/updateGitignore.js';
 import updatePackageJson from '../updaters/jetstream/updatePackageJson.js';
 import updateRoutesWebPhp from '../updaters/jetstream/updateRoutesWebPhp.js';
-import installJetstreamGsapTs from './jetstream/resources/js/install-jetstream-gsap-ts.js';
 export default function () {
     // update the app gitignore file for VILT DS
     updateGitignore();
@@ -46,7 +46,7 @@ export default function () {
     installAppVvClassesTs();
     installJetstreamGsapTs();
     // install laravel blade files
-    updateAppBladePhp();
+    installAppBladePhp();
     // update laravel php files for VILT DS
     updateConfigJetstreamPhp();
     updateRoutesWebPhp();

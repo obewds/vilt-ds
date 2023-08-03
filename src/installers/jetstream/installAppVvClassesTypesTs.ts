@@ -1,8 +1,8 @@
 // ./src/installers/jetstream/installAppVvClassesTypesTs.ts
 
-import installWhenNoFile from '../../helpers/installWhenNoFile.js'
+import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
-import generateAppVvClassesTypesTs from '../../generators/jetstream/generateAppVvClassesTypesTs.js'
+import generateAppVvClassesTypesTs from '../../generators/jetstream/resources/js/Types/generate-app-vv-classes-types-ts.js'
 
 export default function (): void {
 

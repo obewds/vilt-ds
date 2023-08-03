@@ -1,6 +1,6 @@
 // ./src/installers/jetstream/installTsconfigJson.ts
 
-import installWhenNoFile from '../../helpers/installWhenNoFile.js'
+import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
 import viltDsTypescriptConfig from '../../data/typescript/vilt-ds-typescript-config.js'
 

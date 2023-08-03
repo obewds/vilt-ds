@@ -1,6 +1,6 @@
 // ./src/installers/jetstream/installViteTsxDts.ts
 
-import installWhenNoFile from '../../helpers/installWhenNoFile.js'
+import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
 import generateViteTsxDts from '../../generators/jetstream/generateViteTsxDts.js'
 

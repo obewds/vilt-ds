@@ -1,6 +1,6 @@
 // ./src/installers/jetstream/installVscodeExtensionsJson.ts
 
-import installWhenNoFile from '../../helpers/installWhenNoFile.js'
+import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
 import viltDsVscodeExtensions from '../../data/ide/vilt-ds-vscode-extensions.js'
 
