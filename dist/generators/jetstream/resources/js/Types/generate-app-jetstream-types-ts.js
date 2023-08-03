@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateAppJetstreamTypesTs.ts
+// ./src/generators/jetstream/resources/js/Types/generate-app-jetstream-types-ts.ts
 export default function () {
     return `// ./resources/js/Types/app-jetstream-types.ts
 
@@ -111,4 +111,4 @@ export interface UsePageSharedDataProps extends PageProps {
 }
 `;
 }
-//# sourceMappingURL=generateAppJetstreamTypesTs.js.map
+//# sourceMappingURL=generate-app-jetstream-types-ts.js.map

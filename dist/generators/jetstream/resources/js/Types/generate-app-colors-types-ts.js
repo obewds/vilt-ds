@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateAppColorsTypesTs.ts
+// ./src/generators/jetstream/resources/js/Types/generate-app-colors-types-ts.ts
 export default function () {
     return `// ./resources/js/Types/app-colors-types.ts
 
@@ -110,4 +110,4 @@ export type VvAppDefaultColors = VvAppGenericColors<VvAppDefaultTintsShades>
 export type VvAppCompleteColors = VvAppGenericCompleteColors<VvAppDefaultTintsShades>
 `;
 }
-//# sourceMappingURL=generateAppColorsTypesTs.js.map
+//# sourceMappingURL=generate-app-colors-types-ts.js.map

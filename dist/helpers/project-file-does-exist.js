@@ -1,4 +1,4 @@
-// ./src/helpers/projectFileDoesExist.ts
+// ./src/helpers/project-file-does-exist.ts
 import fs from 'fs-extra';
 import cwd from './cwd.js';
 export default function (filepath) {
@@ -13,4 +13,4 @@ export default function (filepath) {
         return false;
     }
 }
-//# sourceMappingURL=projectFileDoesExist.js.map
+//# sourceMappingURL=project-file-does-exist.js.map

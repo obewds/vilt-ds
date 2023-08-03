@@ -1,5 +1,5 @@
-// ./src/updaters/jetstream/updateAppBladePhp.ts
-import updateWhenFileExists from '../../helpers/update-when-file-exists.js';
+// ./src/generators/jetstream/resources/views/generate-app-blade-php.ts
+import updateWhenFileExists from '../../../../helpers/update-when-file-exists.js';
 export default function () {
     updateWhenFileExists('/resources/views/', 'app.blade.php', `<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -45,4 +45,4 @@ export default function () {
 </html>
 `);
 }
-//# sourceMappingURL=updateAppBladePhp.js.map
+//# sourceMappingURL=generate-app-blade-php.js.map

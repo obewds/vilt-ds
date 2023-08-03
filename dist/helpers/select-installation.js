@@ -1,4 +1,4 @@
-// ./src/helpers/selectInstallation.ts
+// ./src/helpers/select-installation.ts
 import inquirer from 'inquirer';
 import viltDsBrand from '../helpers/vilt-ds-brand.js';
 export default async function () {
@@ -13,4 +13,4 @@ export default async function () {
     });
     return answers.installChoice;
 }
-//# sourceMappingURL=selectInstallation.js.map
+//# sourceMappingURL=select-installation.js.map

@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateAppVvClassesTypesTs.ts
+// ./src/generators/jetstream/resources/js/Types/generate-app-vv-classes-types-ts.ts
 export default function () {
     return `// ./resources/js/Types/app-vv-classes-types.ts
 
@@ -57,4 +57,4 @@ export interface AppVvClasses {
 }
 `;
 }
-//# sourceMappingURL=generateAppVvClassesTypesTs.js.map
+//# sourceMappingURL=generate-app-vv-classes-types-ts.js.map

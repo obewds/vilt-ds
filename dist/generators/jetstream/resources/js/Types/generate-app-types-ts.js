@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateAppTypesTs.ts
+// ./src/generators/jetstream/resources/js/Types/generate-app-types-ts.ts
 export default function () {
     return `// ./resources/js/Types/app-types.ts
 
@@ -46,4 +46,4 @@ export interface CreateInertiaAppProps {
 }
 `;
 }
-//# sourceMappingURL=generateAppTypesTs.js.map
+//# sourceMappingURL=generate-app-types-ts.js.map

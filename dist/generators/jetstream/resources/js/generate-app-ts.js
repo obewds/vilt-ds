@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateAppTs.ts
+// ./src/generators/jetstream/resources/js/generate-app-ts.ts
 export default function () {
     return `// ./resources/js/app.ts
 
@@ -40,4 +40,4 @@ const inertiaProps: CreateInertiaAppProps = {
 createInertiaApp(inertiaProps)
 `;
 }
-//# sourceMappingURL=generateAppTs.js.map
+//# sourceMappingURL=generate-app-ts.js.map

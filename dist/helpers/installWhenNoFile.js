@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import cliSuccessMessage from './cli-success-message.js';
 import cliWarningMessage from './cli-warning-message.js';
 import cwd from './cwd.js';
-import projectFileDoesExist from './projectFileDoesExist.js';
+import projectFileDoesExist from './project-file-does-exist.js';
 export default function (rootRelativePath, filenameStr, newFileData) {
     const filename = filenameStr;
     const filepath = rootRelativePath + filename;
