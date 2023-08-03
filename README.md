@@ -10,26 +10,32 @@ The official repository for the VILT Design System for the Vue.js, Inertia.js, L
 
 ## Installation Prep
 
-Create a new project repo (IE GitHub), and/or use a tool like GitHub Desktop to clone your repo locally to give your new project a root directory and corresponding versioning repository.
+Create a new project repo, and use git and/or a tool like GitHub Desktop to clone your repo locally and give your new project a root directory and corresponding versioning repository.
+
+Use a console to move into your new project root directory and run the Laravel/Sail command:
 
 ```bash
 curl -s https://laravel.build/new-app-name-here | bash
 ```
 
-Move ALL the installed files into repo root directory and out of the installed directory (IE the `new-app-name-here` directory in this example).
+Either move into the directory the Laravel installation process provides, or move ALL the Laravel installed files into your repo root directory manually, and out of the installed directory (IE the `new-app-name-here` directory in this example), which can then be deleted.
+
+Next up, install Laravel Jetstream from the project root directory with the command:
 
 ```bash
 composer require laravel/jetstream
 ```
 
-> It's highly advised to use Laravel Sail and Docker Desktop to make installation easier for both beginners and experts alike. This guide assumes your local dev machine has Docker Desktop installed as well as a Laravel Sail shortcut to remove the need to precede sail CLI commands from needing a `php` prefix!
+> It's highly advised to use Laravel Sail and Docker + Docker Desktop to make installation easier for both beginners and experts alike. This guide assumes your local dev machine has Docker and Docker Desktop installed as well as a Laravel Sail shortcut to remove the need to precede sail CLI commands with a `php` prefix!
 
-> It's also highly advised to use Inertia's SSR feature as it makes for more resilient Vue component code and functionality as a project evolves into a bigger project!
+> It's also highly advised to use Inertia's SSR feature for most projects, as it makes for more resilient and reusable Vue component code/functionality as a project evolves!
+
+Next up, launch Laravel Sail, and run an artisan command via Sail to install the Inertia Jetstream package files:
 
 ```bash
 # to start and use Laravel Sail run:
 sail up
-# then in a separate console run:
+# then open a separate console and run:
 sail artisan jetstream:install inertia --dark --ssr
 # or this to add Jetstream teams:
 sail artisan jetstream:install inertia --dark --ssr --teams
@@ -50,13 +56,13 @@ npm run dev
 
 ## Installing VILT DS
 
-And now you can finally install VILT DS with the following command:
+With Laravel/Jetstream/Inertia installed, you can install VILT DS with the following command:
 
 ```bash
 npm install -D @obewds/vilt-ds
 ```
 
-Once the VILT DS package is installed, and Laravel/Jetstream are installed, you can access and run the VILT DS installation CLI with:
+Once the VILT DS package is installed, you can access and run the VILT DS installation CLI with:
 
 ```bash
 npx vilt-ds
