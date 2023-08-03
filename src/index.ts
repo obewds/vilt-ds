@@ -3,7 +3,7 @@
 
 import type { ViltDsInstallationChoice } from './helpers/selectInstallation.js'
 
-import cliStartMessage from './helpers/cliStartMessage.js'
+import cliStartMessage from './helpers/cli-start-message.js'
 import selectInstallation from './helpers/selectInstallation.js'
 
 import installViltDsJetstream from './installers/installViltDsJetstream.js'
