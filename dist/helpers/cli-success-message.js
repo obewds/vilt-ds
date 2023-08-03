@@ -1,6 +1,6 @@
-// ./cli/helpers/cliSuccessMessage.ts
+// ./cli/helpers/cli-success-message.ts
 import gradientText from './gradient-text.js';
-export default function (string, prefixLineBreak = false, suffixLineBreak = false) {
+export default function (string, prefixLineBreak, suffixLineBreak) {
     if (prefixLineBreak) {
         console.log(' ');
     }
@@ -9,4 +9,4 @@ export default function (string, prefixLineBreak = false, suffixLineBreak = fals
         console.log(' ');
     }
 }
-//# sourceMappingURL=cliSuccessMessage.js.map
+//# sourceMappingURL=cli-success-message.js.map

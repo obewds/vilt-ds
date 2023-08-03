@@ -1,6 +1,6 @@
-// ./cli/helpers/cliWarningMessage.ts
+// ./cli/helpers/cli-warning-message.ts
 import gradient from 'gradient-string';
-export default function (string, prefixLineBreak = false, suffixLineBreak = false) {
+export default function (string, prefixLineBreak, suffixLineBreak) {
     if (prefixLineBreak) {
         console.log(' ');
     }
@@ -9,4 +9,4 @@ export default function (string, prefixLineBreak = false, suffixLineBreak = fals
         console.log(' ');
     }
 }
-//# sourceMappingURL=cliWarningMessage.js.map
+//# sourceMappingURL=cli-warning-message.js.map

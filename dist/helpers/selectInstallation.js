@@ -1,6 +1,6 @@
 // ./src/helpers/selectInstallation.ts
 import inquirer from 'inquirer';
-import viltDsBrand from '../helpers/viltDsBrand.js';
+import viltDsBrand from '../helpers/vilt-ds-brand.js';
 export default async function () {
     let choices = [
         'Install VILT DS Into A Laravel Jetstream Starter App',

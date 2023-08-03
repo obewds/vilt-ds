@@ -1,4 +1,4 @@
-// ./cli/helpers/cliStartMessage.ts
+// ./cli/helpers/cli-start-message.ts
 import gradientText from './gradient-text.js';
 export default function () {
     // show cli start message
@@ -12,4 +12,4 @@ export default function () {
 
 `);
 }
-//# sourceMappingURL=cliStartMessage.js.map
+//# sourceMappingURL=cli-start-message.js.map

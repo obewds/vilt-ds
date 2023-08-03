@@ -1,7 +1,7 @@
 // ./src/helpers/updateWhenFileExists.ts
 import fs from 'fs-extra';
-import cliSuccessMessage from './cliSuccessMessage.js';
-import cliWarningMessage from './cliWarningMessage.js';
+import cliSuccessMessage from './cli-success-message.js';
+import cliWarningMessage from './cli-warning-message.js';
 import cwd from './cwd.js';
 import projectFileDoesExist from './projectFileDoesExist.js';
 export default function (rootRelativePath, filenameStr, newFileData) {
