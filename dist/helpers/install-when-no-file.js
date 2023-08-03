@@ -1,4 +1,4 @@
-// ./src/helpers/installWhenNoFile.ts
+// ./src/helpers/install-when-no-file.ts
 import fs from 'fs-extra';
 import cliSuccessMessage from './cli-success-message.js';
 import cliWarningMessage from './cli-warning-message.js';
@@ -15,4 +15,4 @@ export default function (rootRelativePath, filenameStr, newFileData) {
         cliWarningMessage('A .' + filepath + ' file was found, so no changes were made!', false, false);
     }
 }
-//# sourceMappingURL=installWhenNoFile.js.map
+//# sourceMappingURL=install-when-no-file.js.map

@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateBootstrapTs.ts
+// ./src/generators/jetstream/resources/js/generate-bootstrap-ts.ts
 export default function () {
     return `// ./resources/js/bootstrap.ts
 
@@ -36,4 +36,4 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // });
 `;
 }
-//# sourceMappingURL=generateBootstrapTs.js.map
+//# sourceMappingURL=generate-bootstrap-ts.js.map
