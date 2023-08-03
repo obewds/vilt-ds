@@ -1,6 +1,6 @@
 // ./src/updaters/jetstream/updateGitignore.ts
 import fs from 'fs-extra';
-import generateGitignore from '../../generators/jetstream/generateGitignore.js';
+import generateGitignore from '../../generators/jetstream/generate-gitignore.js';
 import cliSuccessMessage from '../../helpers/cli-success-message.js';
 import cliWarningMessage from '../../helpers/cli-warning-message.js';
 import cwd from '../../helpers/cwd.js';

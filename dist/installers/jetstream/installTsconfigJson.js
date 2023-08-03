@@ -1,7 +1,7 @@
 // ./src/installers/jetstream/installTsconfigJson.ts
 import installWhenNoFile from '../../helpers/install-when-no-file.js';
-import viltDsTypescriptConfig from '../../data/typescript/vilt-ds-typescript-config.js';
+import generateTsconfigJson from '../../generators/jetstream/generate-tsconfig-json.js';
 export default function () {
-    installWhenNoFile('/', 'tsconfig.json', JSON.stringify(viltDsTypescriptConfig, null, 4));
+    installWhenNoFile('/', 'tsconfig.json', generateTsconfigJson());
 }
 //# sourceMappingURL=installTsconfigJson.js.map

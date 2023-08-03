@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateViteWindowDts.ts
+// ./src/generators/jetstream/generate-vite-window-d-ts.ts
 
 export default function (): string {
 

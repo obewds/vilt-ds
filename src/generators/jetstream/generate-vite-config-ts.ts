@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateViteConfigTs.ts
+// ./src/generators/jetstream/generate-vite-config-ts.ts
 
 export default function (): string {
 

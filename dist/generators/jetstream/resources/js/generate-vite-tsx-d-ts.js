@@ -1,8 +1,6 @@
-// ./src/generators/jetstream/generateViteTsxDts.ts
-
-export default function (): string {
-
-return `// ./resources/js/vite-tsx.d.ts
+// ./src/generators/jetstream/resources/js/generate-vite-tsx-d-ts.ts
+export default function () {
+    return `// ./resources/js/vite-tsx.d.ts
 
 import type { VNode } from 'vue'
 import Vue from 'vue'
@@ -19,5 +17,5 @@ declare global {
     }
 }
 `;
-
 }
+//# sourceMappingURL=generate-vite-tsx-d-ts.js.map

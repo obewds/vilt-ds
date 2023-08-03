@@ -11,4 +11,12 @@ describe('./src/helpers/run module', () => {
 
     })
 
+    test('module can run a command line command successfully', () => {
+
+        let command = run("node -v")
+
+        expect(command).toBe(undefined)
+
+    })
+
 })

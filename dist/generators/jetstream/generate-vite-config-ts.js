@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateViteConfigTs.ts
+// ./src/generators/jetstream/generate-vite-config-ts.ts
 export default function () {
     return `// ./vite.config.ts
 
@@ -32,4 +32,4 @@ export default defineConfig({
 })
 `;
 }
-//# sourceMappingURL=generateViteConfigTs.js.map
+//# sourceMappingURL=generate-vite-config-ts.js.map

@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateTailwindConfigTs.ts
+// ./src/generators/jetstream/generate-tailwind-config-ts.ts
 
 export default function (): string {
 

@@ -1,4 +1,4 @@
-// ./src/generators/jetstream/generateViteWindowDts.ts
+// ./src/generators/jetstream/generate-vite-window-d-ts.ts
 export default function () {
     return `// ./resources/js/vite-window.d.ts
 
@@ -19,4 +19,4 @@ declare global {
 }
 `;
 }
-//# sourceMappingURL=generateViteWindowDts.js.map
+//# sourceMappingURL=generate-vite-window-d-ts.js.map
