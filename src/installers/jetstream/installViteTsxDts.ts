@@ -2,7 +2,7 @@
 
 import installWhenNoFile from '../../helpers/install-when-no-file.js'
 
-import generateViteTsxDts from '../../generators/jetstream/generateViteTsxDts.js'
+import generateViteTsxDts from '../../generators/jetstream/resources/js/generate-vite-tsx-d-ts.js'
 
 export default function (): void {
 
