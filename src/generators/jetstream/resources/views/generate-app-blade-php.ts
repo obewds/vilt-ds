@@ -1,10 +1,8 @@
 // ./src/generators/jetstream/resources/views/generate-app-blade-php.ts
 
-import updateWhenFileExists from '../../../../helpers/update-when-file-exists.js'
+export default function (): string {
 
-export default function (): void {
-
-updateWhenFileExists( '/resources/views/', 'app.blade.php', `<!DOCTYPE html>
+return `<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
     <head>
@@ -46,6 +44,6 @@ updateWhenFileExists( '/resources/views/', 'app.blade.php', `<!DOCTYPE html>
     </body>
 
 </html>
-` )
+`;
 
 }
