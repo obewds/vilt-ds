@@ -4,8 +4,7 @@ import cwd from '../helpers/cwd.js';
 import projectFileDoesExist from '../helpers/project-file-does-exist.js';
 export default function () {
     const path = cwd + '/config/jetstream.php';
-    const fileExists = projectFileDoesExist(path);
-    if (fileExists) {
+    if (projectFileDoesExist(path)) {
         var scraped = fs.readFileSync(path, 'utf8');
         let modifiedData = String(scraped).replace('// Features::termsAndPrivacyPolicy()', 'Features::termsAndPrivacyPolicy()').replace('// Features::api()', 'Features::api()');
         return modifiedData;

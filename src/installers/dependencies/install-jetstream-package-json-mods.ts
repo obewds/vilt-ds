@@ -1,4 +1,4 @@
-// ./src/updaters/jetstream/updatePackageJson.ts
+// ./src/installers/dependencies/install-jetstream-package-json-mods.ts
 
 import run from '../../helpers/run.js'
 

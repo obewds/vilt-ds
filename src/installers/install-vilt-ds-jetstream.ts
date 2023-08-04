@@ -1,6 +1,12 @@
-// ./src/installers/installViltDsJetstream.ts
+// ./src/installers/install-vilt-ds-jetstream.ts
 
 import installFile from '../helpers/install-file.js'
+
+import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
+import viltDsVscodeExtensions from '../data/ide/vilt-ds-vscode-extensions.js'
+
+import installJetstreamNpmDeps from '../installers/dependencies/install-jetstream-npm-deps.js'
+import installJetstreamPackageJsonMods from '../installers/dependencies/install-jetstream-package-json-mods.js'
 
 import generateAppBladePhp from '../generators/jetstream/resources/views/generate-app-blade-php.js'
 import generateAppColorsTypesTs from '../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
@@ -10,6 +16,7 @@ import generateAppTypesTs from '../generators/jetstream/resources/js/Types/gener
 import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js'
 import generateAppVvClassesTypesTs from '../generators/jetstream/resources/js/Types/generate-app-vv-classes-types-ts.js'
 import generateBootstrapTs from '../generators/jetstream/resources/js/generate-bootstrap-ts.js'
+import generateGitignore from '../generators/jetstream/generate-gitignore.js'
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 import generateTailwindConfigTs from '../generators/jetstream/generate-tailwind-config-ts.js'
@@ -17,28 +24,17 @@ import generateTsconfigJson from '../generators/jetstream/generate-tsconfig-json
 import generateViteConfigTs from '../generators/jetstream/generate-vite-config-ts.js'
 import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vite-tsx-d-ts.js'
 import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js'
-
-import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
-import viltDsVscodeExtensions from '../data/ide/vilt-ds-vscode-extensions.js'
-
-import installJetstreamNpmDeps from '../installers/dependencies/install-jetstream-npm-deps.js'
-
-
-
-import updateGitignore from '../updaters/jetstream/updateGitignore.js'
-import updatePackageJson from '../updaters/jetstream/updatePackageJson.js'
-import updateRoutesWebPhp from '../updaters/jetstream/updateRoutesWebPhp.js'
-
-
+import generateWebPhp from '../generators/jetstream/routes/generate-web-php.js'
 
 
 export default function (): void {
 
     // update the app gitignore file for VILT DS
-    updateGitignore()
+    installFile( '/.gitignore', generateGitignore() )
 
-    // install client side deps for VILT DS / VueVentus
+    // install client side deps and package scripts/mods for VILT DS and VueVentus
     installJetstreamNpmDeps()
+    installJetstreamPackageJsonMods()
 
     // install typescript specific app files
     installFile( '/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs() )
@@ -67,10 +63,7 @@ export default function (): void {
 
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
-    updateRoutesWebPhp()
-
-    // update the project package json file
-    updatePackageJson()
+    installFile( '/routes/web.php', generateWebPhp() )
 
     // install suggested VS Code Extensions for VILT DS
     installFile( '/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4) )

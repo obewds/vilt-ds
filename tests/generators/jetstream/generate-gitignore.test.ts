@@ -13,7 +13,7 @@ describe('./src/generators/jetstream/vscode/generate-gitignore.test module', () 
     
     test('module default value is a valid string', () => {
 
-        expect(typeof generateGitignore('# some gitignore text to insert') === 'string').toBe(true)
+        expect(typeof generateGitignore() === 'string').toBe(true)
 
     })
 

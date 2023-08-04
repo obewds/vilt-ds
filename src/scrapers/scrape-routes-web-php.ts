@@ -1,4 +1,4 @@
-// ./src/scrapers/scrape-gitignore.ts
+// ./src/scrapers/scrape-routes-web-php.ts
 
 import fs from 'fs-extra'
 import cwd from '../helpers/cwd.js'
@@ -6,7 +6,7 @@ import projectFileDoesExist from '../helpers/project-file-does-exist.js'
 
 export default function (): string|null {
 
-    const path = cwd + '/.gitignore'
+    const path = cwd + '/routes/web.php'
 
     if ( projectFileDoesExist(path) ) {
 
