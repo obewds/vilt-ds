@@ -1,1 +1,0 @@
-{"version":3,"file":"installAppColorsJson.js","sourceRoot":"","sources":["../../../src/installers/jetstream/installAppColorsJson.ts"],"names":[],"mappings":"AAAA,qDAAqD;AAErD,OAAO,iBAAiB,MAAM,uCAAuC,CAAA;AAErE,OAAO,yBAAyB,MAAM,6DAA6D,CAAA;AAGnG,MAAM,CAAC,OAAO;IAEV,iBAAiB,CAAE,gBAAgB,EAAE,iBAAiB,EAAE,IAAI,CAAC,SAAS,CAAC,yBAAyB,EAAE,IAAI,EAAE,CAAC,CAAC,CAAE,CAAA;AAEhH,CAAC"}
