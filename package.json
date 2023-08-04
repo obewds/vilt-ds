@@ -49,5 +49,21 @@
     "gradient-string": "^2.0.2",
     "inquirer": "^9.2.9",
     "rimraf": "^5.0.1"
-  }
+  },
+  "keywords": [
+    "viltds",
+    "vilt",
+    "vue",
+    "vueventus",
+    "laravel",
+    "vite",
+    "tailwindcss",
+    "obewds",
+    "typescript",
+    "jetstream",
+    "rollup",
+    "vitepress",
+    "postcss",
+    "nodejs"
+  ]
 }
