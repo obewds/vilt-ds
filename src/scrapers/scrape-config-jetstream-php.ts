@@ -8,9 +8,7 @@ export default function (): string|null {
 
     const path = cwd + '/config/jetstream.php'
 
-    const fileExists = projectFileDoesExist(path)
-
-    if (fileExists) {
+    if ( projectFileDoesExist(path) ) {
 
         var scraped = fs.readFileSync(path,'utf8')
 
