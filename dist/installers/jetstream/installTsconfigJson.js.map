@@ -1,1 +1,0 @@
-{"version":3,"file":"installTsconfigJson.js","sourceRoot":"","sources":["../../../src/installers/jetstream/installTsconfigJson.ts"],"names":[],"mappings":"AAAA,oDAAoD;AAEpD,OAAO,iBAAiB,MAAM,uCAAuC,CAAA;AAErE,OAAO,oBAAoB,MAAM,sDAAsD,CAAA;AAEvF,MAAM,CAAC,OAAO;IAEV,iBAAiB,CAAE,GAAG,EAAE,eAAe,EAAE,oBAAoB,EAAE,CAAE,CAAA;AAErE,CAAC"}
