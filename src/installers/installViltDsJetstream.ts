@@ -15,7 +15,10 @@ import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstr
 
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
 
-import installNpmDeps from '../installers/jetstream/installNpmDeps.js'
+import installJetstreamNpmDeps from '../installers/dependencies/install-jetstream-npm-deps.js'
+
+
+
 import installTailwindConfigTs from '../installers/jetstream/installTailwindConfigTs.js'
 import installTsconfigJson from '../installers/jetstream/installTsconfigJson.js'
 import installViteConfigTs from '../installers/jetstream/installViteConfigTs.js'
@@ -36,7 +39,7 @@ export default function (): void {
     updateGitignore()
 
     // install client side deps for VILT DS / VueVentus
-    installNpmDeps()
+    installJetstreamNpmDeps()
 
     // install typescript specific app files
     installFile( '/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs() )
