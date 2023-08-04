@@ -16,7 +16,7 @@ describe('./src/helpers/install-file module', () => {
 
     test('module can install file and verify that the installed file contains installed content', async () => {
 
-        const filepathName = '/TESTING.txt'
+        const filepathName = '/install-file.test.txt'
         const fileContent = 'Testing the content.'
 
         installFile(filepathName, fileContent)
@@ -27,9 +27,9 @@ describe('./src/helpers/install-file module', () => {
 
         expect(scraped).toBe(fileContent)
 
-        fs.removeSync('./TESTING.txt')
+        fs.removeSync('./install-file.test.txt')
 
-        expect(projectFileDoesExist('/TESTING.txt')).toBe(false)
+        expect(projectFileDoesExist('/install-file.test.txt')).toBe(false)
 
     })
 
