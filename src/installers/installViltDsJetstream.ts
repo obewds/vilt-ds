@@ -10,6 +10,7 @@ import generateAppTypesTs from '../generators/jetstream/resources/js/Types/gener
 import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js'
 import generateAppVvClassesTypesTs from '../generators/jetstream/resources/js/Types/generate-app-vv-classes-types-ts.js'
 import generateBootstrapTs from '../generators/jetstream/resources/js/generate-bootstrap-ts.js'
+import generateGitignore from '../generators/jetstream/generate-gitignore.js'
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 import generateTailwindConfigTs from '../generators/jetstream/generate-tailwind-config-ts.js'
@@ -25,7 +26,6 @@ import installJetstreamNpmDeps from '../installers/dependencies/install-jetstrea
 
 
 
-import updateGitignore from '../updaters/jetstream/updateGitignore.js'
 import updatePackageJson from '../updaters/jetstream/updatePackageJson.js'
 import updateRoutesWebPhp from '../updaters/jetstream/updateRoutesWebPhp.js'
 
@@ -35,7 +35,7 @@ import updateRoutesWebPhp from '../updaters/jetstream/updateRoutesWebPhp.js'
 export default function (): void {
 
     // update the app gitignore file for VILT DS
-    updateGitignore()
+    installFile( '/.gitignore', generateGitignore() )
 
     // install client side deps for VILT DS / VueVentus
     installJetstreamNpmDeps()
