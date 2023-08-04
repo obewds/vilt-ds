@@ -2,6 +2,7 @@
 
 import installFile from '../helpers/install-file.js'
 
+import generateAppBladePhp from '../generators/jetstream/resources/views/generate-app-blade-php.js'
 import generateAppColorsTypesTs from '../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
 import generateAppJetstreamTypesTs from '../generators/jetstream/resources/js/Types/generate-app-jetstream-types-ts.js'
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
@@ -11,9 +12,6 @@ import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-c
 
 
 
-
-
-import installAppBladePhp from './jetstream/resources/views/install-app-blade-php.js'
 
 
 import installAppTs from '../installers/jetstream/installAppTs.js'
@@ -69,7 +67,7 @@ export default function (): void {
     installFile( '/resources/js/gsap.ts', generateJetstreamGsapTs() )
 
     // install laravel blade files
-    installAppBladePhp()
+    installFile( '/resources/views/app.blade.php', generateAppBladePhp() )
 
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
