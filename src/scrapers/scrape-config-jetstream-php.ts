@@ -6,11 +6,11 @@ import projectFileDoesExist from '../helpers/project-file-does-exist.js'
 
 export default function (): string|null {
 
-    const path = cwd + '/config/jetstream.php'
+    const path = '/config/jetstream.php'
 
     if ( projectFileDoesExist(path) ) {
 
-        var scraped = fs.readFileSync(path,'utf8')
+        var scraped = fs.readFileSync(cwd + path, 'utf8')
 
         let modifiedData = String(scraped).replace(
             '// Features::termsAndPrivacyPolicy()',
