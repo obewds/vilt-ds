@@ -16,6 +16,7 @@ import generateTailwindConfigTs from '../generators/jetstream/generate-tailwind-
 import generateTsconfigJson from '../generators/jetstream/generate-tsconfig-json.js'
 import generateViteConfigTs from '../generators/jetstream/generate-vite-config-ts.js'
 import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vite-tsx-d-ts.js'
+import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js'
 
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
 
@@ -23,7 +24,6 @@ import installJetstreamNpmDeps from '../installers/dependencies/install-jetstrea
 
 
 
-import installViteWindowDts from '../installers/jetstream/installViteWindowDts.js'
 import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js'
 
 import updateGitignore from '../updaters/jetstream/updateGitignore.js'
@@ -48,7 +48,7 @@ export default function (): void {
     installFile( '/resources/js/Types/app-vv-classes-types.ts', generateAppVvClassesTypesTs() )
     installFile( '/tsconfig.json', generateTsconfigJson() )
     installFile( '/resources/js/vite-tsx.d.ts', generateViteTsxDts() )
-    installViteWindowDts()
+    installFile( '/resources/js/vite-window.d.ts', generateViteWindowDts() )
 
     // install vue ecosystem app typed VILT DS files
     installFile( '/resources/js/bootstrap.ts', generateBootstrapTs() )
