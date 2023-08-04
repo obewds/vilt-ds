@@ -8,21 +8,11 @@ export default function (): string|null {
 
     const path = cwd + '/.gitignore'
 
-    const fileExists = projectFileDoesExist(path)
-
-    if (fileExists) {
+    if ( projectFileDoesExist(path) ) {
 
         var scraped = fs.readFileSync(path,'utf8')
 
-        let modifiedData = String(scraped).replace(
-            '// Features::termsAndPrivacyPolicy()',
-            'Features::termsAndPrivacyPolicy()'
-        ).replace(
-            '// Features::api()',
-            'Features::api()'
-        )
-
-        return modifiedData
+        return scraped
 
     } else {
 
