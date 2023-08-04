@@ -6,6 +6,8 @@ import generateAppBladePhp from '../generators/jetstream/resources/views/generat
 import generateAppColorsTypesTs from '../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
 import generateAppJetstreamTypesTs from '../generators/jetstream/resources/js/Types/generate-app-jetstream-types-ts.js'
 import generateAppTs from '../generators/jetstream/resources/js/generate-app-ts.js'
+import generateAppTypesTs from '../generators/jetstream/resources/js/Types/generate-app-types-ts.js'
+import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js'
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 
@@ -15,8 +17,6 @@ import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-c
 
 
 
-import installAppTypesTs from '../installers/jetstream/installAppTypesTs.js'
-import installAppVvClassesTs from '../installers/jetstream/installAppVvClassesTs.js'
 import installAppVvClassesTypesTs from '../installers/jetstream/installAppVvClassesTypesTs.js'
 import installBootstrapTs from '../installers/jetstream/installBootstrapTs.js'
 import installNpmDeps from '../installers/jetstream/installNpmDeps.js'
@@ -45,7 +45,7 @@ export default function (): void {
     // install typescript specific app files
     installFile( '/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs() )
     installFile( '/resources/js/Types/app-jetstream-types.ts', generateAppJetstreamTypesTs() )
-    installAppTypesTs()
+    installFile( '/resources/js/Types/app-types.ts', generateAppTypesTs() )
     installAppVvClassesTypesTs()
     installTsconfigJson()
     installViteTsxDts()
@@ -61,7 +61,7 @@ export default function (): void {
 
     // install VueVentus and VueVentus dependency app files
     installFile( '/resources/js/app.colors.json', JSON.stringify(viltDsDefaultColorPalette, null, 4) )
-    installAppVvClassesTs()
+    installFile( '/resources/js/app.vv.classes.ts', generateAppVvClassesTs() )
     installFile( '/resources/js/gsap.ts', generateJetstreamGsapTs() )
 
     // install laravel blade files
