@@ -4,11 +4,16 @@ import installFile from '../helpers/install-file.js'
 
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 
+import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
+
+
+
+
+
 import installAppBladePhp from './jetstream/resources/views/install-app-blade-php.js'
 import installJetstreamGsapTs from './jetstream/resources/js/install-jetstream-gsap-ts.js'
 
 
-import installAppColorsJson from '../installers/jetstream/installAppColorsJson.js'
 import installAppColorsTypesTs from '../installers/jetstream/installAppColorsTypesTs.js'
 import installAppJetstreamTypesTs from '../installers/jetstream/installAppJetstreamTypesTs.js'
 import installAppTs from '../installers/jetstream/installAppTs.js'
@@ -59,7 +64,7 @@ export default function (): void {
     installTailwindConfigTs()
 
     // install VueVentus and VueVentus dependency app files
-    installAppColorsJson()
+    installFile( '/resources/js/app.colors.json', JSON.stringify(viltDsDefaultColorPalette, null, 4) )
     installAppVvClassesTs()
     installJetstreamGsapTs()
 
