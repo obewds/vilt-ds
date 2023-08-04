@@ -1,8 +1,11 @@
 // ./src/installers/installViltDsJetstream.ts
 
+import installFile from '../helpers/install-file.js'
+
+import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
+
 import installAppBladePhp from './jetstream/resources/views/install-app-blade-php.js'
 import installJetstreamGsapTs from './jetstream/resources/js/install-jetstream-gsap-ts.js'
-
 
 
 import installAppColorsJson from '../installers/jetstream/installAppColorsJson.js'
@@ -22,7 +25,6 @@ import installViteTsxDts from '../installers/jetstream/installViteTsxDts.js'
 import installViteWindowDts from '../installers/jetstream/installViteWindowDts.js'
 import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js'
 
-import updateConfigJetstreamPhp from '../updaters/jetstream/updateConfigJetstreamPhp.js'
 import updateGitignore from '../updaters/jetstream/updateGitignore.js'
 import updatePackageJson from '../updaters/jetstream/updatePackageJson.js'
 import updateRoutesWebPhp from '../updaters/jetstream/updateRoutesWebPhp.js'
@@ -65,7 +67,7 @@ export default function (): void {
     installAppBladePhp()
 
     // update laravel php files for VILT DS
-    updateConfigJetstreamPhp()
+    installFile( '/config/jetstream.php', generateJetstreamPhp() )
     updateRoutesWebPhp()
 
     // update the project package json file
