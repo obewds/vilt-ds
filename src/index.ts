@@ -6,7 +6,7 @@ import type { ViltDsInstallationChoice } from './helpers/select-installation.js'
 import cliStartMessage from './helpers/cli-start-message.js'
 import selectInstallation from './helpers/select-installation.js'
 
-import installViltDsJetstream from './installers/installViltDsJetstream.js'
+import installViltDsJetstream from './installers/install-vilt-ds-jetstream.js'
 
 
 let userInstallation: ViltDsInstallationChoice = null
