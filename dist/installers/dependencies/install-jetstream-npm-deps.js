@@ -1,4 +1,4 @@
-// ./src/installers/jetstream/installNpmDeps.ts
+// ./src/installers/dependencies/install-jetstream-npm-deps.ts
 import cliSuccessMessage from '../../helpers/cli-success-message.js';
 import run from '../../helpers/run.js';
 import viltDsJetstreamDeps from '../../data/npm/vilt-ds-jetstream-deps.js';
@@ -9,4 +9,4 @@ export default function () {
     viltDsJetstreamDeps.forEach((dep) => cliSuccessMessage(dep + ' dependency installed!', false, false));
     console.log(' ');
 }
-//# sourceMappingURL=installNpmDeps.js.map
+//# sourceMappingURL=install-jetstream-npm-deps.js.map
