@@ -15,7 +15,6 @@ import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-c
 
 
 
-import installAppTs from '../installers/jetstream/installAppTs.js'
 import installAppTypesTs from '../installers/jetstream/installAppTypesTs.js'
 import installAppVvClassesTs from '../installers/jetstream/installAppVvClassesTs.js'
 import installAppVvClassesTypesTs from '../installers/jetstream/installAppVvClassesTypesTs.js'
