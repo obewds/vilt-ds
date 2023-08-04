@@ -8,16 +8,12 @@ import generateAppJetstreamTypesTs from '../generators/jetstream/resources/js/Ty
 import generateAppTs from '../generators/jetstream/resources/js/generate-app-ts.js'
 import generateAppTypesTs from '../generators/jetstream/resources/js/Types/generate-app-types-ts.js'
 import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js'
+import generateAppVvClassesTypesTs from '../generators/jetstream/resources/js/Types/generate-app-vv-classes-types-ts.js'
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
 
-
-
-
-
-import installAppVvClassesTypesTs from '../installers/jetstream/installAppVvClassesTypesTs.js'
 import installBootstrapTs from '../installers/jetstream/installBootstrapTs.js'
 import installNpmDeps from '../installers/jetstream/installNpmDeps.js'
 import installTailwindConfigTs from '../installers/jetstream/installTailwindConfigTs.js'
@@ -46,7 +42,7 @@ export default function (): void {
     installFile( '/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs() )
     installFile( '/resources/js/Types/app-jetstream-types.ts', generateAppJetstreamTypesTs() )
     installFile( '/resources/js/Types/app-types.ts', generateAppTypesTs() )
-    installAppVvClassesTypesTs()
+    installFile( '/resources/js/Types/app-vv-classes-types.ts', generateAppVvClassesTypesTs() )
     installTsconfigJson()
     installViteTsxDts()
     installViteWindowDts()
