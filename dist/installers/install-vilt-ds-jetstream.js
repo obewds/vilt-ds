@@ -22,11 +22,11 @@ import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vi
 import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js';
 import generateWebPhp from '../generators/jetstream/routes/generate-web-php.js';
 export default function () {
-    // update the app gitignore file for VILT DS
-    installFile('/.gitignore', generateGitignore());
     // install client side deps and package scripts/mods for VILT DS and VueVentus
     installJetstreamNpmDeps();
     installJetstreamPackageJsonMods();
+    // update the app gitignore file for VILT DS
+    installFile('/.gitignore', generateGitignore());
     // install typescript specific app files
     installFile('/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs());
     installFile('/resources/js/Types/app-jetstream-types.ts', generateAppJetstreamTypesTs());
