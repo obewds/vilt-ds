@@ -3,6 +3,7 @@
 import installFile from '../helpers/install-file.js'
 
 import generateAppColorsTypesTs from '../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
+import generateAppJetstreamTypesTs from '../generators/jetstream/resources/js/Types/generate-app-jetstream-types-ts.js'
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
@@ -15,7 +16,6 @@ import installAppBladePhp from './jetstream/resources/views/install-app-blade-ph
 import installJetstreamGsapTs from './jetstream/resources/js/install-jetstream-gsap-ts.js'
 
 
-import installAppJetstreamTypesTs from '../installers/jetstream/installAppJetstreamTypesTs.js'
 import installAppTs from '../installers/jetstream/installAppTs.js'
 import installAppTypesTs from '../installers/jetstream/installAppTypesTs.js'
 import installAppVvClassesTs from '../installers/jetstream/installAppVvClassesTs.js'
@@ -47,7 +47,7 @@ export default function (): void {
 
     // install typescript specific app files
     installFile( '/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs() )
-    installAppJetstreamTypesTs()
+    installFile( '/resources/js/Types/app-jetstream-types.ts', generateAppJetstreamTypesTs() )
     installAppTypesTs()
     installAppVvClassesTypesTs()
     installTsconfigJson()
