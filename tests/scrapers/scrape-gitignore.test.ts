@@ -13,7 +13,7 @@ describe('./src/scrapers/scrape-gitignore module', () => {
 
     })
 
-    test('module returns null when a config/jetstream.php file does not exist', () => {
+    test('module returns null when a .gitignore file does not exist', () => {
 
         expect(scrapeGitignore()).toBe(null)
 
