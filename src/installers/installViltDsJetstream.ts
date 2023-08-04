@@ -19,12 +19,11 @@ import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vi
 import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js'
 
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
+import viltDsVscodeExtensions from '../data/ide/vilt-ds-vscode-extensions.js'
 
 import installJetstreamNpmDeps from '../installers/dependencies/install-jetstream-npm-deps.js'
 
 
-
-import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js'
 
 import updateGitignore from '../updaters/jetstream/updateGitignore.js'
 import updatePackageJson from '../updaters/jetstream/updatePackageJson.js'
@@ -74,6 +73,6 @@ export default function (): void {
     updatePackageJson()
 
     // install suggested VS Code Extensions for VILT DS
-    installVscodeExtensionsJson()
+    installFile( '/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4) )
 
 }
