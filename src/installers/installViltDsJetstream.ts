@@ -13,6 +13,7 @@ import generateBootstrapTs from '../generators/jetstream/resources/js/generate-b
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 import generateTailwindConfigTs from '../generators/jetstream/generate-tailwind-config-ts.js'
+import generateTsconfigJson from '../generators/jetstream/generate-tsconfig-json.js'
 
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
 
@@ -20,7 +21,6 @@ import installJetstreamNpmDeps from '../installers/dependencies/install-jetstrea
 
 
 
-import installTsconfigJson from '../installers/jetstream/installTsconfigJson.js'
 import installViteConfigTs from '../installers/jetstream/installViteConfigTs.js'
 import installViteTsxDts from '../installers/jetstream/installViteTsxDts.js'
 import installViteWindowDts from '../installers/jetstream/installViteWindowDts.js'
@@ -46,7 +46,7 @@ export default function (): void {
     installFile( '/resources/js/Types/app-jetstream-types.ts', generateAppJetstreamTypesTs() )
     installFile( '/resources/js/Types/app-types.ts', generateAppTypesTs() )
     installFile( '/resources/js/Types/app-vv-classes-types.ts', generateAppVvClassesTypesTs() )
-    installTsconfigJson()
+    installFile( '/tsconfig.json', generateTsconfigJson() )
     installViteTsxDts()
     installViteWindowDts()
 
