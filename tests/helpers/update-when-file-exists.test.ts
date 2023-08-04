@@ -16,23 +16,23 @@ describe('./src/helpers/update-when-file-exists module', () => {
 
     test('module does not update a non-existing file', async () => {
 
-        updateWhenFileExists('', '/TESTING-2.txt', 'Testing the content.')
+        updateWhenFileExists('', '/update-when-file-exists.txt', 'Testing the content.')
 
-        expect(projectFileDoesExist('/TESTING-2.txt')).toBe(false)
+        expect(projectFileDoesExist('/update-when-file-exists.txt')).toBe(false)
         
     })
 
     test('module can update an existing file successfully', async () => {
 
-        expect(projectFileDoesExist('/TESTING-2.txt')).toBe(false)
+        expect(projectFileDoesExist('/update-when-file-exists.txt')).toBe(false)
 
-        installWhenNoFile('', '/TESTING-2.txt', 'Testing the content.')
+        installWhenNoFile('', '/update-when-file-exists.txt', 'Testing the content.')
 
-        updateWhenFileExists('', '/TESTING-2.txt', 'Changed text.')
+        updateWhenFileExists('', '/update-when-file-exists.txt', 'Changed text.')
 
-        expect(projectFileDoesExist('/TESTING-2.txt')).toBe(true)
+        expect(projectFileDoesExist('/update-when-file-exists.txt')).toBe(true)
 
-        fs.removeSync('./TESTING-2.txt')
+        fs.removeSync('./update-when-file-exists.txt')
         
     })
 

@@ -1,6 +1,6 @@
 {
   "name": "@obewds/vilt-ds",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "The official repository for the VILT Design System for the Vue.js, Inertia.js, Laravel, and Tailwind CSS web app stack that is turbocharged with Typescript and VueVentus.",
   "license": "MIT",
   "author": "Matt McT",
@@ -49,5 +49,21 @@
     "gradient-string": "^2.0.2",
     "inquirer": "^9.2.9",
     "rimraf": "^5.0.1"
-  }
+  },
+  "keywords": [
+    "viltds",
+    "vilt",
+    "vue",
+    "vueventus",
+    "laravel",
+    "vite",
+    "tailwindcss",
+    "obewds",
+    "typescript",
+    "jetstream",
+    "rollup",
+    "vitepress",
+    "postcss",
+    "nodejs"
+  ]
 }

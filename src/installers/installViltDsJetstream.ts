@@ -1,28 +1,30 @@
 // ./src/installers/installViltDsJetstream.ts
 
-import installAppBladePhp from './jetstream/resources/views/install-app-blade-php.js'
-import installJetstreamGsapTs from './jetstream/resources/js/install-jetstream-gsap-ts.js'
+import installFile from '../helpers/install-file.js'
+
+import generateAppBladePhp from '../generators/jetstream/resources/views/generate-app-blade-php.js'
+import generateAppColorsTypesTs from '../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
+import generateAppJetstreamTypesTs from '../generators/jetstream/resources/js/Types/generate-app-jetstream-types-ts.js'
+import generateAppTs from '../generators/jetstream/resources/js/generate-app-ts.js'
+import generateAppTypesTs from '../generators/jetstream/resources/js/Types/generate-app-types-ts.js'
+import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js'
+import generateAppVvClassesTypesTs from '../generators/jetstream/resources/js/Types/generate-app-vv-classes-types-ts.js'
+import generateBootstrapTs from '../generators/jetstream/resources/js/generate-bootstrap-ts.js'
+import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
+import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
+import generateTailwindConfigTs from '../generators/jetstream/generate-tailwind-config-ts.js'
+import generateTsconfigJson from '../generators/jetstream/generate-tsconfig-json.js'
+import generateViteConfigTs from '../generators/jetstream/generate-vite-config-ts.js'
+import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vite-tsx-d-ts.js'
+import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js'
+
+import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js'
+import viltDsVscodeExtensions from '../data/ide/vilt-ds-vscode-extensions.js'
+
+import installJetstreamNpmDeps from '../installers/dependencies/install-jetstream-npm-deps.js'
 
 
 
-import installAppColorsJson from '../installers/jetstream/installAppColorsJson.js'
-import installAppColorsTypesTs from '../installers/jetstream/installAppColorsTypesTs.js'
-import installAppJetstreamTypesTs from '../installers/jetstream/installAppJetstreamTypesTs.js'
-import installAppTs from '../installers/jetstream/installAppTs.js'
-import installAppTypesTs from '../installers/jetstream/installAppTypesTs.js'
-import installAppVvClassesTs from '../installers/jetstream/installAppVvClassesTs.js'
-import installAppVvClassesTypesTs from '../installers/jetstream/installAppVvClassesTypesTs.js'
-import installAppVvTs from '../installers/jetstream/installAppVvTs.js'
-import installBootstrapTs from '../installers/jetstream/installBootstrapTs.js'
-import installNpmDeps from '../installers/jetstream/installNpmDeps.js'
-import installTailwindConfigTs from '../installers/jetstream/installTailwindConfigTs.js'
-import installTsconfigJson from '../installers/jetstream/installTsconfigJson.js'
-import installViteConfigTs from '../installers/jetstream/installViteConfigTs.js'
-import installViteTsxDts from '../installers/jetstream/installViteTsxDts.js'
-import installViteWindowDts from '../installers/jetstream/installViteWindowDts.js'
-import installVscodeExtensionsJson from '../installers/jetstream/installVscodeExtensionsJson.js'
-
-import updateConfigJetstreamPhp from '../updaters/jetstream/updateConfigJetstreamPhp.js'
 import updateGitignore from '../updaters/jetstream/updateGitignore.js'
 import updatePackageJson from '../updaters/jetstream/updatePackageJson.js'
 import updateRoutesWebPhp from '../updaters/jetstream/updateRoutesWebPhp.js'
@@ -36,42 +38,41 @@ export default function (): void {
     updateGitignore()
 
     // install client side deps for VILT DS / VueVentus
-    installNpmDeps()
+    installJetstreamNpmDeps()
 
     // install typescript specific app files
-    installAppColorsTypesTs()
-    installAppJetstreamTypesTs()
-    installAppTypesTs()
-    installAppVvClassesTypesTs()
-    installTsconfigJson()
-    installViteTsxDts()
-    installViteWindowDts()
+    installFile( '/resources/js/Types/app-colors-types.ts', generateAppColorsTypesTs() )
+    installFile( '/resources/js/Types/app-jetstream-types.ts', generateAppJetstreamTypesTs() )
+    installFile( '/resources/js/Types/app-types.ts', generateAppTypesTs() )
+    installFile( '/resources/js/Types/app-vv-classes-types.ts', generateAppVvClassesTypesTs() )
+    installFile( '/tsconfig.json', generateTsconfigJson() )
+    installFile( '/resources/js/vite-tsx.d.ts', generateViteTsxDts() )
+    installFile( '/resources/js/vite-window.d.ts', generateViteWindowDts() )
 
     // install vue ecosystem app typed VILT DS files
-    installBootstrapTs()
-    installAppTs()
-    installAppVvTs()
-    installViteConfigTs()
+    installFile( '/resources/js/bootstrap.ts', generateBootstrapTs() )
+    installFile( '/resources/js/app.ts', generateAppTs() )
+    installFile( '/vite.config.ts', generateViteConfigTs() )
 
     // install tailwind app typed files
-    installTailwindConfigTs()
+    installFile( '/tailwind.config.ts', generateTailwindConfigTs() )
 
     // install VueVentus and VueVentus dependency app files
-    installAppColorsJson()
-    installAppVvClassesTs()
-    installJetstreamGsapTs()
+    installFile( '/resources/js/app.colors.json', JSON.stringify(viltDsDefaultColorPalette, null, 4) )
+    installFile( '/resources/js/app.vv.classes.ts', generateAppVvClassesTs() )
+    installFile( '/resources/js/gsap.ts', generateJetstreamGsapTs() )
 
     // install laravel blade files
-    installAppBladePhp()
+    installFile( '/resources/views/app.blade.php', generateAppBladePhp() )
 
     // update laravel php files for VILT DS
-    updateConfigJetstreamPhp()
+    installFile( '/config/jetstream.php', generateJetstreamPhp() )
     updateRoutesWebPhp()
 
     // update the project package json file
     updatePackageJson()
 
     // install suggested VS Code Extensions for VILT DS
-    installVscodeExtensionsJson()
+    installFile( '/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4) )
 
 }
