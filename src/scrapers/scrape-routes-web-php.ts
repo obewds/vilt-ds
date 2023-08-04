@@ -6,11 +6,11 @@ import projectFileDoesExist from '../helpers/project-file-does-exist.js'
 
 export default function (): string|null {
 
-    const path = cwd + '/routes/web.php'
+    const path = '/routes/web.php'
 
     if ( projectFileDoesExist(path) ) {
 
-        var scraped = fs.readFileSync(path,'utf8')
+        var scraped = fs.readFileSync(cwd + path, 'utf8')
 
         return scraped
 
