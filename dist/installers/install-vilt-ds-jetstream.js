@@ -26,6 +26,12 @@ import generateActionMessageVue from '../generators/jetstream/resources/js/Compo
 import generateActionSectionVue from '../generators/jetstream/resources/js/Components/generate-action-section-vue.js';
 import generateApplicationLogoVue from '../generators/jetstream/resources/js/Components/generate-application-logo-vue.js';
 import generateApplicationMarkVue from '../generators/jetstream/resources/js/Components/generate-application-mark-vue.js';
+import generateAuthenticationCardLogoVue from '../generators/jetstream/resources/js/Components/generate-authentication-card-logo-vue.js';
+import generateAuthenticationCardVue from '../generators/jetstream/resources/js/Components/generate-authentication-card-vue.js';
+import generateBannerVue from '../generators/jetstream/resources/js/Components/generate-banner-vue.js';
+import generateCheckboxVue from '../generators/jetstream/resources/js/Components/generate-checkbox-vue.js';
+import generateConfirmationModalVue from '../generators/jetstream/resources/js/Components/generate-confirmation-modal-vue.js';
+import generateConfirmsPasswordVue from '../generators/jetstream/resources/js/Components/generate-confirms-password-vue.js';
 export default function () {
     // install client side deps and package scripts/mods for VILT DS and VueVentus
     installJetstreamNpmDeps();
@@ -59,6 +65,12 @@ export default function () {
     installFile('/resources/js/Components/ActionSection.vue', generateActionSectionVue());
     installFile('/resources/js/Components/ApplicationLogo.vue', generateApplicationLogoVue());
     installFile('/resources/js/Components/ApplicationMark.vue', generateApplicationMarkVue());
+    installFile('/resources/js/Components/AuthenticationCardLogo.vue', generateAuthenticationCardLogoVue());
+    installFile('/resources/js/Components/AuthenticationCard.vue', generateAuthenticationCardVue());
+    installFile('/resources/js/Components/Banner.vue', generateBannerVue());
+    installFile('/resources/js/Components/Checkbox.vue', generateCheckboxVue());
+    installFile('/resources/js/Components/ConfirmationModal.vue', generateConfirmationModalVue());
+    installFile('/resources/js/Components/ConfirmsPassword.vue', generateConfirmsPasswordVue());
     // update laravel php files for VILT DS
     installFile('/config/jetstream.php', generateJetstreamPhp());
     installFile('/routes/web.php', generateWebPhp());
