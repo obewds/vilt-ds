@@ -11,6 +11,7 @@ import installJetstreamPackageJsonMods from '../installers/dependencies/install-
 import generateAppBladePhp from '../generators/jetstream/resources/views/generate-app-blade-php.js'
 import generateAppColorsTypesTs from '../generators/jetstream/resources/js/Types/generate-app-colors-types-ts.js'
 import generateAppJetstreamTypesTs from '../generators/jetstream/resources/js/Types/generate-app-jetstream-types-ts.js'
+import generateAppLayoutVue from '../generators/jetstream/resources/js/Layouts/generate-app-layout-vue.js'
 import generateAppTs from '../generators/jetstream/resources/js/generate-app-ts.js'
 import generateAppTypesTs from '../generators/jetstream/resources/js/Types/generate-app-types-ts.js'
 import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js'
@@ -25,6 +26,11 @@ import generateViteConfigTs from '../generators/jetstream/generate-vite-config-t
 import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vite-tsx-d-ts.js'
 import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js'
 import generateWebPhp from '../generators/jetstream/routes/generate-web-php.js'
+
+import generateActionMessageVue from '../generators/jetstream/resources/js/Components/generate-action-message-vue.js'
+import generateActionSectionVue from '../generators/jetstream/resources/js/Components/generate-action-section-vue.js'
+import generateApplicationLogoVue from '../generators/jetstream/resources/js/Components/generate-application-logo-vue.js'
+import generateApplicationMarkVue from '../generators/jetstream/resources/js/Components/generate-application-mark-vue.js'
 
 
 export default function (): void {
@@ -60,6 +66,15 @@ export default function (): void {
 
     // install laravel blade files
     installFile( '/resources/views/app.blade.php', generateAppBladePhp() )
+
+    // install laravel jetstream layout component files
+    installFile( '/resources/js/Layouts/AppLayout.vue', generateAppLayoutVue() )
+
+    // install laravel jetstream component files
+    installFile( '/resources/js/Components/ActionMessage.vue', generateActionMessageVue() )
+    installFile( '/resources/js/Components/ActionSection.vue', generateActionSectionVue() )
+    installFile( '/resources/js/Components/ApplicationLogo.vue', generateApplicationLogoVue() )
+    installFile( '/resources/js/Components/ApplicationMark.vue', generateApplicationMarkVue() )
 
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
