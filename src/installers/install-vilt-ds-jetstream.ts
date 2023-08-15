@@ -37,6 +37,14 @@ import generateBannerVue from '../generators/jetstream/resources/js/Components/g
 import generateCheckboxVue from '../generators/jetstream/resources/js/Components/generate-checkbox-vue.js'
 import generateConfirmationModalVue from '../generators/jetstream/resources/js/Components/generate-confirmation-modal-vue.js'
 import generateConfirmsPasswordVue from '../generators/jetstream/resources/js/Components/generate-confirms-password-vue.js'
+import generateDangerButtonVue from '../generators/jetstream/resources/js/Components/generate-danger-button-vue.js'
+import generateDialogModalVue from '../generators/jetstream/resources/js/Components/generate-dialog-modal-vue.js'
+import generateDropdownLinkVue from '../generators/jetstream/resources/js/Components/generate-dropdown-link-vue.js'
+import generateDropdownVue from '../generators/jetstream/resources/js/Components/generate-dropdown-vue.js'
+import generateFormSectionVue from '../generators/jetstream/resources/js/Components/generate-form-section-vue.js'
+import generateInputErrorVue from '../generators/jetstream/resources/js/Components/generate-input-error-vue.js'
+import generateInputLabelVue from '../generators/jetstream/resources/js/Components/generate-input-label-vue.js'
+import generateModalVue from '../generators/jetstream/resources/js/Components/generate-modal-vue.js'
 
 
 export default function (): void {
@@ -87,6 +95,14 @@ export default function (): void {
     installFile( '/resources/js/Components/Checkbox.vue', generateCheckboxVue() )
     installFile( '/resources/js/Components/ConfirmationModal.vue', generateConfirmationModalVue() )
     installFile( '/resources/js/Components/ConfirmsPassword.vue', generateConfirmsPasswordVue() )
+    installFile( '/resources/js/Components/DangerButton.vue', generateDangerButtonVue() )
+    installFile( '/resources/js/Components/DialogModal.vue', generateDialogModalVue() )
+    installFile( '/resources/js/Components/DropdownLink.vue', generateDropdownLinkVue() )
+    installFile( '/resources/js/Components/Dropdown.vue', generateDropdownVue() )
+    installFile( '/resources/js/Components/FormSection.vue', generateFormSectionVue() )
+    installFile( '/resources/js/Components/InputError.vue', generateInputErrorVue() )
+    installFile( '/resources/js/Components/InputLabel.vue', generateInputLabelVue() )
+    installFile( '/resources/js/Components/Modal.vue', generateModalVue() )
 
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
