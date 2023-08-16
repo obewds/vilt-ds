@@ -45,7 +45,15 @@ import generateFormSectionVue from '../generators/jetstream/resources/js/Compone
 import generateInputErrorVue from '../generators/jetstream/resources/js/Components/generate-input-error-vue.js'
 import generateInputLabelVue from '../generators/jetstream/resources/js/Components/generate-input-label-vue.js'
 import generateModalVue from '../generators/jetstream/resources/js/Components/generate-modal-vue.js'
-
+import generateNavLinkVue from '../generators/jetstream/resources/js/Components/generate-nav-link-vue.js'
+import generatePrimaryButtonVue from '../generators/jetstream/resources/js/Components/generate-primary-button-vue.js'
+import generateResponsiveNavLinkVue from '../generators/jetstream/resources/js/Components/generate-responsive-nav-link-vue.js'
+import generateScrollUpColorModeSectionVue from '../generators/jetstream/resources/js/Components/generate-scroll-up-color-mode-section-vue.js'
+import generateSecondaryButtonVue from '../generators/jetstream/resources/js/Components/generate-secondary-button-vue.js'
+import generateSectionBorderVue from '../generators/jetstream/resources/js/Components/generate-section-border-vue.js'
+import generateSectionTitleVue from '../generators/jetstream/resources/js/Components/generate-section-title-vue.js'
+import generateTextInputVue from '../generators/jetstream/resources/js/Components/generate-text-input-vue.js'
+import generateWelcomeVue from '../generators/jetstream/resources/js/Components/generate-welcome-vue.js'
 
 export default function (): void {
 
@@ -103,6 +111,15 @@ export default function (): void {
     installFile( '/resources/js/Components/InputError.vue', generateInputErrorVue() )
     installFile( '/resources/js/Components/InputLabel.vue', generateInputLabelVue() )
     installFile( '/resources/js/Components/Modal.vue', generateModalVue() )
+    installFile( '/resources/js/Components/NavLink.vue', generateNavLinkVue() )
+    installFile( '/resources/js/Components/PrimaryButton.vue', generatePrimaryButtonVue() )
+    installFile( '/resources/js/Components/ResponsiveNavLink.vue', generateResponsiveNavLinkVue() )
+    installFile( '/resources/js/Components/ScrollUpColorModeSection.vue', generateScrollUpColorModeSectionVue() )
+    installFile( '/resources/js/Components/SecondaryButton.vue', generateSecondaryButtonVue() )
+    installFile( '/resources/js/Components/SectionBorder.vue', generateSectionBorderVue() )
+    installFile( '/resources/js/Components/SectionTitle.vue', generateSectionTitleVue() )
+    installFile( '/resources/js/Components/TextInput.vue', generateTextInputVue() )
+    installFile( '/resources/js/Components/Welcome.vue', generateWelcomeVue() )
 
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
