@@ -55,6 +55,18 @@ import generateSectionTitleVue from '../generators/jetstream/resources/js/Compon
 import generateTextInputVue from '../generators/jetstream/resources/js/Components/generate-text-input-vue.js'
 import generateWelcomeVue from '../generators/jetstream/resources/js/Components/generate-welcome-vue.js'
 
+import generateVvAnchorVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-anchor-vue.js'
+import generateVvInertiaLinkVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-inertia-link-vue.js'
+import generateVvButtonVue from '../generators/jetstream/resources/js/Components/vv/buttons/generate-vv-button-vue.js'
+import generateVvColorModeButtonVue from '../generators/jetstream/resources/js/Components/vv/buttons/generate-vv-color-mode-button-vue.js'
+import generateVvScrollUpVue from '../generators/jetstream/resources/js/Components/vv/buttons/generate-vv-scroll-up-vue.js'
+import generateVvElVue from '../generators/jetstream/resources/js/Components/vv/elements/generate-vv-el-vue.js'
+import generateVvFormGroupVue from '../generators/jetstream/resources/js/Components/vv/forms/generate-vv-form-group-vue.js'
+import generateVvQuadFormGroupVue from '../generators/jetstream/resources/js/Components/vv/forms/generate-vv-quad-form-group-vue.js'
+import generateVvCheckboxVue from '../generators/jetstream/resources/js/Components/vv/inputs/generate-vv-checkbox-vue.js'
+import generateVvInputVue from '../generators/jetstream/resources/js/Components/vv/inputs/generate-vv-input-vue.js'
+import generateVvRadioVue from '../generators/jetstream/resources/js/Components/vv/inputs/generate-vv-radio-vue.js'
+
 export default function (): void {
 
     // install client side deps and package scripts/mods for VILT DS and VueVentus
@@ -85,6 +97,19 @@ export default function (): void {
     installFile( '/resources/js/app.colors.json', JSON.stringify(viltDsDefaultColorPalette, null, 4) )
     installFile( '/resources/js/app.vv.classes.ts', generateAppVvClassesTs() )
     installFile( '/resources/js/gsap.ts', generateJetstreamGsapTs() )
+    
+    // install VueVentus components
+    installFile( '/resources/js/Components/vv/anchors/VvAnchor.vue', generateVvAnchorVue() )
+    installFile( '/resources/js/Components/vv/anchors/VvInertiaLink.vue', generateVvInertiaLinkVue() )
+    installFile( '/resources/js/Components/vv/buttons/VvButton.vue', generateVvButtonVue() )
+    installFile( '/resources/js/Components/vv/buttons/VvColorModeButton.vue', generateVvColorModeButtonVue() )
+    installFile( '/resources/js/Components/vv/buttons/VvScrollUp.vue', generateVvScrollUpVue() )
+    installFile( '/resources/js/Components/vv/elements/VvEl.vue', generateVvElVue() )
+    installFile( '/resources/js/Components/vv/forms/VvFormGroup.vue', generateVvFormGroupVue() )
+    installFile( '/resources/js/Components/vv/forms/VvQuadFormGroup.vue', generateVvQuadFormGroupVue() )
+    installFile( '/resources/js/Components/vv/inputs/VvCheckbox.vue', generateVvCheckboxVue() )
+    installFile( '/resources/js/Components/vv/inputs/VvInput.vue', generateVvInputVue() )
+    installFile( '/resources/js/Components/vv/inputs/VvRadio.vue', generateVvRadioVue() )
 
     // install laravel blade files
     installFile( '/resources/views/app.blade.php', generateAppBladePhp() )
