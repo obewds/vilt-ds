@@ -60,6 +60,16 @@ import generateVvQuadFormGroupVue from '../generators/jetstream/resources/js/Com
 import generateVvCheckboxVue from '../generators/jetstream/resources/js/Components/vv/inputs/generate-vv-checkbox-vue.js';
 import generateVvInputVue from '../generators/jetstream/resources/js/Components/vv/inputs/generate-vv-input-vue.js';
 import generateVvRadioVue from '../generators/jetstream/resources/js/Components/vv/inputs/generate-vv-radio-vue.js';
+import generateVvListItemVue from '../generators/jetstream/resources/js/Components/vv/lists/generate-vv-list-item-vue.js';
+import generateVvListVue from '../generators/jetstream/resources/js/Components/vv/lists/generate-vv-list-vue.js';
+import generateVvListboxVue from '../generators/jetstream/resources/js/Components/vv/selects/generate-vv-listbox-vue.js';
+import generateVvSelectVue from '../generators/jetstream/resources/js/Components/vv/selects/generate-vv-select-vue.js';
+import generateVvTextareaVue from '../generators/jetstream/resources/js/Components/vv/textareas/generate-vv-textarea-vue.js';
+import generateDashboardVue from '../generators/jetstream/resources/js/Pages/generate-dashboard-vue.js';
+import generatePrivacyPolicyVue from '../generators/jetstream/resources/js/Pages/generate-privacy-policy-vue.js';
+import generateTermsOfServiceVue from '../generators/jetstream/resources/js/Pages/generate-terms-of-service-vue.js';
+import generateVueVentusVue from '../generators/jetstream/resources/js/Pages/generate-vue-ventus-vue.js';
+import generatePageWelcomeVue from '../generators/jetstream/resources/js/Pages/generate-welcome-vue.js';
 export default function () {
     // install client side deps and package scripts/mods for VILT DS and VueVentus
     installJetstreamNpmDeps();
@@ -96,6 +106,11 @@ export default function () {
     installFile('/resources/js/Components/vv/inputs/VvCheckbox.vue', generateVvCheckboxVue());
     installFile('/resources/js/Components/vv/inputs/VvInput.vue', generateVvInputVue());
     installFile('/resources/js/Components/vv/inputs/VvRadio.vue', generateVvRadioVue());
+    installFile('/resources/js/Components/vv/lists/VvListItem.vue', generateVvListItemVue());
+    installFile('/resources/js/Components/vv/lists/VvList.vue', generateVvListVue());
+    installFile('/resources/js/Components/vv/selects/VvListbox.vue', generateVvListboxVue());
+    installFile('/resources/js/Components/vv/selects/VvSelect.vue', generateVvSelectVue());
+    installFile('/resources/js/Components/vv/textareas/VvTextarea.vue', generateVvTextareaVue());
     // install laravel blade files
     installFile('/resources/views/app.blade.php', generateAppBladePhp());
     // install laravel jetstream layout component files
@@ -131,6 +146,12 @@ export default function () {
     // update laravel php files for VILT DS
     installFile('/config/jetstream.php', generateJetstreamPhp());
     installFile('/routes/web.php', generateWebPhp());
+    // install laravel jetstream page component files
+    installFile('/resources/js/Pages/Dashboard.vue', generateDashboardVue());
+    installFile('/resources/js/Pages/PrivacyPolicy.vue', generatePrivacyPolicyVue());
+    installFile('/resources/js/Pages/TermsOfService.vue', generateTermsOfServiceVue());
+    installFile('/resources/js/Pages/VueVentus.vue', generateVueVentusVue());
+    installFile('/resources/js/Pages/Welcome.vue', generatePageWelcomeVue());
     // install suggested VS Code Extensions for VILT DS
     installFile('/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4));
 }
