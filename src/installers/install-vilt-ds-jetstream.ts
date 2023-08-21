@@ -88,6 +88,29 @@ import generateWelcomeVue from '../generators/jetstream/resources/js/Components/
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 import generateWebPhp from '../generators/jetstream/routes/generate-web-php.js'
 
+// import laravel jetstream API components/page files
+import generateApiTokenManagerVue from '../generators/jetstream/resources/js/Pages/API/Partials/generate-api-token-manager-vue.js'
+import generateApiIndexVue from '../generators/jetstream/resources/js/Pages/API/generate-api-index-vue.js'
+
+// import laravel jetstream Auth components/page files
+import generateConfirmPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-confirm-password-vue.js'
+import generateForgotPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-forgot-password-vue.js'
+import generateLoginVue from '../generators/jetstream/resources/js/Pages/Auth/generate-login-vue.js'
+import generateRegisterVue from '../generators/jetstream/resources/js/Pages/Auth/generate-register-vue.js'
+import generateResetPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-reset-password-vue.js'
+import generateTwoFactorChallengeVue from '../generators/jetstream/resources/js/Pages/Auth/generate-two-factor-challenge-vue.js'
+import generateVerifyEmailVue from '../generators/jetstream/resources/js/Pages/Auth/generate-verify-email-vue.js'
+
+// import laravel jetstream Profile components/page files
+import generateDeleteUserFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-delete-user-form-vue.js'
+import generateLogoutOtherBrowserSessionsFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-logout-other-browser-sessions-form-vue.js'
+import generateTwoFactorAuthenticationFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-two-factor-authentication-form-vue.js'
+import generateUpdatePasswordFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-update-password-form-vue.js'
+import generateUpdateProfileInformationFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-update-profile-information-form-vue.js'
+import generateProfileShowVue from '../generators/jetstream/resources/js/Pages/Profile/generate-profile-show-vue.js'
+
+// import laravel jetstream Team components/page files
+
 // import laravel jetstream page component files
 import generateDashboardVue from '../generators/jetstream/resources/js/Pages/generate-dashboard-vue.js'
 import generatePrivacyPolicyVue from '../generators/jetstream/resources/js/Pages/generate-privacy-policy-vue.js'
@@ -186,6 +209,29 @@ export default function (): void {
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
     installFile( '/routes/web.php', generateWebPhp() )
+
+    // install laravel jetstream API components/page files
+    installFile( '/resources/js/Pages/API/Partials/ApiTokenManager.vue', generateApiTokenManagerVue() )
+    installFile( '/resources/js/Pages/API/Index.vue', generateApiIndexVue() )
+
+    // install laravel jetstream Auth components/page files
+    installFile( '/resources/js/Pages/Auth/ConfirmPassword.vue', generateConfirmPasswordVue() )
+    installFile( '/resources/js/Pages/Auth/ForgotPassword.vue', generateForgotPasswordVue() )
+    installFile( '/resources/js/Pages/Auth/Login.vue', generateLoginVue() )
+    installFile( '/resources/js/Pages/Auth/Register.vue', generateRegisterVue() )
+    installFile( '/resources/js/Pages/Auth/ResetPassword.vue', generateResetPasswordVue() )
+    installFile( '/resources/js/Pages/Auth/TwoFactorChallenge.vue', generateTwoFactorChallengeVue() )
+    installFile( '/resources/js/Pages/Auth/VerifyEmail.vue', generateVerifyEmailVue() )
+
+    // install laravel jetstream Profile components/page files
+    installFile( '/resources/js/Pages/Profile/Partials/DeleteUserForm.vue', generateDeleteUserFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue', generateLogoutOtherBrowserSessionsFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue', generateTwoFactorAuthenticationFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue', generateUpdatePasswordFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue', generateUpdateProfileInformationFormVue() )
+    installFile( '/resources/js/Pages/Profile/Show.vue', generateProfileShowVue() )
+
+    // install laravel jetstream Team components/page files
 
     // install laravel jetstream page component files
     installFile( '/resources/js/Pages/Dashboard.vue', generateDashboardVue() )
