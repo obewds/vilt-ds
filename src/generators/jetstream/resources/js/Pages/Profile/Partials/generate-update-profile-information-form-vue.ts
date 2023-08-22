@@ -172,7 +172,7 @@ return `<!-- ./resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.
                 <div v-show="photoPreview" class="mt-2">
                     <span
                         class="block rounded-full w-20 h-20 bg-cover bg-no-repeat bg-center"
-                        :style="'background-image: url(\'' + photoPreview + '\');'"
+                        :style="'background-image: url(' + photoPreview + ');'"
                     />
                 </div>
 

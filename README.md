@@ -53,6 +53,8 @@ Next up, you can check out the install so far using (vite will give you a link f
 npm run dev
 ```
 
+> NOTE: You may need to delete Jetstream's node_modules directory and reinstall node.js dependencies with a `npm install` command to get vite to play nicely with Jetstream defaults!
+
 
 ## Installing VILT DS
 
@@ -68,4 +70,12 @@ Once the VILT DS package is installed, you can access and run the VILT DS instal
 npx vilt-ds
 ```
 
+After your base VILT DS files are installed, you'll need to run the following command:
 
+```bash
+sail artisan ziggy:generate
+```
+
+The `sail artisan ziggy:generate` command will generate a Javascript file with current routes in it. Typescript needs this information downstream, so we need to update this file when new routes are established.
+
+For now, we can simply switch the ziggy generated file from a Javascript `.js` extension to a Typescript `.ts` extension, and move on with our project.
