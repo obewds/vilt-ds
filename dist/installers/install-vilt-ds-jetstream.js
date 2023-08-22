@@ -1,5 +1,6 @@
 // ./src/installers/install-vilt-ds-jetstream.ts
 import installFile from '../helpers/install-file.js';
+import removeFile from '../helpers/remove-file.js';
 // import client side deps and package scripts/mods for VILT DS and VueVentus
 import installJetstreamNpmDeps from '../installers/dependencies/install-jetstream-npm-deps.js';
 import installJetstreamPackageJsonMods from '../installers/dependencies/install-jetstream-package-json-mods.js';
@@ -207,5 +208,12 @@ export default function () {
     installFile('/resources/js/Pages/Welcome.vue', generatePageWelcomeVue());
     // install suggested VS Code Extensions for VILT DS
     installFile('/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4));
+    console.log(' ');
+    // delete javascript files now replaced by typescript files
+    removeFile('/vite.config.js');
+    removeFile('/tailwind.config.js');
+    removeFile('/tailwind.config.js');
+    removeFile('/resources/js/bootstrap.js');
+    removeFile('/resources/js/app.js');
 }
 //# sourceMappingURL=install-vilt-ds-jetstream.js.map
