@@ -5,7 +5,7 @@ export default function () {
 <script lang="ts">
 
     import type { ValidColorModes } from '@obewds/vueventus'
-    import type { UsePageSharedDataProps } from '../Types/app-jetstream-types'
+    import type { JetstreamUserTeamData, UsePageSharedDataProps } from '../Types/app-jetstream-types'
 
     import { computed, defineComponent, ref } from 'vue'
     import { Head, Link, router } from '@inertiajs/vue3'
@@ -52,8 +52,7 @@ export default function () {
 
             const pageProps = computed( () => usePage().props as UsePageSharedDataProps )
 
-            // TODO: fix this team any type
-            const switchToTeam = (team:any) => {
+            const switchToTeam = (team:JetstreamUserTeamData) => {
                 router.put(route('current-team.update'), {
                     team_id: team.id,
                 }, {
