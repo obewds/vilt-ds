@@ -32,6 +32,86 @@ export interface JetstreamApiTokenData {
     tokenable_type: string
 }
 
+export interface JetstreamTeamOwnerData {
+    created_at: string // timestamp
+    current_team_id: null|number
+    email: string
+    email_verified_at: null|string // timestamp
+    id: number
+    name: string
+    profile_photo_path: null|string
+    profile_photo_url: string
+    two_factor_confirmed_at: null|string
+    updated_at: string // timestamp
+}
+
+export interface JetstreamTeamInvitation {
+    created_at: string // timestamp
+    email: string
+    id: number
+    role: string
+    team_id: number
+    updated_at: string // timestamp
+}
+
+export interface JetstreamTeamMembership {
+    created_at: string // timestamp
+    role: string
+    team_id: number
+    updated_at: string // timestamp
+    user_id: number
+}
+
+export interface JetstreamTeamMember {
+    created_at: string // timestamp
+    current_team_id: number
+    email: string
+    email_verified_at: null|string
+    id: number
+    membership: JetstreamTeamMembership
+    name: string
+    profile_photo_path: null|string
+    profile_photo_url: string
+    two_factor_confirmed_at: null|string
+    updated_at: string // timestamp
+}
+
+export interface JetstreamTeamData {
+    created_at: string // timestamp
+    id: number
+    name: string
+    owner: JetstreamTeamOwnerData
+    personal_team: boolean
+    team_invitations: Array<JetstreamTeamInvitation>
+    updated_at: string // timestamp
+    user_id: number
+    users: Array<JetstreamTeamMember>
+}
+
+export interface JetstreamTeamRoleData {
+    description: string
+    key: string
+    name: string
+    permissions: Array<'create'|'read'|'update'|'delete'|string>
+}
+
+export interface JetstreamTeamPermissionsData {
+    canAddTeamMembers: boolean
+    canDeleteTeam: boolean
+    canRemoveTeamMembers: boolean
+    canUpdateTeam: boolean
+    canUpdateTeamMembers: boolean
+}
+
+export interface JetstreamUserTeamData {
+    created_at: string // timestamp
+    id: number
+    name: string
+    personal_team: boolean
+    updated_at: string // timestamp
+    user_id: number
+}
+
 export interface JetstreamSharedFlashData {
     banner?: string
     bannerStyle?: string
@@ -53,12 +133,10 @@ export interface JetstreamSharedData {
 }
 
 export interface JetstreamAuthUser {
-    // TODO: figure out TS type for all_teams property
-    all_teams: Array<any>
+    all_teams: Array<JetstreamUserTeamData>
     created_at: string // timestamp
     current_team_id: null|number
-    // TODO: figure out TS type for current_team property
-    current_team: any
+    current_team: JetstreamUserTeamData
     email: string
     email_verified_at: null|string // timestamp
     id: number
@@ -103,7 +181,6 @@ export interface UsePageSharedDataProps extends PageProps {
     defaultPermissions: Array<JetstreamApiPermission>
     // TODO: figure out TS type for errorBags property
     errorBags: any[]
-    // TODO: figure out TS type for errors property
     errors: null|Errors & ErrorBag
     jetstream: JetstreamSharedData
     sessions: Array<JetstreamSessionData>
