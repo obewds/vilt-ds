@@ -14,6 +14,7 @@ import generateAppVvClassesTypesTs from '../generators/jetstream/resources/js/Ty
 import generateTsconfigJson from '../generators/jetstream/generate-tsconfig-json.js';
 import generateViteTsxDts from '../generators/jetstream/resources/js/generate-vite-tsx-d-ts.js';
 import generateViteWindowDts from '../generators/jetstream/resources/js/generate-vite-window-d-ts.js';
+import generateZiggyTs from '../generators/jetstream/resources/js/generate-ziggy-ts.js';
 // import vue ecosystem app typed VILT DS files
 import generateBootstrapTs from '../generators/jetstream/resources/js/generate-bootstrap-ts.js';
 // import tailwind app typed files
@@ -118,6 +119,7 @@ export default function () {
     installFile('/tsconfig.json', generateTsconfigJson());
     installFile('/resources/js/vite-tsx.d.ts', generateViteTsxDts());
     installFile('/resources/js/vite-window.d.ts', generateViteWindowDts());
+    installFile('/resources/js/ziggy.ts', generateZiggyTs());
     // install vue ecosystem app typed VILT DS files
     installFile('/resources/js/bootstrap.ts', generateBootstrapTs());
     installFile('/resources/js/app.ts', generateAppTs());
