@@ -21,6 +21,7 @@ import generateAppTs from '../generators/jetstream/resources/js/generate-app-ts.
 import generateViteConfigTs from '../generators/jetstream/generate-vite-config-ts.js';
 // import VueVentus and VueVentus dependency app files
 import viltDsDefaultColorPalette from '../data/colors/vilt-ds-default-tailwind-color-palette.js';
+import generateAppVvTs from '../generators/jetstream/resources/js/generate-app-vv-ts.js';
 import generateAppVvClassesTs from '../generators/jetstream/resources/js/generate-app-vv-classes-ts.js';
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js';
 // import VueVentus components
@@ -124,6 +125,7 @@ export default function () {
     installFile('/tailwind.config.ts', generateTailwindConfigTs());
     // install VueVentus and VueVentus dependency app files
     installFile('/resources/js/app.colors.json', JSON.stringify(viltDsDefaultColorPalette, null, 4));
+    installFile('/resources/js/app.vv.ts', generateAppVvTs());
     installFile('/resources/js/app.vv.classes.ts', generateAppVvClassesTs());
     installFile('/resources/js/gsap.ts', generateJetstreamGsapTs());
     // install VueVentus components
