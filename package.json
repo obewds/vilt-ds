@@ -23,7 +23,8 @@
   "types": "./dist/index.d.ts",
   "bin": {
     "vilt-ds": "./dist/index.js",
-    "update-vilt:vueventus": "./dist/update-vueventus.js"
+    "update-vilt:vueventus": "./dist/update-vueventus.js",
+    "update-vilt:jetstream-teams": "./dist/update-jetstream-teams.js"
   },
   "repository": {
     "type": "git",
