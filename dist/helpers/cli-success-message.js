@@ -1,4 +1,4 @@
-// ./cli/helpers/cli-success-message.ts
+// ./src/helpers/cli-success-message.ts
 import gradientText from './gradient-text.js';
 export default function (string, prefixLineBreak, suffixLineBreak) {
     if (prefixLineBreak) {
