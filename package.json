@@ -22,7 +22,8 @@
   ],
   "types": "./dist/index.d.ts",
   "bin": {
-    "vilt-ds": "./dist/index.js"
+    "vilt-ds": "./dist/index.js",
+    "update-vilt:vueventus": "./dist/update-vueventus.js"
   },
   "repository": {
     "type": "git",
