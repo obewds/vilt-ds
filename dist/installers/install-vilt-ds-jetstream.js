@@ -51,54 +51,66 @@ import generateAppBladePhp from '../generators/jetstream/resources/views/generat
 // import laravel jetstream layout component files
 import generateAppLayoutVue from '../generators/jetstream/resources/js/Layouts/generate-app-layout-vue.js';
 // import laravel jetstream component files
-import generateActionMessageVue from '../generators/jetstream/resources/js/Components/generate-action-message-vue.js';
-import generateActionSectionVue from '../generators/jetstream/resources/js/Components/generate-action-section-vue.js';
-import generateApplicationLogoVue from '../generators/jetstream/resources/js/Components/generate-application-logo-vue.js';
-import generateApplicationMarkVue from '../generators/jetstream/resources/js/Components/generate-application-mark-vue.js';
-import generateAuthenticationCardLogoVue from '../generators/jetstream/resources/js/Components/generate-authentication-card-logo-vue.js';
-import generateAuthenticationCardVue from '../generators/jetstream/resources/js/Components/generate-authentication-card-vue.js';
-import generateBannerVue from '../generators/jetstream/resources/js/Components/generate-banner-vue.js';
-import generateCheckboxVue from '../generators/jetstream/resources/js/Components/generate-checkbox-vue.js';
-import generateConfirmationModalVue from '../generators/jetstream/resources/js/Components/generate-confirmation-modal-vue.js';
-import generateConfirmsPasswordVue from '../generators/jetstream/resources/js/Components/generate-confirms-password-vue.js';
-import generateDangerButtonVue from '../generators/jetstream/resources/js/Components/generate-danger-button-vue.js';
-import generateDialogModalVue from '../generators/jetstream/resources/js/Components/generate-dialog-modal-vue.js';
-import generateDropdownLinkVue from '../generators/jetstream/resources/js/Components/generate-dropdown-link-vue.js';
-import generateDropdownVue from '../generators/jetstream/resources/js/Components/generate-dropdown-vue.js';
-import generateFormSectionVue from '../generators/jetstream/resources/js/Components/generate-form-section-vue.js';
-import generateInputErrorVue from '../generators/jetstream/resources/js/Components/generate-input-error-vue.js';
-import generateInputLabelVue from '../generators/jetstream/resources/js/Components/generate-input-label-vue.js';
-import generateModalVue from '../generators/jetstream/resources/js/Components/generate-modal-vue.js';
-import generateNavLinkVue from '../generators/jetstream/resources/js/Components/generate-nav-link-vue.js';
-import generatePrimaryButtonVue from '../generators/jetstream/resources/js/Components/generate-primary-button-vue.js';
-import generateResponsiveNavLinkVue from '../generators/jetstream/resources/js/Components/generate-responsive-nav-link-vue.js';
-import generateScrollUpColorModeSectionVue from '../generators/jetstream/resources/js/Components/generate-scroll-up-color-mode-section-vue.js';
-import generateSecondaryButtonVue from '../generators/jetstream/resources/js/Components/generate-secondary-button-vue.js';
-import generateSectionBorderVue from '../generators/jetstream/resources/js/Components/generate-section-border-vue.js';
-import generateSectionTitleVue from '../generators/jetstream/resources/js/Components/generate-section-title-vue.js';
-import generateTextInputVue from '../generators/jetstream/resources/js/Components/generate-text-input-vue.js';
-import generateWelcomeVue from '../generators/jetstream/resources/js/Components/generate-welcome-vue.js';
+import jetstreamBaseComponents from '../updaters/jetstream-base-components.js';
+/*
+import generateActionMessageVue from '../generators/jetstream/resources/js/Components/generate-action-message-vue.js'
+import generateActionSectionVue from '../generators/jetstream/resources/js/Components/generate-action-section-vue.js'
+import generateApplicationLogoVue from '../generators/jetstream/resources/js/Components/generate-application-logo-vue.js'
+import generateApplicationMarkVue from '../generators/jetstream/resources/js/Components/generate-application-mark-vue.js'
+import generateAuthenticationCardLogoVue from '../generators/jetstream/resources/js/Components/generate-authentication-card-logo-vue.js'
+import generateAuthenticationCardVue from '../generators/jetstream/resources/js/Components/generate-authentication-card-vue.js'
+import generateBannerVue from '../generators/jetstream/resources/js/Components/generate-banner-vue.js'
+import generateCheckboxVue from '../generators/jetstream/resources/js/Components/generate-checkbox-vue.js'
+import generateConfirmationModalVue from '../generators/jetstream/resources/js/Components/generate-confirmation-modal-vue.js'
+import generateConfirmsPasswordVue from '../generators/jetstream/resources/js/Components/generate-confirms-password-vue.js'
+import generateDangerButtonVue from '../generators/jetstream/resources/js/Components/generate-danger-button-vue.js'
+import generateDialogModalVue from '../generators/jetstream/resources/js/Components/generate-dialog-modal-vue.js'
+import generateDropdownLinkVue from '../generators/jetstream/resources/js/Components/generate-dropdown-link-vue.js'
+import generateDropdownVue from '../generators/jetstream/resources/js/Components/generate-dropdown-vue.js'
+import generateFormSectionVue from '../generators/jetstream/resources/js/Components/generate-form-section-vue.js'
+import generateInputErrorVue from '../generators/jetstream/resources/js/Components/generate-input-error-vue.js'
+import generateInputLabelVue from '../generators/jetstream/resources/js/Components/generate-input-label-vue.js'
+import generateModalVue from '../generators/jetstream/resources/js/Components/generate-modal-vue.js'
+import generateNavLinkVue from '../generators/jetstream/resources/js/Components/generate-nav-link-vue.js'
+import generatePrimaryButtonVue from '../generators/jetstream/resources/js/Components/generate-primary-button-vue.js'
+import generateResponsiveNavLinkVue from '../generators/jetstream/resources/js/Components/generate-responsive-nav-link-vue.js'
+import generateScrollUpColorModeSectionVue from '../generators/jetstream/resources/js/Components/generate-scroll-up-color-mode-section-vue.js'
+import generateSecondaryButtonVue from '../generators/jetstream/resources/js/Components/generate-secondary-button-vue.js'
+import generateSectionBorderVue from '../generators/jetstream/resources/js/Components/generate-section-border-vue.js'
+import generateSectionTitleVue from '../generators/jetstream/resources/js/Components/generate-section-title-vue.js'
+import generateTextInputVue from '../generators/jetstream/resources/js/Components/generate-text-input-vue.js'
+import generateWelcomeVue from '../generators/jetstream/resources/js/Components/generate-welcome-vue.js'
+*/
 // import laravel php files for VILT DS
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js';
 import generateWebPhp from '../generators/jetstream/routes/generate-web-php.js';
 // import laravel jetstream API components/page files
-import generateApiTokenManagerVue from '../generators/jetstream/resources/js/Pages/API/Partials/generate-api-token-manager-vue.js';
-import generateApiIndexVue from '../generators/jetstream/resources/js/Pages/API/generate-api-index-vue.js';
+import jetstreamApi from '../updaters/jetstream-api.js';
+/*
+import generateApiTokenManagerVue from '../generators/jetstream/resources/js/Pages/API/Partials/generate-api-token-manager-vue.js'
+import generateApiIndexVue from '../generators/jetstream/resources/js/Pages/API/generate-api-index-vue.js'
+*/
 // import laravel jetstream Auth components/page files
-import generateConfirmPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-confirm-password-vue.js';
-import generateForgotPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-forgot-password-vue.js';
-import generateLoginVue from '../generators/jetstream/resources/js/Pages/Auth/generate-login-vue.js';
-import generateRegisterVue from '../generators/jetstream/resources/js/Pages/Auth/generate-register-vue.js';
-import generateResetPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-reset-password-vue.js';
-import generateTwoFactorChallengeVue from '../generators/jetstream/resources/js/Pages/Auth/generate-two-factor-challenge-vue.js';
-import generateVerifyEmailVue from '../generators/jetstream/resources/js/Pages/Auth/generate-verify-email-vue.js';
+import jetstreamAuth from '../updaters/jetstream-auth.js';
+/*
+import generateConfirmPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-confirm-password-vue.js'
+import generateForgotPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-forgot-password-vue.js'
+import generateLoginVue from '../generators/jetstream/resources/js/Pages/Auth/generate-login-vue.js'
+import generateRegisterVue from '../generators/jetstream/resources/js/Pages/Auth/generate-register-vue.js'
+import generateResetPasswordVue from '../generators/jetstream/resources/js/Pages/Auth/generate-reset-password-vue.js'
+import generateTwoFactorChallengeVue from '../generators/jetstream/resources/js/Pages/Auth/generate-two-factor-challenge-vue.js'
+import generateVerifyEmailVue from '../generators/jetstream/resources/js/Pages/Auth/generate-verify-email-vue.js'
+*/
 // import laravel jetstream Profile components/page files
-import generateDeleteUserFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-delete-user-form-vue.js';
-import generateLogoutOtherBrowserSessionsFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-logout-other-browser-sessions-form-vue.js';
-import generateTwoFactorAuthenticationFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-two-factor-authentication-form-vue.js';
-import generateUpdatePasswordFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-update-password-form-vue.js';
-import generateUpdateProfileInformationFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-update-profile-information-form-vue.js';
-import generateProfileShowVue from '../generators/jetstream/resources/js/Pages/Profile/generate-profile-show-vue.js';
+import jetstreamProfile from '../updaters/jetstream-profile.js';
+/*
+import generateDeleteUserFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-delete-user-form-vue.js'
+import generateLogoutOtherBrowserSessionsFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-logout-other-browser-sessions-form-vue.js'
+import generateTwoFactorAuthenticationFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-two-factor-authentication-form-vue.js'
+import generateUpdatePasswordFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-update-password-form-vue.js'
+import generateUpdateProfileInformationFormVue from '../generators/jetstream/resources/js/Pages/Profile/Partials/generate-update-profile-information-form-vue.js'
+import generateProfileShowVue from '../generators/jetstream/resources/js/Pages/Profile/generate-profile-show-vue.js'
+*/
 // import laravel jetstream Team components/page files
 import jetstreamTeams from '../updaters/jetstream-teams.js';
 /*
@@ -110,11 +122,14 @@ import generateTeamsCreateVue from '../generators/jetstream/resources/js/Pages/T
 import generateTeamsShowVue from '../generators/jetstream/resources/js/Pages/Teams/generate-teams-show-vue.js'
 */
 // import laravel jetstream page component files
-import generateDashboardVue from '../generators/jetstream/resources/js/Pages/generate-dashboard-vue.js';
-import generatePrivacyPolicyVue from '../generators/jetstream/resources/js/Pages/generate-privacy-policy-vue.js';
-import generateTermsOfServiceVue from '../generators/jetstream/resources/js/Pages/generate-terms-of-service-vue.js';
-import generateVueVentusVue from '../generators/jetstream/resources/js/Pages/generate-vue-ventus-vue.js';
-import generatePageWelcomeVue from '../generators/jetstream/resources/js/Pages/generate-welcome-vue.js';
+import jetstreamBasePages from '../updaters/jetstream-base-pages.js';
+/*
+import generateDashboardVue from '../generators/jetstream/resources/js/Pages/generate-dashboard-vue.js'
+import generatePrivacyPolicyVue from '../generators/jetstream/resources/js/Pages/generate-privacy-policy-vue.js'
+import generateTermsOfServiceVue from '../generators/jetstream/resources/js/Pages/generate-terms-of-service-vue.js'
+import generateVueVentusVue from '../generators/jetstream/resources/js/Pages/generate-vue-ventus-vue.js'
+import generatePageWelcomeVue from '../generators/jetstream/resources/js/Pages/generate-welcome-vue.js'
+*/
 // import suggested VS Code Extensions for VILT DS
 import viltDsVscodeExtensions from '../data/ide/vilt-ds-vscode-extensions.js';
 export default function () {
@@ -168,54 +183,66 @@ export default function () {
     // install laravel jetstream layout component files
     installFile('/resources/js/Layouts/AppLayout.vue', generateAppLayoutVue());
     // install laravel jetstream component files
-    installFile('/resources/js/Components/ActionMessage.vue', generateActionMessageVue());
-    installFile('/resources/js/Components/ActionSection.vue', generateActionSectionVue());
-    installFile('/resources/js/Components/ApplicationLogo.vue', generateApplicationLogoVue());
-    installFile('/resources/js/Components/ApplicationMark.vue', generateApplicationMarkVue());
-    installFile('/resources/js/Components/AuthenticationCardLogo.vue', generateAuthenticationCardLogoVue());
-    installFile('/resources/js/Components/AuthenticationCard.vue', generateAuthenticationCardVue());
-    installFile('/resources/js/Components/Banner.vue', generateBannerVue());
-    installFile('/resources/js/Components/Checkbox.vue', generateCheckboxVue());
-    installFile('/resources/js/Components/ConfirmationModal.vue', generateConfirmationModalVue());
-    installFile('/resources/js/Components/ConfirmsPassword.vue', generateConfirmsPasswordVue());
-    installFile('/resources/js/Components/DangerButton.vue', generateDangerButtonVue());
-    installFile('/resources/js/Components/DialogModal.vue', generateDialogModalVue());
-    installFile('/resources/js/Components/DropdownLink.vue', generateDropdownLinkVue());
-    installFile('/resources/js/Components/Dropdown.vue', generateDropdownVue());
-    installFile('/resources/js/Components/FormSection.vue', generateFormSectionVue());
-    installFile('/resources/js/Components/InputError.vue', generateInputErrorVue());
-    installFile('/resources/js/Components/InputLabel.vue', generateInputLabelVue());
-    installFile('/resources/js/Components/Modal.vue', generateModalVue());
-    installFile('/resources/js/Components/NavLink.vue', generateNavLinkVue());
-    installFile('/resources/js/Components/PrimaryButton.vue', generatePrimaryButtonVue());
-    installFile('/resources/js/Components/ResponsiveNavLink.vue', generateResponsiveNavLinkVue());
-    installFile('/resources/js/Components/ScrollUpColorModeSection.vue', generateScrollUpColorModeSectionVue());
-    installFile('/resources/js/Components/SecondaryButton.vue', generateSecondaryButtonVue());
-    installFile('/resources/js/Components/SectionBorder.vue', generateSectionBorderVue());
-    installFile('/resources/js/Components/SectionTitle.vue', generateSectionTitleVue());
-    installFile('/resources/js/Components/TextInput.vue', generateTextInputVue());
-    installFile('/resources/js/Components/Welcome.vue', generateWelcomeVue());
+    jetstreamBaseComponents();
+    /*
+    installFile( '/resources/js/Components/ActionMessage.vue', generateActionMessageVue() )
+    installFile( '/resources/js/Components/ActionSection.vue', generateActionSectionVue() )
+    installFile( '/resources/js/Components/ApplicationLogo.vue', generateApplicationLogoVue() )
+    installFile( '/resources/js/Components/ApplicationMark.vue', generateApplicationMarkVue() )
+    installFile( '/resources/js/Components/AuthenticationCardLogo.vue', generateAuthenticationCardLogoVue() )
+    installFile( '/resources/js/Components/AuthenticationCard.vue', generateAuthenticationCardVue() )
+    installFile( '/resources/js/Components/Banner.vue', generateBannerVue() )
+    installFile( '/resources/js/Components/Checkbox.vue', generateCheckboxVue() )
+    installFile( '/resources/js/Components/ConfirmationModal.vue', generateConfirmationModalVue() )
+    installFile( '/resources/js/Components/ConfirmsPassword.vue', generateConfirmsPasswordVue() )
+    installFile( '/resources/js/Components/DangerButton.vue', generateDangerButtonVue() )
+    installFile( '/resources/js/Components/DialogModal.vue', generateDialogModalVue() )
+    installFile( '/resources/js/Components/DropdownLink.vue', generateDropdownLinkVue() )
+    installFile( '/resources/js/Components/Dropdown.vue', generateDropdownVue() )
+    installFile( '/resources/js/Components/FormSection.vue', generateFormSectionVue() )
+    installFile( '/resources/js/Components/InputError.vue', generateInputErrorVue() )
+    installFile( '/resources/js/Components/InputLabel.vue', generateInputLabelVue() )
+    installFile( '/resources/js/Components/Modal.vue', generateModalVue() )
+    installFile( '/resources/js/Components/NavLink.vue', generateNavLinkVue() )
+    installFile( '/resources/js/Components/PrimaryButton.vue', generatePrimaryButtonVue() )
+    installFile( '/resources/js/Components/ResponsiveNavLink.vue', generateResponsiveNavLinkVue() )
+    installFile( '/resources/js/Components/ScrollUpColorModeSection.vue', generateScrollUpColorModeSectionVue() )
+    installFile( '/resources/js/Components/SecondaryButton.vue', generateSecondaryButtonVue() )
+    installFile( '/resources/js/Components/SectionBorder.vue', generateSectionBorderVue() )
+    installFile( '/resources/js/Components/SectionTitle.vue', generateSectionTitleVue() )
+    installFile( '/resources/js/Components/TextInput.vue', generateTextInputVue() )
+    installFile( '/resources/js/Components/Welcome.vue', generateWelcomeVue() )
+    */
     // update laravel php files for VILT DS
     installFile('/config/jetstream.php', generateJetstreamPhp());
     installFile('/routes/web.php', generateWebPhp());
     // install laravel jetstream API components/page files
-    installFile('/resources/js/Pages/API/Partials/ApiTokenManager.vue', generateApiTokenManagerVue());
-    installFile('/resources/js/Pages/API/Index.vue', generateApiIndexVue());
+    jetstreamApi();
+    /*
+    installFile( '/resources/js/Pages/API/Partials/ApiTokenManager.vue', generateApiTokenManagerVue() )
+    installFile( '/resources/js/Pages/API/Index.vue', generateApiIndexVue() )
+    */
     // install laravel jetstream Auth components/page files
-    installFile('/resources/js/Pages/Auth/ConfirmPassword.vue', generateConfirmPasswordVue());
-    installFile('/resources/js/Pages/Auth/ForgotPassword.vue', generateForgotPasswordVue());
-    installFile('/resources/js/Pages/Auth/Login.vue', generateLoginVue());
-    installFile('/resources/js/Pages/Auth/Register.vue', generateRegisterVue());
-    installFile('/resources/js/Pages/Auth/ResetPassword.vue', generateResetPasswordVue());
-    installFile('/resources/js/Pages/Auth/TwoFactorChallenge.vue', generateTwoFactorChallengeVue());
-    installFile('/resources/js/Pages/Auth/VerifyEmail.vue', generateVerifyEmailVue());
+    jetstreamAuth();
+    /*
+    installFile( '/resources/js/Pages/Auth/ConfirmPassword.vue', generateConfirmPasswordVue() )
+    installFile( '/resources/js/Pages/Auth/ForgotPassword.vue', generateForgotPasswordVue() )
+    installFile( '/resources/js/Pages/Auth/Login.vue', generateLoginVue() )
+    installFile( '/resources/js/Pages/Auth/Register.vue', generateRegisterVue() )
+    installFile( '/resources/js/Pages/Auth/ResetPassword.vue', generateResetPasswordVue() )
+    installFile( '/resources/js/Pages/Auth/TwoFactorChallenge.vue', generateTwoFactorChallengeVue() )
+    installFile( '/resources/js/Pages/Auth/VerifyEmail.vue', generateVerifyEmailVue() )
+    */
     // install laravel jetstream Profile components/page files
-    installFile('/resources/js/Pages/Profile/Partials/DeleteUserForm.vue', generateDeleteUserFormVue());
-    installFile('/resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue', generateLogoutOtherBrowserSessionsFormVue());
-    installFile('/resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue', generateTwoFactorAuthenticationFormVue());
-    installFile('/resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue', generateUpdatePasswordFormVue());
-    installFile('/resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue', generateUpdateProfileInformationFormVue());
-    installFile('/resources/js/Pages/Profile/Show.vue', generateProfileShowVue());
+    jetstreamProfile();
+    /*
+    installFile( '/resources/js/Pages/Profile/Partials/DeleteUserForm.vue', generateDeleteUserFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue', generateLogoutOtherBrowserSessionsFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue', generateTwoFactorAuthenticationFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue', generateUpdatePasswordFormVue() )
+    installFile( '/resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue', generateUpdateProfileInformationFormVue() )
+    installFile( '/resources/js/Pages/Profile/Show.vue', generateProfileShowVue() )
+    */
     // install laravel jetstream Team components/page files
     jetstreamTeams();
     /*
@@ -227,11 +254,14 @@ export default function () {
     installFile( '/resources/js/Pages/Teams/Show.vue', generateTeamsShowVue() )
     */
     // install laravel jetstream page component files
-    installFile('/resources/js/Pages/Dashboard.vue', generateDashboardVue());
-    installFile('/resources/js/Pages/PrivacyPolicy.vue', generatePrivacyPolicyVue());
-    installFile('/resources/js/Pages/TermsOfService.vue', generateTermsOfServiceVue());
-    installFile('/resources/js/Pages/VueVentus.vue', generateVueVentusVue());
-    installFile('/resources/js/Pages/Welcome.vue', generatePageWelcomeVue());
+    jetstreamBasePages();
+    /*
+    installFile( '/resources/js/Pages/Dashboard.vue', generateDashboardVue() )
+    installFile( '/resources/js/Pages/PrivacyPolicy.vue', generatePrivacyPolicyVue() )
+    installFile( '/resources/js/Pages/TermsOfService.vue', generateTermsOfServiceVue() )
+    installFile( '/resources/js/Pages/VueVentus.vue', generateVueVentusVue() )
+    installFile( '/resources/js/Pages/Welcome.vue', generatePageWelcomeVue() )
+    */
     // install suggested VS Code Extensions for VILT DS
     installFile('/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4));
     console.log(' ');
