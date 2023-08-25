@@ -35,7 +35,7 @@ import generateAppVvClassesTs from '../generators/jetstream/resources/js/generat
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 
 // import VueVentus components
-import updateVueVentusComponents from '../updaters/vueventus-components.js'
+import vueventus from '../updaters/vueventus.js'
 /*
 import generateVvAnchorVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-anchor-vue.js'
 import generateVvInertiaLinkVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-inertia-link-vue.js'
@@ -116,7 +116,7 @@ import generateUpdateProfileInformationFormVue from '../generators/jetstream/res
 import generateProfileShowVue from '../generators/jetstream/resources/js/Pages/Profile/generate-profile-show-vue.js'
 
 // import laravel jetstream Team components/page files
-import jetstreamTeamComponents from '../updaters/jetstream-team-components.js'
+import jetstreamTeams from '../updaters/jetstream-teams.js'
 /*
 import generateCreateTeamFormVue from '../generators/jetstream/resources/js/Pages/Teams/Partials/generate-create-team-form-vue.js'
 import generateDeleteTeamFormVue from '../generators/jetstream/resources/js/Pages/Teams/Partials/generate-delete-team-form-vue.js'
@@ -171,7 +171,7 @@ export default function (): void {
     installFile( '/resources/js/gsap.ts', generateJetstreamGsapTs() )
     
     // install VueVentus components
-    updateVueVentusComponents()
+    vueventus()
     /*
     installFile( '/resources/js/Components/vv/anchors/VvAnchor.vue', generateVvAnchorVue() )
     installFile( '/resources/js/Components/vv/anchors/VvInertiaLink.vue', generateVvInertiaLinkVue() )
@@ -252,7 +252,7 @@ export default function (): void {
     installFile( '/resources/js/Pages/Profile/Show.vue', generateProfileShowVue() )
 
     // install laravel jetstream Team components/page files
-    jetstreamTeamComponents()
+    jetstreamTeams()
     /*
     installFile( '/resources/js/Pages/Teams/Partials/CreateTeamForm.vue', generateCreateTeamFormVue() )
     installFile( '/resources/js/Pages/Teams/Partials/DeleteTeamForm.vue', generateDeleteTeamFormVue() )
