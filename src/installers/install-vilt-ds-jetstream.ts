@@ -1,5 +1,7 @@
 // ./src/installers/install-vilt-ds-jetstream.ts
 
+import updateVueVentusComponents from '../updaters/vueventus-components.js'
+
 import installFile from '../helpers/install-file.js'
 import removeFile from '../helpers/remove-file.js'
 
@@ -35,6 +37,7 @@ import generateAppVvClassesTs from '../generators/jetstream/resources/js/generat
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 
 // import VueVentus components
+/*
 import generateVvAnchorVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-anchor-vue.js'
 import generateVvInertiaLinkVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-inertia-link-vue.js'
 import generateVvButtonVue from '../generators/jetstream/resources/js/Components/vv/buttons/generate-vv-button-vue.js'
@@ -51,6 +54,7 @@ import generateVvListVue from '../generators/jetstream/resources/js/Components/v
 import generateVvListboxVue from '../generators/jetstream/resources/js/Components/vv/selects/generate-vv-listbox-vue.js'
 import generateVvSelectVue from '../generators/jetstream/resources/js/Components/vv/selects/generate-vv-select-vue.js'
 import generateVvTextareaVue from '../generators/jetstream/resources/js/Components/vv/textareas/generate-vv-textarea-vue.js'
+*/
 
 // import laravel blade files
 import generateAppBladePhp from '../generators/jetstream/resources/views/generate-app-blade-php.js'
@@ -165,6 +169,8 @@ export default function (): void {
     installFile( '/resources/js/gsap.ts', generateJetstreamGsapTs() )
     
     // install VueVentus components
+    updateVueVentusComponents()
+    /*
     installFile( '/resources/js/Components/vv/anchors/VvAnchor.vue', generateVvAnchorVue() )
     installFile( '/resources/js/Components/vv/anchors/VvInertiaLink.vue', generateVvInertiaLinkVue() )
     installFile( '/resources/js/Components/vv/buttons/VvButton.vue', generateVvButtonVue() )
@@ -181,6 +187,7 @@ export default function (): void {
     installFile( '/resources/js/Components/vv/selects/VvListbox.vue', generateVvListboxVue() )
     installFile( '/resources/js/Components/vv/selects/VvSelect.vue', generateVvSelectVue() )
     installFile( '/resources/js/Components/vv/textareas/VvTextarea.vue', generateVvTextareaVue() )
+    */
 
     // install laravel blade files
     installFile( '/resources/views/app.blade.php', generateAppBladePhp() )
