@@ -1,7 +1,5 @@
 // ./src/installers/install-vilt-ds-jetstream.ts
 
-import updateVueVentusComponents from '../updaters/vueventus-components.js'
-
 import installFile from '../helpers/install-file.js'
 import removeFile from '../helpers/remove-file.js'
 
@@ -37,6 +35,7 @@ import generateAppVvClassesTs from '../generators/jetstream/resources/js/generat
 import generateJetstreamGsapTs from '../generators/jetstream/resources/js/generate-jetstream-gsap-ts.js'
 
 // import VueVentus components
+import updateVueVentusComponents from '../updaters/vueventus-components.js'
 /*
 import generateVvAnchorVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-anchor-vue.js'
 import generateVvInertiaLinkVue from '../generators/jetstream/resources/js/Components/vv/anchors/generate-vv-inertia-link-vue.js'
@@ -117,12 +116,15 @@ import generateUpdateProfileInformationFormVue from '../generators/jetstream/res
 import generateProfileShowVue from '../generators/jetstream/resources/js/Pages/Profile/generate-profile-show-vue.js'
 
 // import laravel jetstream Team components/page files
+import jetstreamTeamComponents from '../updaters/jetstream-team-components.js'
+/*
 import generateCreateTeamFormVue from '../generators/jetstream/resources/js/Pages/Teams/Partials/generate-create-team-form-vue.js'
 import generateDeleteTeamFormVue from '../generators/jetstream/resources/js/Pages/Teams/Partials/generate-delete-team-form-vue.js'
 import generateTeamMemberManagerVue from '../generators/jetstream/resources/js/Pages/Teams/Partials/generate-team-member-manager-vue.js'
 import generateUpdateNameFormVue from '../generators/jetstream/resources/js/Pages/Teams/Partials/generate-update-team-name-form-vue.js'
 import generateTeamsCreateVue from '../generators/jetstream/resources/js/Pages/Teams/generate-teams-create-vue.js'
 import generateTeamsShowVue from '../generators/jetstream/resources/js/Pages/Teams/generate-teams-show-vue.js'
+*/
 
 // import laravel jetstream page component files
 import generateDashboardVue from '../generators/jetstream/resources/js/Pages/generate-dashboard-vue.js'
@@ -250,12 +252,15 @@ export default function (): void {
     installFile( '/resources/js/Pages/Profile/Show.vue', generateProfileShowVue() )
 
     // install laravel jetstream Team components/page files
+    jetstreamTeamComponents()
+    /*
     installFile( '/resources/js/Pages/Teams/Partials/CreateTeamForm.vue', generateCreateTeamFormVue() )
     installFile( '/resources/js/Pages/Teams/Partials/DeleteTeamForm.vue', generateDeleteTeamFormVue() )
     installFile( '/resources/js/Pages/Teams/Partials/TeamMemberManager.vue', generateTeamMemberManagerVue() )
     installFile( '/resources/js/Pages/Teams/Partials/UpdateNameForm.vue', generateUpdateNameFormVue() )
     installFile( '/resources/js/Pages/Teams/Create.vue', generateTeamsCreateVue() )
     installFile( '/resources/js/Pages/Teams/Show.vue', generateTeamsShowVue() )
+    */
 
     // install laravel jetstream page component files
     installFile( '/resources/js/Pages/Dashboard.vue', generateDashboardVue() )
