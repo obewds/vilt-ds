@@ -1,4 +1,4 @@
-// ./cli/helpers/cli-warning-message.ts
+// ./src/helpers/cli-warning-message.ts
 
 import gradient from 'gradient-string'
 

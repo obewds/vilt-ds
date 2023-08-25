@@ -1,4 +1,4 @@
-// ./cli/helpers/cli-start-message.ts
+// ./src/helpers/cli-start-message.ts
 import gradientText from './gradient-text.js';
 export default function () {
     // show cli start message
