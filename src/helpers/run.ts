@@ -1,4 +1,4 @@
-// ./cli/helpers/run.ts
+// ./src/helpers/run.ts
 
 import child_process from 'child_process'
 
