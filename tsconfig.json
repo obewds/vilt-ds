@@ -6,7 +6,8 @@
         "sourceMap": true,
         "outDir": "dist",
         "declaration": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "allowJs": true,
     },
     "include": ["src/**/*"]
 }
