@@ -1,1 +1,0 @@
-{"version":3,"file":"generate-extensions-json.js","sourceRoot":"","sources":["../../../../../src/generators/jetstream/vscode/generate-extensions-json.ts"],"names":[],"mappings":"AAAA,gEAAgE;AAEhE,OAAO,sBAAsB,MAAM,gDAAgD,CAAA;AAEnF,MAAM,CAAC,OAAO;IAEV,OAAO,IAAI,CAAC,SAAS,CAAC,sBAAsB,EAAE,IAAI,EAAE,CAAC,CAAC,CAAA;AAE1D,CAAC"}
