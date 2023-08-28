@@ -1,0 +1,1 @@
+{"version":3,"file":"generate-tsconfig-json.js","sourceRoot":"","sources":["../../../../src/generators/jetstream/generate-tsconfig-json.ts"],"names":[],"mappings":"AAAA,uDAAuD;AAEvD,OAAO,sBAAsB,MAAM,oDAAoD,CAAA;AAEvF,MAAM,CAAC,OAAO;IAEV,OAAO,IAAI,CAAC,SAAS,CAAC,sBAAsB,EAAE,IAAI,EAAE,CAAC,CAAC,CAAA;AAE1D,CAAC"}

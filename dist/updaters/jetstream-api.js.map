@@ -1,1 +1,0 @@
-{"version":3,"file":"jetstream-api.js","sourceRoot":"","sources":["../../src/updaters/jetstream-api.ts"],"names":[],"mappings":"AAAA,kCAAkC;AAElC,OAAO,WAAW,MAAM,4BAA4B,CAAA;AAEpD,OAAO,0BAA0B,MAAM,2FAA2F,CAAA;AAClI,OAAO,mBAAmB,MAAM,0EAA0E,CAAA;AAE1G,MAAM,CAAC,OAAO;IAEV,WAAW,CAAE,sDAAsD,EAAE,0BAA0B,EAAE,CAAE,CAAA;IACnG,WAAW,CAAE,mCAAmC,EAAE,mBAAmB,EAAE,CAAE,CAAA;AAE7E,CAAC"}
