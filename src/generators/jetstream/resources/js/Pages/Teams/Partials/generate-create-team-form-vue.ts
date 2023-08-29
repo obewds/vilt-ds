@@ -11,19 +11,19 @@ return `<!-- ./resources/js/Pages/Teams/Partials/CreateTeamForm.vue -->
     import { computed, defineComponent } from 'vue'
     import { useForm, usePage } from '@inertiajs/vue3'
     import FormSection from '../../../Components/FormSection.vue'
-    import InputError from '../../../Components/InputError.vue'
     import InputLabel from '../../../Components/InputLabel.vue'
     import PrimaryButton from '../../../Components/PrimaryButton.vue'
-    import TextInput from '../../../Components/TextInput.vue'
+    import VvFormGroup from '../../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
         components: {
             FormSection,
-            InputError,
             InputLabel,
             PrimaryButton,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         setup () {
@@ -88,17 +88,20 @@ return `<!-- ./resources/js/Pages/Teams/Partials/CreateTeamForm.vue -->
 
             <div class="col-span-6 sm:col-span-4">
 
-                <InputLabel for="name" value="Team Name" />
-
-                <TextInput
-                    id="name"
-                    v-model="form.name"
-                    type="text"
-                    class="block w-full mt-1"
-                    autofocus
-                />
-
-                <InputError :message="form.errors.name" class="mt-2" />
+                <VvFormGroup
+                    label="New Team Name:"
+                    label-for="name"
+                    :display-error="form.errors.name !== ''"
+                    :error-text="form.errors.name"
+                >
+                    <VvInput
+                        id="name"
+                        v-model="form.name"
+                        placeholder="Enter New Team Name"
+                        autofocus="true"
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
             </div>
 
