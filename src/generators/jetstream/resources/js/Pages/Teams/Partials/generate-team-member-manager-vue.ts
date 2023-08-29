@@ -23,7 +23,8 @@ return `<!-- ./resources/js/Pages/Teams/Partials/TeamMemberManager.vue -->
     import PrimaryButton from '../../../Components/PrimaryButton.vue'
     import SecondaryButton from '../../../Components/SecondaryButton.vue'
     import SectionBorder from '../../../Components/SectionBorder.vue'
-    import TextInput from '../../../Components/TextInput.vue'
+    import VvFormGroup from '../../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
@@ -39,7 +40,8 @@ return `<!-- ./resources/js/Pages/Teams/Partials/TeamMemberManager.vue -->
             PrimaryButton,
             SecondaryButton,
             SectionBorder,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         props: {
@@ -58,15 +60,6 @@ return `<!-- ./resources/js/Pages/Teams/Partials/TeamMemberManager.vue -->
         },
 
         setup (props) {
-
-            console.log('props.team:')
-            console.log(props.team)
-
-            console.log('props.availableRoles:')
-            console.log(props.availableRoles)
-
-            console.log('props.userPermissions:')
-            console.log(props.userPermissions)
 
             const pageProps = computed( () => usePage().props as UsePageSharedDataProps )
 
@@ -198,14 +191,22 @@ return `<!-- ./resources/js/Pages/Teams/Partials/TeamMemberManager.vue -->
 
                     <!-- Member Email -->
                     <div class="col-span-6 sm:col-span-4">
-                        <InputLabel for="email" value="Email" />
-                        <TextInput
-                            id="email"
-                            v-model="addTeamMemberForm.email"
-                            type="email"
-                            class="mt-1 block w-full"
-                        />
-                        <InputError :message="addTeamMemberForm.errors.email" class="mt-2" />
+
+                        <VvFormGroup
+                            label="Email:"
+                            label-for="email"
+                            :display-error="addTeamMemberForm.errors.email !== ''"
+                            :error-text="addTeamMemberForm.errors.email"
+                        >
+                            <VvInput
+                                id="email"
+                                v-model="addTeamMemberForm.email"
+                                type="email"
+                                placeholder="Enter Teammate Email"
+                                class="rounded-lg"
+                            />
+                        </VvFormGroup>
+
                     </div>
 
                     <!-- Role -->
