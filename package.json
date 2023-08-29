@@ -41,7 +41,6 @@
   "homepage": "https://github.com/obewds/vilt-ds#readme",
   "devDependencies": {
     "@jest/globals": "^29.6.3",
-    "@obewds/puff-js": "^0.1.6",
     "@types/fs-extra": "^11.0.1",
     "@types/gradient-string": "^1.1.2",
     "@types/inquirer": "^9.0.3",
@@ -53,6 +52,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@obewds/puff-js": "^0.1.6",
     "fs-extra": "^11.1.1",
     "gradient-string": "^2.0.2",
     "inquirer": "^9.2.10",
