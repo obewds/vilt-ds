@@ -1,5 +1,5 @@
 // ./src/generators/jetstream/resources/js/Components/vv/anchors/generate-vv-anchor-vue.ts
-import { generateVvAnchorVue } from '@obewds/puff-js/dist/index.js';
+import { generateVvAnchorVue } from '@obewds/puff-js';
 export default function () {
     return generateVvAnchorVue({
         filePathComment: './resources/js/Components/vv/anchors/VvAnchor.vue',
