@@ -1,15 +1,14 @@
 // ./src/generators/jetstream/resources/js/Components/vv/anchors/generate-vv-anchor-vue.ts
 
-import { generateVvAnchorVue } from '@obewds/puff-js'
+// import { generateVvAnchorVue } from '@obewds/puff-js'
 
 export default function (): string {
 
-    return generateVvAnchorVue({
-        filePathComment: './resources/js/Components/vv/anchors/VvAnchor.vue',
-        appVvFilePath: '../../../app.vv',
-    })
+    // return generateVvAnchorVue({
+    //     filePathComment: './resources/js/Components/vv/anchors/VvAnchor.vue',
+    //     appVvFilePath: '../../../app.vv',
+    // })
 
-/*
 return `<!-- ./resources/js/Components/vv/anchors/VvAnchor.vue -->
 
 <script lang="ts">
@@ -100,6 +99,5 @@ return `<!-- ./resources/js/Components/vv/anchors/VvAnchor.vue -->
 
 </template>
 `;
-*/
 
 }
