@@ -12,11 +12,10 @@ return `<!-- ./resources/js/Pages/Auth/TwoFactorChallenge.vue -->
 
     import AuthenticationCard from '../../Components/AuthenticationCard.vue'
     import AuthenticationCardLogo from '../../Components/AuthenticationCardLogo.vue'
-    import InputError from '../../Components/InputError.vue'
-    import InputLabel from '../../Components/InputLabel.vue'
     import PrimaryButton from '../../Components/PrimaryButton.vue'
     import ScrollUpColorModeSection from '../../Components/ScrollUpColorModeSection.vue'
-    import TextInput from '../../Components/TextInput.vue'
+    import VvFormGroup from '../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
@@ -24,11 +23,10 @@ return `<!-- ./resources/js/Pages/Auth/TwoFactorChallenge.vue -->
             AuthenticationCard,
             AuthenticationCardLogo,
             Head,
-            InputError,
-            InputLabel,
             PrimaryButton,
             ScrollUpColorModeSection,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         setup () {
@@ -109,37 +107,41 @@ return `<!-- ./resources/js/Pages/Auth/TwoFactorChallenge.vue -->
 
             <div v-if="! recovery">
 
-                <InputLabel for="code" value="Code" />
-
-                <TextInput
-                    id="code"
-                    ref="codeInput"
-                    v-model="form.code"
-                    type="text"
-                    inputmode="numeric"
-                    class="mt-1 block w-full"
-                    autofocus
-                    autocomplete="one-time-code"
-                />
-
-                <InputError class="mt-2" :message="form.errors.code" />
+                <VvFormGroup
+                    label="Code:"
+                    label-for="code"
+                    :display-error="form.errors.code !== ''"
+                    :error-text="form.errors.code"
+                >
+                    <VvInput
+                        id="code"
+                        ref="codeInput"
+                        v-model="form.code"
+                        autofocus
+                        autocomplete="one-time-code"
+                        inputmode="numeric"
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
             </div>
 
             <div v-else>
 
-                <InputLabel for="recovery_code" value="Recovery Code" />
-
-                <TextInput
-                    id="recovery_code"
-                    ref="recoveryCodeInput"
-                    v-model="form.recovery_code"
-                    type="text"
-                    class="mt-1 block w-full"
-                    autocomplete="one-time-code"
-                />
-
-                <InputError class="mt-2" :message="form.errors.recovery_code" />
+                <VvFormGroup
+                    label="Recovery Code:"
+                    label-for="recovery_code"
+                    :display-error="form.errors.recovery_code !== ''"
+                    :error-text="form.errors.recovery_code"
+                >
+                    <VvInput
+                        id="recovery_code"
+                        ref="recoveryCodeInput"
+                        v-model="form.recovery_code"
+                        autocomplete="one-time-code"
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
             </div>
 

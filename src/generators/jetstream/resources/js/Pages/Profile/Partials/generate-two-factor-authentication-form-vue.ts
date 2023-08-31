@@ -16,11 +16,10 @@ return `<!-- ./resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.v
     import ActionSection from '../../../Components/ActionSection.vue'
     import ConfirmsPassword from '../../../Components/ConfirmsPassword.vue'
     import DangerButton from '../../../Components/DangerButton.vue'
-    import InputError from '../../../Components/InputError.vue'
-    import InputLabel from '../../../Components/InputLabel.vue'
     import PrimaryButton from '../../../Components/PrimaryButton.vue'
     import SecondaryButton from '../../../Components/SecondaryButton.vue'
-    import TextInput from '../../../Components/TextInput.vue'
+    import VvFormGroup from '../../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
@@ -28,11 +27,10 @@ return `<!-- ./resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.v
             ActionSection,
             ConfirmsPassword,
             DangerButton,
-            InputError,
-            InputLabel,
             PrimaryButton,
             SecondaryButton,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         props: {
@@ -209,21 +207,23 @@ return `<!-- ./resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.v
 
                     <div v-if="confirming" class="mt-4">
 
-                        <InputLabel for="code" value="Code" />
-
-                        <TextInput
-                            id="code"
-                            v-model="confirmationForm.code"
-                            type="text"
-                            name="code"
-                            class="block mt-1 w-1/2"
-                            inputmode="numeric"
-                            autofocus
-                            autocomplete="one-time-code"
-                            @keyup.enter="confirmTwoFactorAuthentication"
-                        />
-
-                        <InputError :message="confirmationForm.errors.code" class="mt-2" />
+                        <VvFormGroup
+                            label="Code:"
+                            label-for="code"
+                            :display-error="confirmationForm.errors.code !== ''"
+                            :error-text="confirmationForm.errors.code"
+                        >
+                            <VvInput
+                                id="code"
+                                v-model="confirmationForm.code"
+                                name="code"
+                                inputmode="numeric"
+                                autofocus
+                                autocomplete="one-time-code"
+                                @keyup.enter="confirmTwoFactorAuthentication"
+                                class="rounded-lg"
+                            />
+                        </VvFormGroup>
 
                     </div>
 
