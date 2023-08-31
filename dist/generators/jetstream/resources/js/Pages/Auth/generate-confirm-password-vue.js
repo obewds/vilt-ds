@@ -8,11 +8,10 @@ export default function () {
     import { Head, useForm } from '@inertiajs/vue3'
     import AuthenticationCard from '../../Components/AuthenticationCard.vue'
     import AuthenticationCardLogo from '../../Components/AuthenticationCardLogo.vue'
-    import InputError from '../../Components/InputError.vue'
-    import InputLabel from '../../Components/InputLabel.vue'
     import PrimaryButton from '../../Components/PrimaryButton.vue'
     import ScrollUpColorModeSection from '../../Components/ScrollUpColorModeSection.vue'
-    import TextInput from '../../Components/TextInput.vue'
+    import VvFormGroup from '../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
@@ -20,11 +19,10 @@ export default function () {
             AuthenticationCard,
             AuthenticationCardLogo,
             Head,
-            InputError,
-            InputLabel,
             PrimaryButton,
             ScrollUpColorModeSection,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         setup () {
@@ -76,20 +74,24 @@ export default function () {
 
             <div>
 
-                <InputLabel for="password" value="Password" />
-
-                <TextInput
-                    id="password"
-                    ref="passwordInput"
-                    v-model="form.password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    required
-                    autocomplete="current-password"
-                    autofocus
-                />
-
-                <InputError class="mt-2" :message="form.errors.password" />
+                <VvFormGroup
+                    label="Password:"
+                    label-for="password"
+                    :display-error="form.errors.password !== ''"
+                    :error-text="form.errors.password"
+                >
+                    <VvInput
+                        id="password"
+                        ref="passwordInput"
+                        v-model="form.password"
+                        type="password"
+                        placeholder="•••••••••••••••"
+                        autocomplete="current-password"
+                        required
+                        autofocus
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
             </div>
 

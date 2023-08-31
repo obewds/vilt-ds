@@ -10,11 +10,10 @@ export default function () {
 
     import AuthenticationCard from '../../Components/AuthenticationCard.vue'
     import AuthenticationCardLogo from '../../Components/AuthenticationCardLogo.vue'
-    import InputError from '../../Components/InputError.vue'
-    import InputLabel from '../../Components/InputLabel.vue'
     import PrimaryButton from '../../Components/PrimaryButton.vue'
     import ScrollUpColorModeSection from '../../Components/ScrollUpColorModeSection.vue'
-    import TextInput from '../../Components/TextInput.vue'
+    import VvFormGroup from '../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
@@ -22,11 +21,10 @@ export default function () {
             AuthenticationCard,
             AuthenticationCardLogo,
             Head,
-            InputError,
-            InputLabel,
             PrimaryButton,
             ScrollUpColorModeSection,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         props: {
@@ -80,53 +78,65 @@ export default function () {
 
             <div>
 
-                <InputLabel for="email" value="Email" />
-
-                <TextInput
-                    id="email"
-                    v-model="form.email"
-                    type="email"
-                    class="mt-1 block w-full"
-                    required
-                    autofocus
-                    autocomplete="username"
-                />
-
-                <InputError class="mt-2" :message="form.errors.email" />
-
-            </div>
-
-            <div class="mt-4">
-
-                <InputLabel for="password" value="Password" />
-
-                <TextInput
-                    id="password"
-                    v-model="form.password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    required
-                    autocomplete="new-password"
-                />
-
-                <InputError class="mt-2" :message="form.errors.password" />
+                <VvFormGroup
+                    label="Email:"
+                    label-for="email"
+                    :display-error="form.errors.email !== ''"
+                    :error-text="form.errors.email"
+                >
+                    <VvInput
+                        id="email"
+                        v-model="form.email"
+                        type="email"
+                        required
+                        autofocus
+                        placeholder="email@example.com"
+                        autocomplete="username"
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
             </div>
 
             <div class="mt-4">
 
-                <InputLabel for="password_confirmation" value="Confirm Password" />
+                <VvFormGroup
+                    label="Password:"
+                    label-for="password"
+                    :display-error="form.errors.password !== ''"
+                    :error-text="form.errors.password"
+                >
+                    <VvInput
+                        id="password"
+                        v-model="form.password"
+                        type="password"
+                        placeholder="•••••••••••••••"
+                        required
+                        autocomplete="new-password"
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
-                <TextInput
-                    id="password_confirmation"
-                    v-model="form.password_confirmation"
-                    type="password"
-                    class="mt-1 block w-full"
-                    required
-                    autocomplete="new-password"
-                />
+            </div>
 
-                <InputError class="mt-2" :message="form.errors.password_confirmation" />
+            <div class="mt-4">
+
+                <VvFormGroup
+                    label="Confirm Password:"
+                    label-for="password_confirmation"
+                    :display-error="form.errors.password_confirmation !== ''"
+                    :error-text="form.errors.password_confirmation"
+                >
+                    <VvInput
+                        id="password_confirmation"
+                        v-model="form.password_confirmation"
+                        type="password"
+                        placeholder="•••••••••••••••"
+                        required
+                        autocomplete="new-password"
+                        class="rounded-lg"
+                    />
+                </VvFormGroup>
 
             </div>
 

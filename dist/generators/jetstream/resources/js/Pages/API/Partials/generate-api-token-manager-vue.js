@@ -18,12 +18,12 @@ export default function () {
     import DangerButton from '../../../Components/DangerButton.vue'
     import DialogModal from '../../../Components/DialogModal.vue'
     import FormSection from '../../../Components/FormSection.vue'
-    import InputError from '../../../Components/InputError.vue'
     import InputLabel from '../../../Components/InputLabel.vue'
     import PrimaryButton from '../../../Components/PrimaryButton.vue'
     import SecondaryButton from '../../../Components/SecondaryButton.vue'
     import SectionBorder from '../../../Components/SectionBorder.vue'
-    import TextInput from '../../../Components/TextInput.vue'
+    import VvFormGroup from '../../../Components/vv/forms/VvFormGroup.vue'
+    import VvInput from '../../../Components/vv/inputs/VvInput.vue'
 
     export default defineComponent({
 
@@ -35,12 +35,12 @@ export default function () {
             DangerButton,
             DialogModal,
             FormSection,
-            InputError,
             InputLabel,
             PrimaryButton,
             SecondaryButton,
             SectionBorder,
-            TextInput,
+            VvFormGroup,
+            VvInput,
         },
 
         props: {
@@ -154,17 +154,20 @@ export default function () {
                 <!-- Token Name -->
                 <div class="col-span-6 sm:col-span-4">
 
-                    <InputLabel for="name" value="Name" />
-
-                    <TextInput
-                        id="name"
-                        v-model="createApiTokenForm.name"
-                        type="text"
-                        class="mt-1 block w-full"
-                        autofocus
-                    />
-
-                    <InputError :message="createApiTokenForm.errors.name" class="mt-2" />
+                    <VvFormGroup
+                        label="Name:"
+                        label-for="name"
+                        :display-error="createApiTokenForm.errors.name !== ''"
+                        :error-text="createApiTokenForm.errors.name"
+                    >
+                        <VvInput
+                            id="name"
+                            v-model="createApiTokenForm.name"
+                            placeholder="Enter Token Name"
+                            class="rounded-lg"
+                            autofocus="true"
+                        />
+                    </VvFormGroup>
 
                 </div>
 

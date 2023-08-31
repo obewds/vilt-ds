@@ -8,8 +8,6 @@ export default function () {
     import { useForm } from '@inertiajs/vue3'
     import ActionMessage from '../../../Components/ActionMessage.vue'
     import FormSection from '../../../Components/FormSection.vue'
-    import InputError from '../../../Components/InputError.vue'
-    import InputLabel from '../../../Components/InputLabel.vue'
     import PrimaryButton from '../../../Components/PrimaryButton.vue'
     import VvFormGroup from '../../../Components/vv/forms/VvFormGroup.vue'
     import VvInput from '../../../Components/vv/inputs/VvInput.vue'
@@ -19,8 +17,6 @@ export default function () {
         components: {
             ActionMessage,
             FormSection,
-            InputError,
-            InputLabel,
             PrimaryButton,
             VvFormGroup,
             VvInput,
