@@ -3,7 +3,7 @@
 import { describe, expect, test } from '@jest/globals'
 import generateTsconfigJson from '../../../src/generators/jetstream/generate-tsconfig-json'
 
-describe('./src/generators/jetstream/vscode/generate-tsconfig-json module', () => {
+describe('./src/generators/jetstream/generate-tsconfig-json module', () => {
 
     test('module can be imported and a value can be accessed successfully', () => {
 
