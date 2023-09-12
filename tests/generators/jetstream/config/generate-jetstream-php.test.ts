@@ -1,4 +1,4 @@
-// ./tests/generators/jetstream/generate-jetstream-php.test.ts
+// ./tests/generators/jetstream/config/generate-jetstream-php.test.ts
 
 import { describe, expect, test } from '@jest/globals'
 import generateJetstreamPhp from '../../../../src/generators/jetstream/config/generate-jetstream-php'
