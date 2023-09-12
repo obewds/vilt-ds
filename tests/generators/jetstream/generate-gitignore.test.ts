@@ -3,7 +3,7 @@
 import { describe, expect, test } from '@jest/globals'
 import generateGitignore from '../../../src/generators/jetstream/generate-gitignore'
 
-describe('./src/generators/jetstream/vscode/generate-gitignore.test module', () => {
+describe('./src/generators/jetstream/generate-gitignore.test module', () => {
 
     test('module can be imported and a value can be accessed successfully', () => {
 
