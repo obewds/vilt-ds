@@ -11,7 +11,15 @@ return `<!-- ./resources/js/Components/Banner.vue -->
     import { computed, defineComponent, ref, watch } from 'vue'
     import { usePage } from '@inertiajs/vue3'
 
+    import VvButton from './vv/buttons/VvButton.vue'
+    import VvEl from './vv/elements/VvEl.vue'
+
     export default defineComponent({
+
+        components: {
+            VvButton,
+            VvEl,
+        },
 
         setup () {
 
@@ -43,12 +51,10 @@ return `<!-- ./resources/js/Components/Banner.vue -->
 
     <div>
 
-        <div
+        <VvEl
             v-if="show && message"
-            :class="{
-                'bg-indigo-500': style == 'success',
-                'bg-red-700': style == 'danger',
-            }"
+            ground-palette="default"
+            :ground-color="style === 'danger' ? 'error' : 'secondary'"
         >
 
             <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
@@ -58,11 +64,7 @@ return `<!-- ./resources/js/Components/Banner.vue -->
                     <div class="w-0 flex-1 flex items-center min-w-0">
 
                         <span
-                            class="flex p-2 rounded-lg"
-                            :class="{
-                                'bg-indigo-600': style == 'success',
-                                'bg-red-600': style == 'danger'
-                            }"
+                            class="flex p-2 rounded-lg bg-black bg-opacity-15"
                         >
                             <svg
                                 v-if="style == 'success'"
@@ -97,7 +99,7 @@ return `<!-- ./resources/js/Components/Banner.vue -->
                             </svg>
                         </span>
 
-                        <p class="ml-3 font-medium text-sm text-white truncate">
+                        <p class="ml-3 font-medium text-sm truncate">
                             {{ message }}
                         </p>
 
@@ -105,13 +107,10 @@ return `<!-- ./resources/js/Components/Banner.vue -->
 
                     <div class="shrink-0 sm:ml-3">
 
-                        <button
-                            type="button"
-                            class="-mr-1 flex p-2 rounded-md focus:outline-none sm:-mr-2 transition"
-                            :class="{
-                                'hover:bg-indigo-600 focus:bg-indigo-600': style == 'success',
-                                'hover:bg-red-600 focus:bg-red-600': style == 'danger',
-                            }"
+                        <VvButton
+                            class="-mr-1 flex rounded-md sm:-mr-2"
+                            palette="outline"
+                            color="secondary"
                             aria-label="Dismiss"
                             @click.prevent="show = false"
                         >
@@ -129,7 +128,7 @@ return `<!-- ./resources/js/Components/Banner.vue -->
                                     d="M6 18L18 6M6 6l12 12"
                                 />
                             </svg>
-                        </button>
+                        </VvButton>
 
                     </div>
 
@@ -137,7 +136,7 @@ return `<!-- ./resources/js/Components/Banner.vue -->
 
             </div>
 
-        </div>
+        </VvEl>
 
     </div>
 
