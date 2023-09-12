@@ -1,4 +1,4 @@
-// ./tests/generators/jetstream/generate-web-php.test.ts
+// ./tests/generators/jetstream/routes/generate-web-php.test.ts
 
 import { describe, expect, test } from '@jest/globals'
 import generateWebPhp from '../../../../src/generators/jetstream/routes/generate-web-php'
