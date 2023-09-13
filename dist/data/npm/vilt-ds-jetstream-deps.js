@@ -11,5 +11,10 @@ export default [
     '@headlessui/tailwindcss',
     'tailwind-scrollbar',
     'gsap',
+    'vitest',
+    'happy-dom',
+    '@vue/test-utils',
+    '@vitest/coverage-v8',
+    '@types/jest',
 ];
 //# sourceMappingURL=vilt-ds-jetstream-deps.js.map
