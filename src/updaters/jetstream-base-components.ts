@@ -2,6 +2,7 @@
 
 import installFile from '../helpers/install-file.js'
 
+// import component generators
 import generateActionMessageVue from '../generators/jetstream/resources/js/Components/generate-action-message-vue.js'
 import generateActionSectionVue from '../generators/jetstream/resources/js/Components/generate-action-section-vue.js'
 import generateApplicationLogoVue from '../generators/jetstream/resources/js/Components/generate-application-logo-vue.js'
@@ -30,8 +31,12 @@ import generateSectionTitleVue from '../generators/jetstream/resources/js/Compon
 import generateTextInputVue from '../generators/jetstream/resources/js/Components/generate-text-input-vue.js'
 import generateWelcomeVue from '../generators/jetstream/resources/js/Components/generate-welcome-vue.js'
 
+// import vitest test generators for each component
+import generateActionMessageTestTs from '../generators/jetstream/tests/Vitest/Components/generate-action-message-test-ts.js' // generate-action-message-test-ts.ts
+
 export default function (): void {
 
+    // install component generators
     installFile( '/resources/js/Components/ActionMessage.vue', generateActionMessageVue() )
     installFile( '/resources/js/Components/ActionSection.vue', generateActionSectionVue() )
     installFile( '/resources/js/Components/ApplicationLogo.vue', generateApplicationLogoVue() )
@@ -59,5 +64,8 @@ export default function (): void {
     installFile( '/resources/js/Components/SectionTitle.vue', generateSectionTitleVue() )
     installFile( '/resources/js/Components/TextInput.vue', generateTextInputVue() )
     installFile( '/resources/js/Components/Welcome.vue', generateWelcomeVue() )
+
+    // install vitest test generators for each component
+    installFile( '/tests/Vitest/Components/ActionMessage.test.ts', generateActionMessageTestTs() )
 
 }

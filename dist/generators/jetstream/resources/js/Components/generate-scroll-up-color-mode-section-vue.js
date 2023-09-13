@@ -4,7 +4,9 @@ export default function () {
 
 <script lang="ts">
 
+    import type { PropType } from 'vue'
     import type { ValidColorModes } from '@obewds/vueventus'
+    import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
     import { VvColorModeButton } from '@obewds/vueventus'
@@ -15,6 +17,17 @@ export default function () {
         components: {
             VvColorModeButton,
             VvScrollUp,
+        },
+
+        props: {
+            color: {
+                type: String as PropType<keyof DefaultPaletteColors>,
+                default: 'primary',
+            },
+            palette: {
+                type: String as PropType<keyof DefaultButtonPalettes>,
+                default: 'solid',
+            },
         },
 
         setup () {
@@ -38,9 +51,9 @@ export default function () {
 
             <div class="flex flex-col justify-end space-y-3">
 
-                <VvScrollUp palette="solid" color="primary"/>
+                <VvScrollUp :palette="palette" :color="color"/>
 
-                <VvColorModeButton palette="solid" color="primary" :mode="colorMode"/>
+                <VvColorModeButton :palette="palette" :color="color" :mode="colorMode"/>
 
             </div>
 

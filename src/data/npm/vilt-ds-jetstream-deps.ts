@@ -11,6 +11,11 @@ export type ViltDsJetstreamDependency = 'typescript'
 | '@headlessui/tailwindcss'
 | 'tailwind-scrollbar'
 | 'gsap'
+| 'vitest'
+| 'happy-dom'
+| '@vue/test-utils'
+| '@vitest/coverage-v8'
+| '@types/jest'
 
 export default [
     'typescript',
@@ -24,4 +29,9 @@ export default [
     '@headlessui/tailwindcss',
     'tailwind-scrollbar',
     'gsap',
+    'vitest',
+    'happy-dom',
+    '@vue/test-utils',
+    '@vitest/coverage-v8',
+    '@types/jest',
 ] as Array<ViltDsJetstreamDependency>

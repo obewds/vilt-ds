@@ -44,6 +44,12 @@ import generateAppLayoutVue from '../generators/jetstream/resources/js/Layouts/g
 import generateJetstreamPhp from '../generators/jetstream/config/generate-jetstream-php.js'
 import generateWebPhp from '../generators/jetstream/routes/generate-web-php.js'
 
+// import vitest config and setup files
+import generateVitestConfigTs from '../generators/jetstream/generate-vitest-config-ts.js'
+import generateVitestHeadMockedVue from '../generators/jetstream/generate-vitest-head-mocked-vue.js'
+import generateVitestSetupTs from '../generators/jetstream/generate-vitest-setup-ts.js'
+import generateVitestZiggyRouteShimDTs from '../generators/jetstream/generate-vitest-ziggy-route-shim-d-ts.js'
+
 // import laravel and vueventus updatable files to be installed
 import vueventus from '../updaters/vueventus.js'
 import jetstreamBaseComponents from '../updaters/jetstream-base-components.js'
@@ -99,6 +105,12 @@ export default function (): void {
     // update laravel php files for VILT DS
     installFile( '/config/jetstream.php', generateJetstreamPhp() )
     installFile( '/routes/web.php', generateWebPhp() )
+
+    // install vitest config and setup files
+    installFile( '/vitest.config.ts', generateVitestConfigTs() )
+    installFile( '/VitestHeadMocked.vue', generateVitestHeadMockedVue() )
+    installFile( '/vitestSetup.ts', generateVitestSetupTs() )
+    installFile( '/vitestZiggyRouteShim.d.ts', generateVitestZiggyRouteShimDTs() )
 
     // install laravel and vueventus updatable files
     vueventus()
