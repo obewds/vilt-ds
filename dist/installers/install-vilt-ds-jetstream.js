@@ -39,13 +39,17 @@ import generateVitestHeadMockedVue from '../generators/jetstream/generate-vitest
 import generateVitestSetupTs from '../generators/jetstream/generate-vitest-setup-ts.js';
 import generateVitestZiggyRouteShimDTs from '../generators/jetstream/generate-vitest-ziggy-route-shim-d-ts.js';
 // import laravel and vueventus updatable files to be installed
-import vueventus from '../updaters/vueventus.js';
 import jetstreamBaseComponents from '../updaters/jetstream-base-components.js';
 import jetstreamApi from '../updaters/jetstream-api.js';
 import jetstreamAuth from '../updaters/jetstream-auth.js';
 import jetstreamProfile from '../updaters/jetstream-profile.js';
 import jetstreamTeams from '../updaters/jetstream-teams.js';
 import jetstreamBasePages from '../updaters/jetstream-base-pages.js';
+import vueventus from '../updaters/vueventus.js';
+// import vitest typescript tests for laravel and vueventus components to be installed
+import jetstreamBaseComponentTests from '../updaters/jetstream-base-component-tests.js';
+import jetstreamBasePageTests from '../updaters/jetstream-base-page-tests.js';
+import vueventusTests from '../updaters/vueventus-tests.js';
 // import suggested VS Code Extensions for VILT DS
 import viltDsVscodeExtensions from '../data/ide/vilt-ds-vscode-extensions.js';
 export default function () {
@@ -94,6 +98,10 @@ export default function () {
     jetstreamProfile();
     jetstreamTeams();
     jetstreamBasePages();
+    // install vitest typescript tests for laravel and vueventus components
+    jetstreamBaseComponentTests();
+    jetstreamBasePageTests();
+    vueventusTests();
     // install suggested VS Code Extensions for VILT DS
     installFile('/.vscode/extensions.json', JSON.stringify(viltDsVscodeExtensions, null, 4));
     console.log(' ');
