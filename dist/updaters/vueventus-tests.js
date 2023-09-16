@@ -17,21 +17,21 @@ import generateVvListboxTestTs from '../generators/jetstream/tests/Vitest/Compon
 import generateVvSelectTestTs from '../generators/jetstream/tests/Vitest/Components/vv/selects/generate-vv-select-test-ts.js';
 import generateVvTextareaTestTs from '../generators/jetstream/tests/Vitest/Components/vv/textareas/generate-vv-textarea-test-ts.js';
 export default function () {
-    installFile('/test/Vitest/Components/vv/anchors/VvAnchor.test.ts', generateVvAnchorTestTs());
-    installFile('/test/Vitest/Components/vv/anchors/VvInertiaLink.test.ts', generateVvInertiaLinkTestTs());
-    installFile('/test/Vitest/Components/vv/buttons/VvButton.test.ts', generateVvButtonTestTs());
-    installFile('/test/Vitest/Components/vv/buttons/VvColorModeButton.test.ts', generateVvColorModeButtonTestTs());
-    installFile('/test/Vitest/Components/vv/buttons/VvScrollUp.test.ts', generateVvScrollUpTestTs());
-    installFile('/test/Vitest/Components/vv/elements/VvEl.test.ts', generateVvElTestTs());
-    installFile('/test/Vitest/Components/vv/forms/VvFormGroup.test.ts', generateVvFormGroupTestTs());
-    installFile('/test/Vitest/Components/vv/forms/VvQuadFormGroup.test.ts', generateVvQuadFormGroupTestTs());
-    installFile('/test/Vitest/Components/vv/inputs/VvCheckbox.test.ts', generateVvCheckboxTestTs());
-    installFile('/test/Vitest/Components/vv/inputs/VvInput.test.ts', generateVvInputTestTs());
-    installFile('/test/Vitest/Components/vv/inputs/VvRadio.test.ts', generateVvRadioTestTs());
-    installFile('/test/Vitest/Components/vv/lists/VvListItem.test.ts', generateVvListItemTestTs());
-    installFile('/test/Vitest/Components/vv/lists/VvList.test.ts', generateVvListTestTs());
-    installFile('/test/Vitest/Components/vv/selects/VvListbox.test.ts', generateVvListboxTestTs());
-    installFile('/test/Vitest/Components/vv/selects/VvSelect.test.ts', generateVvSelectTestTs());
-    installFile('/test/Vitest/Components/vv/textareas/VvTextarea.test.ts', generateVvTextareaTestTs());
+    installFile('/tests/Vitest/Components/vv/anchors/VvAnchor.test.ts', generateVvAnchorTestTs());
+    installFile('/tests/Vitest/Components/vv/anchors/VvInertiaLink.test.ts', generateVvInertiaLinkTestTs());
+    installFile('/tests/Vitest/Components/vv/buttons/VvButton.test.ts', generateVvButtonTestTs());
+    installFile('/tests/Vitest/Components/vv/buttons/VvColorModeButton.test.ts', generateVvColorModeButtonTestTs());
+    installFile('/tests/Vitest/Components/vv/buttons/VvScrollUp.test.ts', generateVvScrollUpTestTs());
+    installFile('/tests/Vitest/Components/vv/elements/VvEl.test.ts', generateVvElTestTs());
+    installFile('/tests/Vitest/Components/vv/forms/VvFormGroup.test.ts', generateVvFormGroupTestTs());
+    installFile('/tests/Vitest/Components/vv/forms/VvQuadFormGroup.test.ts', generateVvQuadFormGroupTestTs());
+    installFile('/tests/Vitest/Components/vv/inputs/VvCheckbox.test.ts', generateVvCheckboxTestTs());
+    installFile('/tests/Vitest/Components/vv/inputs/VvInput.test.ts', generateVvInputTestTs());
+    installFile('/tests/Vitest/Components/vv/inputs/VvRadio.test.ts', generateVvRadioTestTs());
+    installFile('/tests/Vitest/Components/vv/lists/VvListItem.test.ts', generateVvListItemTestTs());
+    installFile('/tests/Vitest/Components/vv/lists/VvList.test.ts', generateVvListTestTs());
+    installFile('/tests/Vitest/Components/vv/selects/VvListbox.test.ts', generateVvListboxTestTs());
+    installFile('/tests/Vitest/Components/vv/selects/VvSelect.test.ts', generateVvSelectTestTs());
+    installFile('/tests/Vitest/Components/vv/textareas/VvTextarea.test.ts', generateVvTextareaTestTs());
 }
 //# sourceMappingURL=vueventus-tests.js.map
