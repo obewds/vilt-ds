@@ -3,6 +3,9 @@
 export default `# NPM Remote Credentials File
 .npmrc
 
+# Vitest testing coverage
+coverage
+
 # Local Project Items
 .vscode
 .idea
