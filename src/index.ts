@@ -20,6 +20,6 @@ console.log(' ')
 
 // For a standard installation with an existing
 // Laravel + Jetstream install in a current working (root) directory
-if (userInstallation === 'Install VILT DS Into A Laravel Jetstream Starter App') {
+if (userInstallation === 'Install VILT DS and Vitest TS Tests Into A Laravel Jetstream Starter App') {
     installViltDsJetstream()
 }
