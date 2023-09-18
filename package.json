@@ -1,6 +1,6 @@
 {
   "name": "@obewds/vilt-ds",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "description": "The official repository for the VILT Design System for the Vue.js, Inertia.js, Laravel, and Tailwind CSS web app stack that is turbocharged with Typescript and VueVentus.",
   "license": "MIT",
   "author": "Matt McT",
@@ -26,13 +26,17 @@
     "vilt-ds-vueventus": "./dist/update-vueventus.js",
     "vilt-ds-vueventus-tests": "./dist/update-vueventus-tests.js",
     "vilt-ds-jetstream-api": "./dist/update-jetstream-api.js",
+    "vilt-ds-jetstream-api-tests": "./dist/update-jetstream-api.js",
     "vilt-ds-jetstream-auth": "./dist/update-jetstream-auth.js",
+    "vilt-ds-jetstream-auth-tests": "./dist/update-jetstream-auth-tests.js",
     "vilt-ds-jetstream-base-components": "./dist/update-jetstream-base-components.js",
-    "vilt-ds-jetstream-base-component-tests": "./dist/update-jetstream-base-component-tests.js",
+    "vilt-ds-jetstream-base-components-tests": "./dist/update-jetstream-base-component-tests.js",
     "vilt-ds-jetstream-base-pages": "./dist/update-jetstream-base-pages.js",
-    "vilt-ds-jetstream-base-page-tests": "./dist/update-jetstream-base-page-tests.js",
+    "vilt-ds-jetstream-base-pages-tests": "./dist/update-jetstream-base-page-tests.js",
     "vilt-ds-jetstream-profile": "./dist/update-jetstream-profile.js",
-    "vilt-ds-jetstream-teams": "./dist/update-jetstream-teams.js"
+    "vilt-ds-jetstream-profile-tests": "./dist/update-jetstream-profile-tests.js",
+    "vilt-ds-jetstream-teams": "./dist/update-jetstream-teams.js",
+    "vilt-ds-jetstream-teams-tests": "./dist/update-jetstream-teams-tests.js"
   },
   "repository": {
     "type": "git",
