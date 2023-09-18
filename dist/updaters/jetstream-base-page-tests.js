@@ -6,10 +6,10 @@ import generateTermsOfServiceTestTs from '../generators/jetstream/tests/Vitest/P
 import generateVueVentusTestTs from '../generators/jetstream/tests/Vitest/Pages/generate-vue-ventus-test-ts.js';
 import generateWelcomeTestTs from '../generators/jetstream/tests/Vitest/Pages/generate-welcome-test-ts.js';
 export default function () {
-    installFile('/tests/Vitest/Pages/Dashboard.vue', generateDashboardTestTs());
-    installFile('/tests/Vitest/Pages/PrivacyPolicy.vue', generatePrivacyPolicyTestTs());
-    installFile('/tests/Vitest/Pages/TermsOfService.vue', generateTermsOfServiceTestTs());
-    installFile('/tests/Vitest/Pages/VueVentus.vue', generateVueVentusTestTs());
-    installFile('/tests/Vitest/Pages/Welcome.vue', generateWelcomeTestTs());
+    installFile('/tests/Vitest/Pages/Dashboard.test.ts', generateDashboardTestTs());
+    installFile('/tests/Vitest/Pages/PrivacyPolicy.test.ts', generatePrivacyPolicyTestTs());
+    installFile('/tests/Vitest/Pages/TermsOfService.test.ts', generateTermsOfServiceTestTs());
+    installFile('/tests/Vitest/Pages/VueVentus.test.ts', generateVueVentusTestTs());
+    installFile('/tests/Vitest/Pages/Welcome.test.ts', generateWelcomeTestTs());
 }
 //# sourceMappingURL=jetstream-base-page-tests.js.map
