@@ -10,10 +10,10 @@ import generateWelcomeTestTs from '../generators/jetstream/tests/Vitest/Pages/ge
 
 export default function (): void {
     
-    installFile( '/tests/Vitest/Pages/Dashboard.vue', generateDashboardTestTs() )
-    installFile( '/tests/Vitest/Pages/PrivacyPolicy.vue', generatePrivacyPolicyTestTs() )
-    installFile( '/tests/Vitest/Pages/TermsOfService.vue', generateTermsOfServiceTestTs() )
-    installFile( '/tests/Vitest/Pages/VueVentus.vue', generateVueVentusTestTs() )
-    installFile( '/tests/Vitest/Pages/Welcome.vue', generateWelcomeTestTs() )
+    installFile( '/tests/Vitest/Pages/Dashboard.test.ts', generateDashboardTestTs() )
+    installFile( '/tests/Vitest/Pages/PrivacyPolicy.test.ts', generatePrivacyPolicyTestTs() )
+    installFile( '/tests/Vitest/Pages/TermsOfService.test.ts', generateTermsOfServiceTestTs() )
+    installFile( '/tests/Vitest/Pages/VueVentus.test.ts', generateVueVentusTestTs() )
+    installFile( '/tests/Vitest/Pages/Welcome.test.ts', generateWelcomeTestTs() )
 
 }
