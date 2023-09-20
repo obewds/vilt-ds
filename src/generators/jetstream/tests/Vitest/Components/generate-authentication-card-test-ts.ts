@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/AuthenticationCard.test.ts
+return `// ./tests/Vitest/Components/AuthenticationCard.test.ts
 
 import { mount } from '@vue/test-utils'
 import AuthenticationCard from '../../../resources/js/Components/AuthenticationCard.vue'
