@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/Modal.test.ts
+return `// ./tests/Vitest/Components/Modal.test.ts
 
 import { mount } from '@vue/test-utils'
 import Modal from '../../../resources/js/Components/Modal.vue'
