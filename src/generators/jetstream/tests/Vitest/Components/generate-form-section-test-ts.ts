@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/FormSection.test.ts
+return `// ./tests/Vitest/Components/FormSection.test.ts
 
 import { mount } from '@vue/test-utils'
 import FormSection from '../../../resources/js/Components/FormSection.vue'
