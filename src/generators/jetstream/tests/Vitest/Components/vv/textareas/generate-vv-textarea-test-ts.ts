@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/vv/textareas/VvTextarea.test.ts
+return `// ./tests/Vitest/Components/vv/textareas/VvTextarea.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvTextarea from '../../../../../resources/js/Components/vv/textareas/VvTextarea.vue'
