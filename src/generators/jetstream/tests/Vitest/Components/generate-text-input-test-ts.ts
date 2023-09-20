@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/TextInput.test.ts
+return `// ./tests/Vitest/Components/TextInput.test.ts
 
 import { mount } from '@vue/test-utils'
 import TextInput from '../../../resources/js/Components/TextInput.vue'
