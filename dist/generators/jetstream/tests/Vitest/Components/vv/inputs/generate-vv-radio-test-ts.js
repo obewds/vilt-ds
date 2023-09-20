@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/inputs/generate-vv-radio-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/inputs/VvRadio.test.ts
+    return `// ./tests/Vitest/Components/vv/inputs/VvRadio.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvRadio from '../../../../../resources/js/Components/vv/inputs/VvRadio.vue'

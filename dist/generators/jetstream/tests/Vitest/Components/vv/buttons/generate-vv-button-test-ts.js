@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/buttons/generate-vv-button-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/buttons/VvButton.test.ts
+    return `// ./tests/Vitest/Components/vv/buttons/VvButton.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvButton from '../../../../../resources/js/Components/vv/buttons/VvButton.vue'

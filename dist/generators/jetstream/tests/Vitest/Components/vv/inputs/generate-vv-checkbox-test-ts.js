@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/inputs/generate-vv-checkbox-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/inputs/VvCheckbox.test.ts
+    return `// ./tests/Vitest/Components/vv/inputs/VvCheckbox.test.ts
 
 import { mount } from '@vue/test-utils'
 import { VvConfig } from '@obewds/vueventus'

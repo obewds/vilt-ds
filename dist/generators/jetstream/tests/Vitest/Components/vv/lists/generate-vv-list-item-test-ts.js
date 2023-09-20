@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/lists/generate-vv-list-item-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/lists/VvListItem.test.ts
+    return `// ./tests/Vitest/Components/vv/lists/VvListItem.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvListItem from '../../../../../resources/js/Components/vv/lists/VvListItem.vue'

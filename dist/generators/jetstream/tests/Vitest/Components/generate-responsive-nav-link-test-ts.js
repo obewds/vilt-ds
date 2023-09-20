@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-responsive-nav-link-test-ts.ts
 export default function () {
-    return `// ./tests/Components/ResponsiveNavLink.test.ts
+    return `// ./tests/Vitest/Components/ResponsiveNavLink.test.ts
 
 import { mount } from '@vue/test-utils'
 import ResponsiveNavLink from '../../../resources/js/Components/ResponsiveNavLink.vue'

@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-scroll-up-color-mode-section-test-ts.ts
 export default function () {
-    return `// ./tests/Components/ScrollUpColorModeSection.test.ts
+    return `// ./tests/Vitest/Components/ScrollUpColorModeSection.test.ts
 
 import { mount } from '@vue/test-utils'
 import ScrollUpColorModeSection from '../../../resources/js/Components/ScrollUpColorModeSection.vue'

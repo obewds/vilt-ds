@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/anchors/generate-vv-inertia-link-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/anchors/VvInertiaLink.test.ts
+    return `// ./tests/Vitest/Components/vv/anchors/VvInertiaLink.test.ts
 
 import { mount, RouterLinkStub } from '@vue/test-utils'
 import { VvConfig } from '@obewds/vueventus'

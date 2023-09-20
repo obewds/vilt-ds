@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-authentication-card-test-ts.ts
 export default function () {
-    return `// ./tests/Components/AuthenticationCard.test.ts
+    return `// ./tests/Vitest/Components/AuthenticationCard.test.ts
 
 import { mount } from '@vue/test-utils'
 import AuthenticationCard from '../../../resources/js/Components/AuthenticationCard.vue'
