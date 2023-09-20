@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/InputError.test.ts
+return `// ./tests/Vitest/Components/InputError.test.ts
 
 import { mount } from '@vue/test-utils'
 import InputError from '../../../resources/js/Components/InputError.vue'
