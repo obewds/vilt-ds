@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/vv/lists/VvList.test.ts
+return `// ./tests/Vitest/Components/vv/lists/VvList.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvList from '../../../../../resources/js/Components/vv/lists/VvList.vue'

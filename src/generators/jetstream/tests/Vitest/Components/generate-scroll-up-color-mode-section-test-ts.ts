@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/ScrollUpColorModeSection.test.ts
+return `// ./tests/Vitest/Components/ScrollUpColorModeSection.test.ts
 
 import { mount } from '@vue/test-utils'
 import ScrollUpColorModeSection from '../../../resources/js/Components/ScrollUpColorModeSection.vue'

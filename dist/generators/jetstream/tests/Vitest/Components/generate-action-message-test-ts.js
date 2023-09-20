@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-action-message-test-ts.ts
 export default function () {
-    return `// ./tests/Components/ActionMessage.test.ts
+    return `// ./tests/Vitest/Components/ActionMessage.test.ts
 
 import { mount } from '@vue/test-utils'
 import ActionMessage from '../../../resources/js/Components/ActionMessage.vue'

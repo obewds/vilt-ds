@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/Checkbox.test.ts
+return `// ./tests/Vitest/Components/Checkbox.test.ts
 
 import { mount } from '@vue/test-utils'
 import Checkbox from '../../../resources/js/Components/Checkbox.vue'

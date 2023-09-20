@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/SectionBorder.test.ts
+return `// ./tests/Vitest/Components/SectionBorder.test.ts
 
 import { mount } from '@vue/test-utils'
 import SectionBorder from '../../../resources/js/Components/SectionBorder.vue'

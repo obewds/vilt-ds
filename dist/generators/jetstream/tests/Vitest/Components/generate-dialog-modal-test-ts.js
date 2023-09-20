@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-dialog-modal-test-ts.ts
 export default function () {
-    return `// ./tests/Components/DialogModal.test.ts
+    return `// ./tests/Vitest/Components/DialogModal.test.ts
 
 import { mount } from '@vue/test-utils'
 import DialogModal from '../../../resources/js/Components/DialogModal.vue'

@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-nav-link-test-ts.ts
 export default function () {
-    return `// ./tests/Components/NavLink.test.ts
+    return `// ./tests/Vitest/Components/NavLink.test.ts
 
 import { mount } from '@vue/test-utils'
 import NavLink from '../../../resources/js/Components/NavLink.vue'

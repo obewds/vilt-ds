@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-welcome-test-ts.ts
 export default function () {
-    return `// ./tests/Components/Welcome.test.ts
+    return `// ./tests/Vitest/Components/Welcome.test.ts
 
 import { mount } from '@vue/test-utils'
 import Welcome from '../../../resources/js/Components/Welcome.vue'

@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-input-label-test-ts.ts
 export default function () {
-    return `// ./tests/Components/InputLabel.test.ts
+    return `// ./tests/Vitest/Components/InputLabel.test.ts
 
 import { mount } from '@vue/test-utils'
 import InputLabel from '../../../resources/js/Components/InputLabel.vue'

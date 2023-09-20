@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/DropdownLink.test.ts
+return `// ./tests/Vitest/Components/DropdownLink.test.ts
 
 import { mount } from '@vue/test-utils'
 import DropdownLink from '../../../resources/js/Components/DropdownLink.vue'

@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-banner-test-ts.ts
 export default function () {
-    return `// ./tests/Components/Banner.test.ts
+    return `// ./tests/Vitest/Components/Banner.test.ts
 
 import { mount } from '@vue/test-utils'
 import Banner from '../../../resources/js/Components/Banner.vue'

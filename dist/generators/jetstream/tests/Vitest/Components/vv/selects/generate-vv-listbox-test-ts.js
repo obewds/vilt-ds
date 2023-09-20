@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/selects/generate-vv-listbox-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/selects/VvListbox.test.ts
+    return `// ./tests/Vitest/Components/vv/selects/VvListbox.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvListbox from '../../../../../resources/js/Components/vv/selects/VvListbox.vue'

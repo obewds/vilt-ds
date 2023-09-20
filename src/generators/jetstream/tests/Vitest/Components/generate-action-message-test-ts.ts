@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/ActionMessage.test.ts
+return `// ./tests/Vitest/Components/ActionMessage.test.ts
 
 import { mount } from '@vue/test-utils'
 import ActionMessage from '../../../resources/js/Components/ActionMessage.vue'

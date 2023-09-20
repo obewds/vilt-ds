@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-form-section-test-ts.ts
 export default function () {
-    return `// ./tests/Components/FormSection.test.ts
+    return `// ./tests/Vitest/Components/FormSection.test.ts
 
 import { mount } from '@vue/test-utils'
 import FormSection from '../../../resources/js/Components/FormSection.vue'

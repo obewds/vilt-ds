@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/PrimaryButton.test.ts
+return `// ./tests/Vitest/Components/PrimaryButton.test.ts
 
 import { mount } from '@vue/test-utils'
 import PrimaryButton from '../../../resources/js/Components/PrimaryButton.vue'

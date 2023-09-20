@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-dropdown-test-ts.ts
 export default function () {
-    return `// ./tests/Components/Dropdown.test.ts
+    return `// ./tests/Vitest/Components/Dropdown.test.ts
 
 import { mount } from '@vue/test-utils'
 import Dropdown from '../../../resources/js/Components/Dropdown.vue'

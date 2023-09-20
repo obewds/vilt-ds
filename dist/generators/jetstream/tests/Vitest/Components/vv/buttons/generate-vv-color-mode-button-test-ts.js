@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/buttons/generate-vv-color-mode-button-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/buttons/VvColorModeButton.test.ts
+    return `// ./tests/Vitest/Components/vv/buttons/VvColorModeButton.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvColorModeButton from '../../../../../resources/js/Components/vv/buttons/VvColorModeButton.vue'

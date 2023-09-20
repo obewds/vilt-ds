@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-dropdown-link-test-ts.ts
 export default function () {
-    return `// ./tests/Components/DropdownLink.test.ts
+    return `// ./tests/Vitest/Components/DropdownLink.test.ts
 
 import { mount } from '@vue/test-utils'
 import DropdownLink from '../../../resources/js/Components/DropdownLink.vue'

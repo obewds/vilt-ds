@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/buttons/generate-vv-scroll-up-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/buttons/VvScrollUp.test.ts
+    return `// ./tests/Vitest/Components/vv/buttons/VvScrollUp.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvScrollUp from '../../../../../resources/js/Components/vv/buttons/VvScrollUp.vue'

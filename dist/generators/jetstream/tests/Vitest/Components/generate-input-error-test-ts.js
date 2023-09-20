@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/generate-input-error-test-ts.ts
 export default function () {
-    return `// ./tests/Components/InputError.test.ts
+    return `// ./tests/Vitest/Components/InputError.test.ts
 
 import { mount } from '@vue/test-utils'
 import InputError from '../../../resources/js/Components/InputError.vue'

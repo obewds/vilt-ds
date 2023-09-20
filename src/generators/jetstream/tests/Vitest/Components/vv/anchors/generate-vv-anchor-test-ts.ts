@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/vv/anchors/VvAnchor.test.ts
+return `// ./tests/Vitest/Components/vv/anchors/VvAnchor.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvAnchor from '../../../../../resources/js/Components/vv/anchors/VvAnchor.vue'

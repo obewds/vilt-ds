@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/tests/Vitest/Components/vv/anchors/generate-vv-anchor-test-ts.ts
 export default function () {
-    return `// ./tests/Components/vv/anchors/VvAnchor.test.ts
+    return `// ./tests/Vitest/Components/vv/anchors/VvAnchor.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvAnchor from '../../../../../resources/js/Components/vv/anchors/VvAnchor.vue'

@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/InputLabel.test.ts
+return `// ./tests/Vitest/Components/InputLabel.test.ts
 
 import { mount } from '@vue/test-utils'
 import InputLabel from '../../../resources/js/Components/InputLabel.vue'
