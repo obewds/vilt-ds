@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/ResponsiveNavLink.test.ts
+return `// ./tests/Vitest/Components/ResponsiveNavLink.test.ts
 
 import { mount } from '@vue/test-utils'
 import ResponsiveNavLink from '../../../resources/js/Components/ResponsiveNavLink.vue'
