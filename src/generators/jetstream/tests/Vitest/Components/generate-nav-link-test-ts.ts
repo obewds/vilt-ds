@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/NavLink.test.ts
+return `// ./tests/Vitest/Components/NavLink.test.ts
 
 import { mount } from '@vue/test-utils'
 import NavLink from '../../../resources/js/Components/NavLink.vue'
