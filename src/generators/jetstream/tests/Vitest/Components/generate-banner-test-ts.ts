@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/Banner.test.ts
+return `// ./tests/Vitest/Components/Banner.test.ts
 
 import { mount } from '@vue/test-utils'
 import Banner from '../../../resources/js/Components/Banner.vue'
