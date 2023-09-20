@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/SectionTitle.test.ts
+return `// ./tests/Vitest/Components/SectionTitle.test.ts
 
 import { mount } from '@vue/test-utils'
 import SectionTitle from '../../../resources/js/Components/SectionTitle.vue'
