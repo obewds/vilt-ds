@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/vv/forms/VvQuadFormGroup.test.ts
+return `// ./tests/Vitest/Components/vv/forms/VvQuadFormGroup.test.ts
 
 import { mount } from '@vue/test-utils'
 import VvQuadFormGroup from '../../../../../resources/js/Components/vv/forms/VvQuadFormGroup.vue'
