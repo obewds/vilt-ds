@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `// ./tests/Components/vv/inputs/VvCheckbox.test.ts
+return `// ./tests/Vitest/Components/vv/inputs/VvCheckbox.test.ts
 
 import { mount } from '@vue/test-utils'
 import { VvConfig } from '@obewds/vueventus'
