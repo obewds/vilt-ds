@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
+return `<!-- ./resources/js/Components/vv/buttons/VvColorModeButton.vue -->
 
 <script lang="ts">
 
