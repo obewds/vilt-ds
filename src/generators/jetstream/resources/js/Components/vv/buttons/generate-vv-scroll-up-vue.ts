@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
+return `<!-- ./resources/js/Components/vv/buttons/VvScrollUp.vue -->
 
 <script lang="ts">
 
