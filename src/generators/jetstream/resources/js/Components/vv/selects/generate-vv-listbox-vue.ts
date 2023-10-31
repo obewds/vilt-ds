@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `<!-- ./src/components/vv/selects/VvListbox.vue -->
+return `<!-- ./resources/js/Components/vv/selects/VvListbox.vue -->
 
 <script lang="ts">
 
