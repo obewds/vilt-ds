@@ -2,7 +2,7 @@
 
 export default function (): string {
 
-return `<!-- ./src/components/vv/buttons/VvButton.vue -->
+return `<!-- ./resources/js/Components/vv/buttons/VvButton.vue -->
 
 <script lang="ts">
 
