@@ -11,7 +11,7 @@ return `<!-- ./resources/js/Components/ScrollUpColorModeSection.vue -->
     import type { DefaultButtonPalettes, DefaultPaletteColors, DefaultPalettes, SizesButtons, SizesText } from '@obewds/vueventus'
 
     import { defineComponent } from 'vue'
-    import { VvColorModeButton } from '@obewds/vueventus'
+    import VvColorModeButton from '../Components/vv/buttons/VvColorModeButton.vue'
     import VvScrollUp from '../Components/vv/buttons/VvScrollUp.vue'
 
     export default defineComponent({
