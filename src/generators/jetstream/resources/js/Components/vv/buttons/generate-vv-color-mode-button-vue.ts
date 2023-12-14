@@ -82,7 +82,26 @@ return `<!-- ./resources/js/Components/vv/buttons/VvColorModeButton.vue -->
 
             const colorMode = typeof window !== 'undefined' && localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
 
-            return { colorMode }
+            const dispatchColorModeChangedEvent = function () {
+
+                if (typeof window !== 'undefined' && document && localStorage && localStorage.getItem('colorMode')) {
+
+                    let changedColorMode = localStorage.getItem('colorMode') as ValidColorModes
+
+                    window.dispatchEvent(new CustomEvent('color-mode-changed', {
+                        detail: {
+                            mode: changedColorMode
+                        }
+                    }))
+
+                }
+
+            }
+
+            return {
+                colorMode,
+                dispatchColorModeChangedEvent,
+            }
 
         },
 
@@ -120,6 +139,7 @@ return `<!-- ./resources/js/Components/vv/buttons/VvColorModeButton.vue -->
         :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
         :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
         :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
+        @click="dispatchColorModeChangedEvent()"
     />
 
 </template>
