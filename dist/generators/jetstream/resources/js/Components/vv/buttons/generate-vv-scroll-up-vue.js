@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/resources/js/Components/vv/buttons/generate-vv-scroll-up-vue.ts
 export default function () {
-    return `<!-- ./src/components/vv/buttons/VvScrollUp.vue -->
+    return `<!-- ./resources/js/Components/vv/buttons/VvScrollUp.vue -->
 
 <script lang="ts">
 
