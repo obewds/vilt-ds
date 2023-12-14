@@ -4,10 +4,12 @@
 
 export default function (): string {
 
-    // return generateVvAnchorVue({
+    // const output = generateVvAnchorVue({
     //     filePathComment: './resources/js/Components/vv/anchors/VvAnchor.vue',
     //     appVvFilePath: '../../../app.vv',
     // })
+
+    // return output
 
 return `<!-- ./resources/js/Components/vv/anchors/VvAnchor.vue -->
 

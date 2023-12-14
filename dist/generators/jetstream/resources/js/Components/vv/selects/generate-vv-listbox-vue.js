@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/resources/js/Components/vv/selects/generate-vv-listbox-vue.ts
 export default function () {
-    return `<!-- ./src/components/vv/selects/VvListbox.vue -->
+    return `<!-- ./resources/js/Components/vv/selects/VvListbox.vue -->
 
 <script lang="ts">
 

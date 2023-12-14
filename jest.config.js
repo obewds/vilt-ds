@@ -6,5 +6,8 @@ export default {
     moduleNameMapper: {
         "^(\\.\\.?\\/.+)\\.js$": "$1",
     },
-    setupFiles: ["<rootDir>/env.jest.js"]
+    setupFiles: ["<rootDir>/env.jest.js"],
+    // transformIgnorePatterns: [
+    //     "node_modules/(?!@obewds)"
+    // ],
 };

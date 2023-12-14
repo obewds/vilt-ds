@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/resources/js/Components/vv/buttons/generate-vv-color-mode-button-vue.ts
 export default function () {
-    return `<!-- ./src/components/vv/buttons/VvColorModeButton.vue -->
+    return `<!-- ./resources/js/Components/vv/buttons/VvColorModeButton.vue -->
 
 <script lang="ts">
 
@@ -80,7 +80,26 @@ export default function () {
 
             const colorMode = typeof window !== 'undefined' && localStorage && localStorage.getItem('colorMode') ? localStorage.getItem('colorMode') : 'light'
 
-            return { colorMode }
+            const dispatchColorModeChangedEvent = function () {
+
+                if (typeof window !== 'undefined' && document && localStorage && localStorage.getItem('colorMode')) {
+
+                    let changedColorMode = localStorage.getItem('colorMode') as ValidColorModes
+
+                    window.dispatchEvent(new CustomEvent('color-mode-changed', {
+                        detail: {
+                            mode: changedColorMode
+                        }
+                    }))
+
+                }
+
+            }
+
+            return {
+                colorMode,
+                dispatchColorModeChangedEvent,
+            }
 
         },
 
@@ -118,6 +137,7 @@ export default function () {
         :data-vv-color-mode-button-prop-text-light="debug ? textLight : null"
         :data-vv-color-mode-button-prop-title-dark="debug ? titleDark : null"
         :data-vv-color-mode-button-prop-title-light="debug ? titleLight : null"
+        @click="dispatchColorModeChangedEvent()"
     />
 
 </template>

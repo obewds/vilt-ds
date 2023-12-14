@@ -1,6 +1,6 @@
 // ./src/generators/jetstream/resources/js/Components/vv/buttons/generate-vv-button-vue.ts
 export default function () {
-    return `<!-- ./src/components/vv/buttons/VvButton.vue -->
+    return `<!-- ./resources/js/Components/vv/buttons/VvButton.vue -->
 
 <script lang="ts">
 
