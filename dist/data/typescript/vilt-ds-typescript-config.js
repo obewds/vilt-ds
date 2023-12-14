@@ -31,12 +31,12 @@ export default {
         "resolveJsonModule": true,
         "useDefineForClassFields": true,
         "forceConsistentCasingInFileNames": true,
-        "importHelpers": true,
-        "experimentalDecorators": true,
+        "importHelpers": true, // ?
+        "experimentalDecorators": true, // ?
         "allowImportingTsExtensions": true,
-        "allowJs": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
+        "allowJs": true, // ?
+        "allowSyntheticDefaultImports": true, // ?
+        "sourceMap": true, // ?
         "baseUrl": ".",
         "types": [
             "vite/client",
