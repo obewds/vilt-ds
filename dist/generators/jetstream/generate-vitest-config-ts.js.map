@@ -1,1 +1,1 @@
-{"version":3,"file":"generate-vitest-config-ts.js","sourceRoot":"","sources":["../../../src/generators/jetstream/generate-vitest-config-ts.ts"],"names":[],"mappings":"AAAA,0DAA0D;AAE1D,MAAM,CAAC,OAAO;IAEd,OAAO;;;;;;;;;;;;;;;;;CAiBN,CAAC;AAEF,CAAC"}
+{"version":3,"file":"generate-vitest-config-ts.js","sourceRoot":"","sources":["../../../src/generators/jetstream/generate-vitest-config-ts.ts"],"names":[],"mappings":"AAAA,0DAA0D;AAE1D,MAAM,CAAC,OAAO;IAEd,OAAO;;;;;;;;;;;;;;;;;;;;;CAqBN,CAAC;AAEF,CAAC"}
