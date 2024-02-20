@@ -3,7 +3,6 @@
 export type ViltDsJetstreamDependency = 'typescript'
 | '@types/node'
 | '@inertiajs/progress'
-| '@types/ziggy-js'
 | 'ziggy-js'
 | '@obewds/vueventus'
 | '@headlessui/vue'
@@ -16,12 +15,13 @@ export type ViltDsJetstreamDependency = 'typescript'
 | '@vue/test-utils'
 | '@vitest/coverage-v8'
 | '@types/jest'
+// | '@types/ziggy-js'
 
 export default [
     'typescript',
     '@types/node',
     '@inertiajs/progress',
-    '@types/ziggy-js',
+    // '@types/ziggy-js',
     'ziggy-js',
     '@obewds/vueventus',
     '@headlessui/vue',
