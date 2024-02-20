@@ -1,9 +1,10 @@
 // ./src/data/npm/vilt-ds-jetstream-deps.ts
+// | '@types/ziggy-js'
 export default [
     'typescript',
     '@types/node',
     '@inertiajs/progress',
-    '@types/ziggy-js',
+    // '@types/ziggy-js',
     'ziggy-js',
     '@obewds/vueventus',
     '@headlessui/vue',
