@@ -15,6 +15,10 @@ export default {
         setupFiles: ['./vitestSetup.ts', './vitestZiggyRouteShim.d.ts'],
         exclude: [...configDefaults.exclude],
         include: ['./tests/Vitest/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
+        coverage: {
+            all: false,
+            provider: 'v8', // or 'istanbul'
+        },
     },
 }
 `;

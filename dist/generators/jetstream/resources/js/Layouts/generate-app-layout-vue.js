@@ -134,7 +134,7 @@ export default function () {
                                                 </div>
 
                                                 <!-- Team Settings -->
-                                                <DropdownLink :href="route('teams.show', pageProps.auth.user.current_team)">
+                                                <DropdownLink :href="route('teams.show', pageProps.auth.user.current_team.id)">
                                                     Team Settings
                                                 </DropdownLink>
 
@@ -299,7 +299,7 @@ export default function () {
                                 </div>
 
                                 <!-- Team Settings -->
-                                <ResponsiveNavLink :href="route('teams.show', pageProps.auth.user.current_team)" :active="route().current('teams.show')">
+                                <ResponsiveNavLink :href="route('teams.show', pageProps.auth.user.current_team.id)" :active="route().current('teams.show')">
                                     Team Settings
                                 </ResponsiveNavLink>
 
