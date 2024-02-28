@@ -9,7 +9,7 @@ export default function () {
 
     import { computed, defineComponent, ref } from 'vue'
     import { useForm, usePage } from '@inertiajs/vue3'
-    import route from 'ziggy-js'
+    import { route } from '../../../../../vendor/tightenco/ziggy'
 
     import ActionMessage from '../../../Components/ActionMessage.vue'
     import ActionSection from '../../../Components/ActionSection.vue'

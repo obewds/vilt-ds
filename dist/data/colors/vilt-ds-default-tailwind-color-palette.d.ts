@@ -25,7 +25,7 @@ declare const _default: {
         "800": string;
         "900": string;
     };
-    warmGray: {
+    blueGray: {
         "50": string;
         "100": string;
         "200": string;
@@ -37,7 +37,7 @@ declare const _default: {
         "800": string;
         "900": string;
     };
-    coolGray: {
+    lightBlueGray: {
         "50": string;
         "100": string;
         "200": string;
