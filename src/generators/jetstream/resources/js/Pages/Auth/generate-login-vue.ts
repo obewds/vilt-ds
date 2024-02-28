@@ -8,7 +8,7 @@ return `<!-- ./resources/js/Pages/Auth/Login.vue -->
 
     import { defineComponent } from 'vue'
     import { Head, useForm } from '@inertiajs/vue3'
-    import route from 'ziggy-js'
+    import { route } from '../../../../vendor/tightenco/ziggy'
 
     import AuthenticationCard from '../../Components/AuthenticationCard.vue'
     import AuthenticationCardLogo from '../../Components/AuthenticationCardLogo.vue'
