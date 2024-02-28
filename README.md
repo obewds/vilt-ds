@@ -1,6 +1,7 @@
 # The VILT Design System
 The official repository for the VILT Design System for the Vue.js, Inertia.js, Laravel, and Tailwind CSS web app stack that is turbocharged with Typescript, Vitest and VueVentus.
 
+
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/obewds/vilt-ds?label=Github&logo=github&style=for-the-badge) &nbsp; ![npm](https://img.shields.io/npm/v/@obewds/vilt-ds?color=%23cc3534&logo=npm&style=for-the-badge)
 
 
@@ -85,6 +86,10 @@ After your base VILT DS files are installed, you'll need to run the following co
 sail artisan ziggy:generate
 ```
 -->
+
+> v1.0.0 - breaking change update due to ziggy package change - route imports now from ziggy vendor php package and not npm package
+
+> 1.0.0 - breaking change update due to ziggy package change - ./resources/js/ziggy.js file now needs to be ziggy typed with the "Config" ziggy typescript interface - which is also now in the ziggy vendor php package and not npm
 
 
 <br/>

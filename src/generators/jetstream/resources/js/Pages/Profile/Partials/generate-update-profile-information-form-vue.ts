@@ -13,7 +13,7 @@ return `<!-- ./resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.
     import type { UsePageSharedDataProps } from '../../../Types/app-jetstream-types'
 
     import { computed, defineComponent, ref } from 'vue'
-    import route from 'ziggy-js'
+    import { route } from '../../../../../vendor/tightenco/ziggy'
     import { Link, router, useForm, usePage } from '@inertiajs/vue3'
 
     import ActionMessage from '../../../Components/ActionMessage.vue'

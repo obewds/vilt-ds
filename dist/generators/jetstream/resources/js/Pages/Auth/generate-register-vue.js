@@ -8,7 +8,7 @@ export default function () {
 
     import { computed, defineComponent } from 'vue'
     import { Head, useForm, usePage } from '@inertiajs/vue3'
-    import route from 'ziggy-js'
+    import { route } from '../../../../vendor/tightenco/ziggy'
 
     import AuthenticationCard from '../../Components/AuthenticationCard.vue'
     import AuthenticationCardLogo from '../../Components/AuthenticationCardLogo.vue'

@@ -19,7 +19,7 @@ return `<!-- ./resources/js/Layouts/AppLayout.vue -->
     import DropdownLink from '../Components/DropdownLink.vue'
     import NavLink from '../Components/NavLink.vue'
     import ResponsiveNavLink from '../Components/ResponsiveNavLink.vue'
-    import route from 'ziggy-js'
+    import { route } from '../../../vendor/tightenco/ziggy'
     import ScrollUpColorModeSection from '../Components/ScrollUpColorModeSection.vue'
     import VvScrollUp from '../Components/vv/buttons/VvScrollUp.vue'
 

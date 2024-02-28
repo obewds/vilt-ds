@@ -8,7 +8,7 @@ export default function () {
 
     import { computed, defineComponent } from 'vue'
     import { Head, Link, usePage } from '@inertiajs/vue3'
-    import route from 'ziggy-js'
+    import { route } from '../../../vendor/tightenco/ziggy'
     import ScrollUpColorModeSection from '../Components/ScrollUpColorModeSection.vue'
 
     export default defineComponent({

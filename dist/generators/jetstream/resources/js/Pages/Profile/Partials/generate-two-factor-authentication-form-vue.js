@@ -9,7 +9,7 @@ export default function () {
     import { defineComponent, computed, ref, watch } from 'vue'
     import { router, useForm, usePage } from '@inertiajs/vue3'
     import axios from 'axios'
-    import route from 'ziggy-js'
+    import { route } from '../../../../../vendor/tightenco/ziggy'
 
     import ActionSection from '../../../Components/ActionSection.vue'
     import ConfirmsPassword from '../../../Components/ConfirmsPassword.vue'
