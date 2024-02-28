@@ -8,7 +8,7 @@ return `<!-- ./resources/js/Components/ConfirmsPassword.vue -->
 
     import { defineComponent, nextTick, ref, reactive } from 'vue'
     import axios from 'axios'
-    import route from 'ziggy-js'
+    import { route } from '../../../vendor/tightenco/ziggy'
 
     import DialogModal from './DialogModal.vue'
     import InputError from './InputError.vue'
