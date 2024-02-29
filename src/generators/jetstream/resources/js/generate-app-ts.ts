@@ -11,7 +11,7 @@ import type { VvAppGenericColors, VvAppDefaultTintsShades } from './Types/app-co
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
-import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.es'
+import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/index'
 import { Ziggy as ziggyGeneratedData } from './ziggy'
 import appColorsJson from './app.colors.json'
 
