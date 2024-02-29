@@ -91,6 +91,8 @@ sail artisan ziggy:generate
 
 > 1.0.0 - breaking change update due to ziggy package change - ./resources/js/ziggy.js file now needs to be ziggy typed with the "Config" ziggy typescript interface - which is also now in the ziggy vendor php package and not npm
 
+> v1.0.1 - breaking change update due to ziggy package change - ./resources/js/app.ts file now needs it's ZiggyVue import to pull from composer/php package and no longer from npm package
+
 
 <br/>
 
